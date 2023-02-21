@@ -1,0 +1,8 @@
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\bin\Debug\CSharpExample.exe.config
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\bin\Debug\CSharpExample.exe
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\bin\Debug\CSharpExample.pdb
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\obj\Debug\CSharpExample.csproj.AssemblyReference.cache
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\obj\Debug\CSharpExample.csproj.SuggestedBindingRedirects.cache
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\obj\Debug\CSharpExample.csproj.CoreCompileInputs.cache
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\obj\Debug\CSharpExample.exe
+D:\Code Java\C-Sharp-GUI-Programming\CSharpExample\obj\Debug\CSharpExample.pdb
