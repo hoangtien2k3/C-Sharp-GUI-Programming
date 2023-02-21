@@ -1,0 +1,11 @@
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\bin\Debug\WinFormExmaple.exe.config
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\bin\Debug\WinFormExmaple.exe
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\bin\Debug\WinFormExmaple.pdb
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.csproj.AssemblyReference.cache
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.csproj.SuggestedBindingRedirects.cache
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.Form1.resources
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.Properties.Resources.resources
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.csproj.GenerateResource.cache
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.csproj.CoreCompileInputs.cache
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.exe
+D:\Code Java\C-Sharp-GUI-Programming\WinFormExmaple\obj\Debug\WinFormExmaple.pdb
