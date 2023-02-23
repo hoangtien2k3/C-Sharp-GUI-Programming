@@ -48,12 +48,12 @@
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(33, 30);
+            this.label1.ForeColor = System.Drawing.Color.Yellow;
+            this.label1.Location = new System.Drawing.Point(35, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 22);
+            this.label1.Size = new System.Drawing.Size(132, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Đầu Vào: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,6 +70,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(23, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(125, 42);
@@ -82,22 +83,24 @@
             this.lblOutput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblOutput.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOutput.Location = new System.Drawing.Point(142, 275);
+            this.lblOutput.Location = new System.Drawing.Point(154, 275);
             this.lblOutput.Name = "lblOutput";
-            this.lblOutput.Size = new System.Drawing.Size(280, 42);
+            this.lblOutput.Size = new System.Drawing.Size(274, 42);
             this.lblOutput.TabIndex = 4;
             this.lblOutput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblOutput.Click += new System.EventHandler(this.label3_Click);
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(444, 274);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Yellow;
+            this.button1.Location = new System.Drawing.Point(464, 274);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 42);
+            this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 5;
             this.button1.Text = "Thoát";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1

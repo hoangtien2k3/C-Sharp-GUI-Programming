@@ -88,8 +88,8 @@ namespace Test5
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            radRed.Checked = true;
-            chkInDam.Checked = true;
+            // radRed.Checked = true;
+            // chkInDam.Checked = true;
         }
 
         private void label3_Click(object sender, EventArgs e)
