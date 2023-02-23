@@ -82,6 +82,7 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(297, 20);
             this.txtA.TabIndex = 3;
+            this.txtA.Tag = "";
             // 
             // txtB
             // 
@@ -98,7 +99,8 @@
             this.btnTong.Name = "btnTong";
             this.btnTong.Size = new System.Drawing.Size(84, 31);
             this.btnTong.TabIndex = 5;
-            this.btnTong.Text = "Tổng";
+            this.btnTong.Text = "&Tổng";
+            this.btnTong.UseCompatibleTextRendering = true;
             this.btnTong.UseVisualStyleBackColor = false;
             this.btnTong.Click += new System.EventHandler(this.btnTong_Click);
             // 
@@ -110,7 +112,7 @@
             this.btnHieu.Name = "btnHieu";
             this.btnHieu.Size = new System.Drawing.Size(84, 31);
             this.btnHieu.TabIndex = 6;
-            this.btnHieu.Text = "Hiệu";
+            this.btnHieu.Text = "&Hiệu";
             this.btnHieu.UseVisualStyleBackColor = false;
             this.btnHieu.Click += new System.EventHandler(this.btnHieu_Click);
             // 
@@ -147,7 +149,7 @@
             this.btnTich.Name = "btnTich";
             this.btnTich.Size = new System.Drawing.Size(84, 31);
             this.btnTich.TabIndex = 9;
-            this.btnTich.Text = "Tích";
+            this.btnTich.Text = "&Tích";
             this.btnTich.UseVisualStyleBackColor = false;
             this.btnTich.Click += new System.EventHandler(this.btnTich_Click);
             // 
@@ -160,7 +162,7 @@
             this.btnThuong.Name = "btnThuong";
             this.btnThuong.Size = new System.Drawing.Size(84, 31);
             this.btnThuong.TabIndex = 10;
-            this.btnThuong.Text = "Thương";
+            this.btnThuong.Text = "&Thương";
             this.btnThuong.UseVisualStyleBackColor = false;
             this.btnThuong.Click += new System.EventHandler(this.btnThuong_Click);
             // 
