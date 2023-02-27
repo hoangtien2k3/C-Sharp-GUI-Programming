@@ -32,16 +32,16 @@
             this.textBoxNhapSo = new System.Windows.Forms.TextBox();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.groupBoxDanhSachSo = new System.Windows.Forms.GroupBox();
-            this.groupBoxChucNang = new System.Windows.Forms.GroupBox();
-            this.buttonKeThuc = new System.Windows.Forms.Button();
             this.listBoxSo = new System.Windows.Forms.ListBox();
-            this.buttonTongDS = new System.Windows.Forms.Button();
-            this.buttonXoaDauCuoi = new System.Windows.Forms.Button();
-            this.buttonXoaPTChon = new System.Windows.Forms.Button();
-            this.buttonTangLen2 = new System.Windows.Forms.Button();
-            this.buttonThayBangBinhPhuong = new System.Windows.Forms.Button();
-            this.buttonSoChan = new System.Windows.Forms.Button();
+            this.groupBoxChucNang = new System.Windows.Forms.GroupBox();
             this.buttonSoLe = new System.Windows.Forms.Button();
+            this.buttonSoChan = new System.Windows.Forms.Button();
+            this.buttonThayBangBinhPhuong = new System.Windows.Forms.Button();
+            this.buttonTangLen2 = new System.Windows.Forms.Button();
+            this.buttonXoaPTChon = new System.Windows.Forms.Button();
+            this.buttonXoaDauCuoi = new System.Windows.Forms.Button();
+            this.buttonTongDS = new System.Windows.Forms.Button();
+            this.buttonKeThuc = new System.Windows.Forms.Button();
             this.groupBoxDanhSachSo.SuspendLayout();
             this.groupBoxChucNang.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +61,7 @@
             this.textBoxNhapSo.Name = "textBoxNhapSo";
             this.textBoxNhapSo.Size = new System.Drawing.Size(464, 20);
             this.textBoxNhapSo.TabIndex = 1;
+            this.textBoxNhapSo.Text = "12";
             // 
             // buttonUpdate
             // 
@@ -82,6 +83,15 @@
             this.groupBoxDanhSachSo.TabStop = false;
             this.groupBoxDanhSachSo.Text = "Danh Sách Số";
             // 
+            // listBoxSo
+            // 
+            this.listBoxSo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxSo.FormattingEnabled = true;
+            this.listBoxSo.Location = new System.Drawing.Point(3, 16);
+            this.listBoxSo.Name = "listBoxSo";
+            this.listBoxSo.Size = new System.Drawing.Size(311, 301);
+            this.listBoxSo.TabIndex = 0;
+            // 
             // groupBoxChucNang
             // 
             this.groupBoxChucNang.Controls.Add(this.buttonSoLe);
@@ -98,74 +108,15 @@
             this.groupBoxChucNang.TabStop = false;
             this.groupBoxChucNang.Text = "Chức Năng";
             // 
-            // buttonKeThuc
+            // buttonSoLe
             // 
-            this.buttonKeThuc.Location = new System.Drawing.Point(26, 440);
-            this.buttonKeThuc.Name = "buttonKeThuc";
-            this.buttonKeThuc.Size = new System.Drawing.Size(653, 23);
-            this.buttonKeThuc.TabIndex = 5;
-            this.buttonKeThuc.Text = "Kết Thúc";
-            this.buttonKeThuc.UseVisualStyleBackColor = true;
-            this.buttonKeThuc.Click += new System.EventHandler(this.buttonKeThuc_Click);
-            // 
-            // listBoxSo
-            // 
-            this.listBoxSo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxSo.FormattingEnabled = true;
-            this.listBoxSo.Location = new System.Drawing.Point(3, 16);
-            this.listBoxSo.Name = "listBoxSo";
-            this.listBoxSo.Size = new System.Drawing.Size(311, 301);
-            this.listBoxSo.TabIndex = 0;
-            // 
-            // buttonTongDS
-            // 
-            this.buttonTongDS.Location = new System.Drawing.Point(7, 31);
-            this.buttonTongDS.Name = "buttonTongDS";
-            this.buttonTongDS.Size = new System.Drawing.Size(288, 23);
-            this.buttonTongDS.TabIndex = 0;
-            this.buttonTongDS.Text = "Tổng của danh sách";
-            this.buttonTongDS.UseVisualStyleBackColor = true;
-            this.buttonTongDS.Click += new System.EventHandler(this.buttonTongDS_Click);
-            // 
-            // buttonXoaDauCuoi
-            // 
-            this.buttonXoaDauCuoi.Location = new System.Drawing.Point(7, 70);
-            this.buttonXoaDauCuoi.Name = "buttonXoaDauCuoi";
-            this.buttonXoaDauCuoi.Size = new System.Drawing.Size(288, 23);
-            this.buttonXoaDauCuoi.TabIndex = 1;
-            this.buttonXoaDauCuoi.Text = "Xóa phần tử đầu và cuối";
-            this.buttonXoaDauCuoi.UseVisualStyleBackColor = true;
-            this.buttonXoaDauCuoi.Click += new System.EventHandler(this.buttonXoaDauCuoi_Click);
-            // 
-            // buttonXoaPTChon
-            // 
-            this.buttonXoaPTChon.Location = new System.Drawing.Point(7, 109);
-            this.buttonXoaPTChon.Name = "buttonXoaPTChon";
-            this.buttonXoaPTChon.Size = new System.Drawing.Size(288, 23);
-            this.buttonXoaPTChon.TabIndex = 2;
-            this.buttonXoaPTChon.Text = "Xóa phần tử đang chọn";
-            this.buttonXoaPTChon.UseVisualStyleBackColor = true;
-            this.buttonXoaPTChon.Click += new System.EventHandler(this.buttonXoaPTChon_Click);
-            // 
-            // buttonTangLen2
-            // 
-            this.buttonTangLen2.Location = new System.Drawing.Point(7, 154);
-            this.buttonTangLen2.Name = "buttonTangLen2";
-            this.buttonTangLen2.Size = new System.Drawing.Size(288, 23);
-            this.buttonTangLen2.TabIndex = 3;
-            this.buttonTangLen2.Text = "Tăng mỗi phần tử lên 2";
-            this.buttonTangLen2.UseVisualStyleBackColor = true;
-            this.buttonTangLen2.Click += new System.EventHandler(this.buttonTangLen2_Click);
-            // 
-            // buttonThayBangBinhPhuong
-            // 
-            this.buttonThayBangBinhPhuong.Location = new System.Drawing.Point(7, 193);
-            this.buttonThayBangBinhPhuong.Name = "buttonThayBangBinhPhuong";
-            this.buttonThayBangBinhPhuong.Size = new System.Drawing.Size(288, 23);
-            this.buttonThayBangBinhPhuong.TabIndex = 4;
-            this.buttonThayBangBinhPhuong.Text = "Thay bằng bình phương";
-            this.buttonThayBangBinhPhuong.UseVisualStyleBackColor = true;
-            this.buttonThayBangBinhPhuong.Click += new System.EventHandler(this.buttonThayBangBinhPhuong_Click);
+            this.buttonSoLe.Location = new System.Drawing.Point(7, 273);
+            this.buttonSoLe.Name = "buttonSoLe";
+            this.buttonSoLe.Size = new System.Drawing.Size(288, 23);
+            this.buttonSoLe.TabIndex = 6;
+            this.buttonSoLe.Text = "Chọn số lẻ";
+            this.buttonSoLe.UseVisualStyleBackColor = true;
+            this.buttonSoLe.Click += new System.EventHandler(this.buttonSoLe_Click);
             // 
             // buttonSoChan
             // 
@@ -177,15 +128,65 @@
             this.buttonSoChan.UseVisualStyleBackColor = true;
             this.buttonSoChan.Click += new System.EventHandler(this.buttonSoChan_Click);
             // 
-            // buttonSoLe
+            // buttonThayBangBinhPhuong
             // 
-            this.buttonSoLe.Location = new System.Drawing.Point(7, 273);
-            this.buttonSoLe.Name = "buttonSoLe";
-            this.buttonSoLe.Size = new System.Drawing.Size(288, 23);
-            this.buttonSoLe.TabIndex = 6;
-            this.buttonSoLe.Text = "Chọn số lẻ";
-            this.buttonSoLe.UseVisualStyleBackColor = true;
-            this.buttonSoLe.Click += new System.EventHandler(this.buttonSoLe_Click);
+            this.buttonThayBangBinhPhuong.Location = new System.Drawing.Point(7, 193);
+            this.buttonThayBangBinhPhuong.Name = "buttonThayBangBinhPhuong";
+            this.buttonThayBangBinhPhuong.Size = new System.Drawing.Size(288, 23);
+            this.buttonThayBangBinhPhuong.TabIndex = 4;
+            this.buttonThayBangBinhPhuong.Text = "Thay bằng bình phương";
+            this.buttonThayBangBinhPhuong.UseVisualStyleBackColor = true;
+            this.buttonThayBangBinhPhuong.Click += new System.EventHandler(this.buttonThayBangBinhPhuong_Click);
+            // 
+            // buttonTangLen2
+            // 
+            this.buttonTangLen2.Location = new System.Drawing.Point(7, 154);
+            this.buttonTangLen2.Name = "buttonTangLen2";
+            this.buttonTangLen2.Size = new System.Drawing.Size(288, 23);
+            this.buttonTangLen2.TabIndex = 3;
+            this.buttonTangLen2.Text = "Tăng mỗi phần tử lên 2";
+            this.buttonTangLen2.UseVisualStyleBackColor = true;
+            this.buttonTangLen2.Click += new System.EventHandler(this.buttonTangLen2_Click);
+            // 
+            // buttonXoaPTChon
+            // 
+            this.buttonXoaPTChon.Location = new System.Drawing.Point(7, 109);
+            this.buttonXoaPTChon.Name = "buttonXoaPTChon";
+            this.buttonXoaPTChon.Size = new System.Drawing.Size(288, 23);
+            this.buttonXoaPTChon.TabIndex = 2;
+            this.buttonXoaPTChon.Text = "Xóa phần tử đang chọn";
+            this.buttonXoaPTChon.UseVisualStyleBackColor = true;
+            this.buttonXoaPTChon.Click += new System.EventHandler(this.buttonXoaPTChon_Click);
+            // 
+            // buttonXoaDauCuoi
+            // 
+            this.buttonXoaDauCuoi.Location = new System.Drawing.Point(7, 70);
+            this.buttonXoaDauCuoi.Name = "buttonXoaDauCuoi";
+            this.buttonXoaDauCuoi.Size = new System.Drawing.Size(288, 23);
+            this.buttonXoaDauCuoi.TabIndex = 1;
+            this.buttonXoaDauCuoi.Text = "Xóa phần tử đầu và cuối";
+            this.buttonXoaDauCuoi.UseVisualStyleBackColor = true;
+            this.buttonXoaDauCuoi.Click += new System.EventHandler(this.buttonXoaDauCuoi_Click);
+            // 
+            // buttonTongDS
+            // 
+            this.buttonTongDS.Location = new System.Drawing.Point(7, 31);
+            this.buttonTongDS.Name = "buttonTongDS";
+            this.buttonTongDS.Size = new System.Drawing.Size(288, 23);
+            this.buttonTongDS.TabIndex = 0;
+            this.buttonTongDS.Text = "Tổng của danh sách";
+            this.buttonTongDS.UseVisualStyleBackColor = true;
+            this.buttonTongDS.Click += new System.EventHandler(this.buttonTongDS_Click);
+            // 
+            // buttonKeThuc
+            // 
+            this.buttonKeThuc.Location = new System.Drawing.Point(26, 440);
+            this.buttonKeThuc.Name = "buttonKeThuc";
+            this.buttonKeThuc.Size = new System.Drawing.Size(653, 23);
+            this.buttonKeThuc.TabIndex = 5;
+            this.buttonKeThuc.Text = "Kết Thúc";
+            this.buttonKeThuc.UseVisualStyleBackColor = true;
+            this.buttonKeThuc.Click += new System.EventHandler(this.buttonKeThuc_Click);
             // 
             // Form1
             // 
