@@ -1,0 +1,11 @@
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\bin\Debug\test7-baitap.exe.config
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\bin\Debug\test7-baitap.exe
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\bin\Debug\test7-baitap.pdb
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.csproj.AssemblyReference.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.csproj.SuggestedBindingRedirects.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7_baitap.Form1.resources
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7_baitap.Properties.Resources.resources
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.csproj.GenerateResource.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.csproj.CoreCompileInputs.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.exe
+D:\Code Java\C-Sharp-GUI-Programming\Test7\test7-baitap\obj\Debug\test7-baitap.pdb

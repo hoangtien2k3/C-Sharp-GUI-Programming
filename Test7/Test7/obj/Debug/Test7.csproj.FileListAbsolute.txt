@@ -1,0 +1,11 @@
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\bin\Debug\Test7.exe.config
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\bin\Debug\Test7.exe
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\bin\Debug\Test7.pdb
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.csproj.AssemblyReference.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.csproj.SuggestedBindingRedirects.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.Form1.resources
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.Properties.Resources.resources
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.csproj.GenerateResource.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.csproj.CoreCompileInputs.cache
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.exe
+D:\Code Java\C-Sharp-GUI-Programming\Test7\Test7\obj\Debug\Test7.pdb
