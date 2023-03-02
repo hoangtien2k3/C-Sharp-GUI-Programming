@@ -104,7 +104,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 423);
+            this.label2.Location = new System.Drawing.Point(25, 413);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 18);
             this.label2.TabIndex = 5;
@@ -115,9 +115,9 @@
             this.labelCount.BackColor = System.Drawing.Color.Yellow;
             this.labelCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCount.Location = new System.Drawing.Point(174, 423);
+            this.labelCount.Location = new System.Drawing.Point(174, 413);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(99, 40);
+            this.labelCount.Size = new System.Drawing.Size(125, 50);
             this.labelCount.TabIndex = 6;
             this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -126,9 +126,9 @@
             this.buttonThoat.BackColor = System.Drawing.Color.Red;
             this.buttonThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThoat.ForeColor = System.Drawing.Color.Yellow;
-            this.buttonThoat.Location = new System.Drawing.Point(357, 436);
+            this.buttonThoat.Location = new System.Drawing.Point(357, 413);
             this.buttonThoat.Name = "buttonThoat";
-            this.buttonThoat.Size = new System.Drawing.Size(75, 27);
+            this.buttonThoat.Size = new System.Drawing.Size(75, 50);
             this.buttonThoat.TabIndex = 7;
             this.buttonThoat.Text = "Thoát";
             this.buttonThoat.UseVisualStyleBackColor = false;
@@ -146,7 +146,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 450);
+            this.label4.Location = new System.Drawing.Point(25, 439);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 18);
             this.label4.TabIndex = 9;
