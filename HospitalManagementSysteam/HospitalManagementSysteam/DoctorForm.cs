@@ -49,9 +49,17 @@ namespace HospitalManagementSysteam
             } else
             {
                 Con.Open();
-                string query = "insert into DoctorTbl values("+DoctorId.Text+", '"+DoctorName.Text+"', "+DoctorExperience.Text+", '"+DoctorPassword.Text+"')";
+
+                string query = "INSERT INTO DoctorTbl(DoctorId, DoctorName, DoctorExperience, DoctorPassword) VALUES(@DoctorId, @DoctorName, @DoctorExperience, @DoctorPassword)";
                 SqlCommand cmd = new SqlCommand(query, Con);
+
+                cmd.Parameters.AddWithValue("@DoctorId", DoctorId.Text);
+                cmd.Parameters.AddWithValue("@DoctorName", DoctorName.Text);
+                cmd.Parameters.AddWithValue("@DoctorExperience", DoctorExperience.Text);
+                cmd.Parameters.AddWithValue("@DoctorPassword", DoctorPassword.Text);
+
                 cmd.ExecuteNonQuery(); 
+
                 MessageBox.Show("Doctor Successfully Added");
                 Con.Close();
                 populate(); // show dữ liệu ra datagridview
@@ -93,18 +101,35 @@ namespace HospitalManagementSysteam
 
         private void DoctorGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            // Lấy thông tin về ô được chọn
-            int rowIndex = e.RowIndex;
-            int columnIndex = e.ColumnIndex;
-
             DoctorId.Text = DoctorGV.Rows[0].Cells[0].Value.ToString();
             DoctorName.Text = DoctorGV.Rows[0].Cells[1].Value.ToString();
             DoctorExperience.Text = DoctorGV.Rows[0].Cells[2].Value.ToString();
             DoctorPassword.Text = DoctorGV.Rows[0].Cells[3].Value.ToString();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+
+            string query = "UPDATE DoctorTbl set DoctorName = @Name, DoctorExperience = @Experience, DoctorPassword = @Password WHERE DoctorId = @Id";
+            SqlCommand cmd = new SqlCommand(query, Con);
+            cmd.Parameters.AddWithValue("@Name", DoctorName.Text);
+            cmd.Parameters.AddWithValue("@Experience", DoctorExperience.Text);
+            cmd.Parameters.AddWithValue("@Password", DoctorPassword.Text);
+            cmd.Parameters.AddWithValue("@Id", DoctorId.Text);
+            cmd.ExecuteNonQuery();
 
 
+            MessageBox.Show("Doctor Successfully Updated");
+            Con.Close();
+            populate();
+        }
 
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home h = new Home();
+            h.Show();
         }
     }
 }

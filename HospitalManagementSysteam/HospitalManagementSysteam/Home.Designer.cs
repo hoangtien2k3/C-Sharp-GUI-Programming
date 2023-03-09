@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.DoctorForm = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.PatientForm = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoctorForm)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,22 +52,23 @@
             this.label1.Text = "HOSPITAL MANAGEMENTS SYSTEAM";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // pictureBox1
+            // DoctorForm
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(543, 112);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.DoctorForm.Image = ((System.Drawing.Image)(resources.GetObject("DoctorForm.Image")));
+            this.DoctorForm.Location = new System.Drawing.Point(560, 112);
+            this.DoctorForm.Name = "DoctorForm";
+            this.DoctorForm.Size = new System.Drawing.Size(92, 66);
+            this.DoctorForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.DoctorForm.TabIndex = 1;
+            this.DoctorForm.TabStop = false;
+            this.DoctorForm.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(567, 89);
+            this.label2.Location = new System.Drawing.Point(574, 89);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 2;
@@ -78,21 +79,22 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(556, 258);
+            this.label3.Location = new System.Drawing.Point(574, 258);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Bệnh nhân";
             // 
-            // pictureBox2
+            // PatientForm
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(543, 281);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(101, 65);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
+            this.PatientForm.Image = ((System.Drawing.Image)(resources.GetObject("PatientForm.Image")));
+            this.PatientForm.Location = new System.Drawing.Point(560, 281);
+            this.PatientForm.Name = "PatientForm";
+            this.PatientForm.Size = new System.Drawing.Size(101, 84);
+            this.PatientForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PatientForm.TabIndex = 3;
+            this.PatientForm.TabStop = false;
+            this.PatientForm.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox3
             // 
@@ -113,17 +115,17 @@
             this.ClientSize = new System.Drawing.Size(704, 537);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.PatientForm);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.DoctorForm);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DoctorForm)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PatientForm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,10 +135,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox DoctorForm;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox PatientForm;
         private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

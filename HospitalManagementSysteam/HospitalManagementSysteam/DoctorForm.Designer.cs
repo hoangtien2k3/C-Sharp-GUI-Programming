@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DoctorForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.DoctorId = new System.Windows.Forms.TextBox();
@@ -46,19 +48,33 @@
             this.DoctorGV = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorGV)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Purple;
+            this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(793, 84);
+            this.panel1.Size = new System.Drawing.Size(800, 84);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.ErrorImage")));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(761, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(36, 35);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label2
             // 
@@ -91,7 +107,7 @@
             // 
             // DoctorName
             // 
-            this.DoctorName.Location = new System.Drawing.Point(131, 166);
+            this.DoctorName.Location = new System.Drawing.Point(131, 169);
             this.DoctorName.Name = "DoctorName";
             this.DoctorName.Size = new System.Drawing.Size(159, 20);
             this.DoctorName.TabIndex = 2;
@@ -155,7 +171,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.Location = new System.Drawing.Point(17, 312);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(88, 31);
+            this.btnAdd.Size = new System.Drawing.Size(88, 39);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -166,17 +182,18 @@
             this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnUpdate.Location = new System.Drawing.Point(125, 312);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(88, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(88, 39);
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDelete.Location = new System.Drawing.Point(229, 312);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(88, 31);
+            this.btnDelete.Size = new System.Drawing.Size(88, 39);
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -185,9 +202,9 @@
             // btnHome
             // 
             this.btnHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnHome.Location = new System.Drawing.Point(91, 369);
+            this.btnHome.Location = new System.Drawing.Point(105, 369);
             this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(88, 31);
+            this.btnHome.Size = new System.Drawing.Size(88, 36);
             this.btnHome.TabIndex = 12;
             this.btnHome.Text = "Home";
             this.btnHome.UseVisualStyleBackColor = false;
@@ -199,7 +216,7 @@
             this.DoctorGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.DoctorGV.Location = new System.Drawing.Point(343, 122);
             this.DoctorGV.Name = "DoctorGV";
-            this.DoctorGV.Size = new System.Drawing.Size(438, 314);
+            this.DoctorGV.Size = new System.Drawing.Size(443, 339);
             this.DoctorGV.TabIndex = 13;
             this.DoctorGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DoctorGV_CellContentClick);
             // 
@@ -208,7 +225,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(500, 94);
+            this.label7.Location = new System.Drawing.Point(508, 94);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(115, 25);
             this.label7.TabIndex = 2;
@@ -218,7 +235,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 455);
+            this.ClientSize = new System.Drawing.Size(800, 478);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.DoctorGV);
             this.Controls.Add(this.btnHome);
@@ -241,6 +258,7 @@
             this.Load += new System.EventHandler(this.DoctorForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DoctorGV)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -266,5 +284,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.DataGridView DoctorGV;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
