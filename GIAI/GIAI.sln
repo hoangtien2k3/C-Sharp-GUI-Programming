@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GIAI", "GIAI\GIAI.csproj", "{B144F70B-6467-43A2-972D-75B3042CAF4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B144F70B-6467-43A2-972D-75B3042CAF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B144F70B-6467-43A2-972D-75B3042CAF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B144F70B-6467-43A2-972D-75B3042CAF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B144F70B-6467-43A2-972D-75B3042CAF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0E92589-B359-4922-82CB-511F1726B5EC}
+	EndGlobalSection
+EndGlobal

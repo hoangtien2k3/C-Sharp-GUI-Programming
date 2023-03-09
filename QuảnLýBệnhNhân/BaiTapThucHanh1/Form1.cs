@@ -190,7 +190,6 @@ namespace BaiTapThucHanh1
                 dtBN.Rows.RemoveAt(index);
                 dataGridViewBenhNhan.DataSource = dtBN;
                 dataGridViewBenhNhan.RefreshEdit();
-               
             } 
 
         }
