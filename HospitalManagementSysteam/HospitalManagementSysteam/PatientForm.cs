@@ -42,10 +42,8 @@ namespace HospitalManagementSysteam
             Con.Close();
         }
 
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             if (PatId.Text == "" || PatName.Text == "" || PatAddress.Text == "" || PatPhone.Text == "" || PatAge.Text == "" || PatGender.Text == "" || PatBloodGroup.Text == "" || PatMajorDisea.Text == "")
             {
                 MessageBox.Show("No Empty Fill Accepted");

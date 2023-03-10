@@ -43,5 +43,26 @@ namespace HospitalManagementSysteam
             PatientForm patient = new PatientForm();
             patient.Show();
         }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormMain form = new FormMain();
+            form.Show();
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            DiagnosisForm formdiagnosis = new DiagnosisForm();
+            formdiagnosis.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 f = new Form1();
+            f.Show();
+        }
     }
 }

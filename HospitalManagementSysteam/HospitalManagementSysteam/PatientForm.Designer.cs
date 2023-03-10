@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PatientForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -55,6 +56,7 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.PatGV = new System.Windows.Forms.DataGridView();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PatGV)).BeginInit();
@@ -319,6 +321,11 @@
             this.PatGV.TabIndex = 23;
             this.PatGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 5;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // PatientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -389,5 +396,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.DataGridView PatGV;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

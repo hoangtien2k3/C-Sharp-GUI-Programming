@@ -119,7 +119,6 @@ namespace HospitalManagementSysteam
             cmd.Parameters.AddWithValue("@Id", DoctorId.Text);
             cmd.ExecuteNonQuery();
 
-
             MessageBox.Show("Doctor Successfully Updated");
             Con.Close();
             populate();
