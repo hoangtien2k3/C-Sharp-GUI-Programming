@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSysteam
 {
-    public partial class DiagnosisForm : Form
+    public partial class BenhAn : Form
     {
-        public DiagnosisForm()
+        public BenhAn()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            MainForm h = new MainForm();
-            h.Show();
-            this.Hide();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
 
         }

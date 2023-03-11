@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSysteam
 {
-    public partial class FormMain : Form
+    public partial class FormThongTin : Form
     {
 
         SqlConnection Con = new SqlConnection(@"Data Source=DESKTOP-FUO61S0\SQLEXPRESS02;Initial Catalog=HospitalManagementSysteam;Integrated Security=True");
@@ -31,7 +31,7 @@ namespace HospitalManagementSysteam
         }
 
 
-        public FormMain()
+        public FormThongTin()
         {
             InitializeComponent();
         }
@@ -44,7 +44,7 @@ namespace HospitalManagementSysteam
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home h = new Home();
+            MainForm h = new MainForm();
             h.Show();
         }
 

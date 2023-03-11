@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HospitalManagementSysteam
 {
-    public partial class Form1 : Form
+    public partial class FormDangNhap : Form
     {
-        public Form1()
+        public FormDangNhap()
         {
             InitializeComponent();
         }
@@ -42,7 +42,7 @@ namespace HospitalManagementSysteam
             if (IsValidUser(username, password))
             {
                 // Đăng nhập thành công
-                Home home = new Home();
+                MainForm home = new MainForm();
                 home.Show();
                 this.Hide();
             }

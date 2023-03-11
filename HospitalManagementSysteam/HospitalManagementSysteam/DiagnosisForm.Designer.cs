@@ -43,7 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -193,16 +192,6 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 15;
             // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(113, 256);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 25;
-            this.button4.Text = "Home";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(204, 215);
@@ -348,7 +337,6 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnAdd);
@@ -395,7 +383,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnAdd;

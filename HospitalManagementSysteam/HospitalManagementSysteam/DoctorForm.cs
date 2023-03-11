@@ -22,7 +22,7 @@ namespace HospitalManagementSysteam
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Home h = new Home();
+            MainForm h = new MainForm();
             h.Show();
             this.Hide();
         }
@@ -127,7 +127,7 @@ namespace HospitalManagementSysteam
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Home h = new Home();
+            MainForm h = new MainForm();
             h.Show();
         }
     }

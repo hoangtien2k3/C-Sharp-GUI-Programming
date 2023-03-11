@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BenhAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BenhAn.Designer.cs">
+      <DependentUpon>BenhAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="DiagnosisForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,11 +89,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PatientForm.cs">
       <SubType>Form</SubType>
@@ -103,6 +109,9 @@
     <Compile Include="SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BenhAn.resx">
+      <DependentUpon>BenhAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DiagnosisForm.resx">
       <DependentUpon>DiagnosisForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,8 +124,8 @@
     <EmbeddedResource Include="FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PatientForm.resx">
       <DependentUpon>PatientForm.cs</DependentUpon>
