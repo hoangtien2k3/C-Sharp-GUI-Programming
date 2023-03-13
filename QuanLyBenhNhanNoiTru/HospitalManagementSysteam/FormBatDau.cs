@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace Project1
+namespace HospitalManagementSysteam
 {
-    public partial class Form1 : Form
+    public partial class FormBatDau : Form
     {
-        public Form1()
+        public FormBatDau()
         {
             InitializeComponent();
         }
@@ -21,26 +22,25 @@ namespace Project1
         private void timer1_Tick(object sender, EventArgs e)
         {
             startpos += 1;
-            Myprogressbar.Value = startpos;
-            if (Myprogressbar.Value == 100 ) 
+            MyprogressBar.Value = startpos;
+            if (MyprogressBar.Value == 100)
             {
-                Myprogressbar.Value = 0;
+                MyprogressBar.Value = 0;
                 timer1.Stop();
-                Login log = new Login();
+                FormDangNhap log = new FormDangNhap();
                 log.Show();
                 this.Hide();
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void progressBar1_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-
+            
         }
 
-        private void Myprogressbar_Click(object sender, EventArgs e)
+        private void FormBatDau_Load(object sender, EventArgs e)
         {
-
+            timer1.Start();
         }
     }
 }

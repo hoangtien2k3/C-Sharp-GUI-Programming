@@ -60,10 +60,11 @@
             // Myprogressbar
             // 
             this.Myprogressbar.ForeColor = System.Drawing.Color.SlateBlue;
-            this.Myprogressbar.Location = new System.Drawing.Point(0, 212);
+            this.Myprogressbar.Location = new System.Drawing.Point(0, 211);
             this.Myprogressbar.Name = "Myprogressbar";
             this.Myprogressbar.Size = new System.Drawing.Size(484, 10);
             this.Myprogressbar.TabIndex = 1;
+            this.Myprogressbar.Click += new System.EventHandler(this.Myprogressbar_Click);
             // 
             // timer1
             // 
