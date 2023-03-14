@@ -48,7 +48,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtChuyenKhoa = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnLamSach = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -59,11 +58,17 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BacSiGV)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -169,11 +174,12 @@
             this.btnThemBacSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnThemBacSi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThemBacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemBacSi.Location = new System.Drawing.Point(28, 392);
+            this.btnThemBacSi.Location = new System.Drawing.Point(25, 368);
             this.btnThemBacSi.Name = "btnThemBacSi";
-            this.btnThemBacSi.Size = new System.Drawing.Size(109, 40);
+            this.btnThemBacSi.Size = new System.Drawing.Size(109, 47);
             this.btnThemBacSi.TabIndex = 9;
-            this.btnThemBacSi.Text = "Thêm Bác Sĩ";
+            this.btnThemBacSi.Text = "Thêm";
+            this.btnThemBacSi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThemBacSi.UseVisualStyleBackColor = false;
             this.btnThemBacSi.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -182,11 +188,12 @@
             this.btnSuaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSuaThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuaThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaThongTin.Location = new System.Drawing.Point(196, 392);
+            this.btnSuaThongTin.Location = new System.Drawing.Point(193, 368);
             this.btnSuaThongTin.Name = "btnSuaThongTin";
-            this.btnSuaThongTin.Size = new System.Drawing.Size(126, 40);
+            this.btnSuaThongTin.Size = new System.Drawing.Size(109, 47);
             this.btnSuaThongTin.TabIndex = 10;
-            this.btnSuaThongTin.Text = "Sửa Thông Tin";
+            this.btnSuaThongTin.Text = "Sửa";
+            this.btnSuaThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSuaThongTin.UseVisualStyleBackColor = false;
             this.btnSuaThongTin.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -195,11 +202,12 @@
             this.btnXoaThongTin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnXoaThongTin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoaThongTin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaThongTin.Location = new System.Drawing.Point(105, 448);
+            this.btnXoaThongTin.Location = new System.Drawing.Point(115, 430);
             this.btnXoaThongTin.Name = "btnXoaThongTin";
-            this.btnXoaThongTin.Size = new System.Drawing.Size(119, 40);
+            this.btnXoaThongTin.Size = new System.Drawing.Size(109, 47);
             this.btnXoaThongTin.TabIndex = 11;
-            this.btnXoaThongTin.Text = "Xóa Thông Tin";
+            this.btnXoaThongTin.Text = "Xóa";
+            this.btnXoaThongTin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXoaThongTin.UseVisualStyleBackColor = false;
             this.btnXoaThongTin.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -274,19 +282,6 @@
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Bác Sĩ Quản Lý Bệnh Nhân";
-            // 
-            // btnLamSach
-            // 
-            this.btnLamSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLamSach.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLamSach.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnLamSach.Location = new System.Drawing.Point(196, 336);
-            this.btnLamSach.Name = "btnLamSach";
-            this.btnLamSach.Size = new System.Drawing.Size(66, 23);
-            this.btnLamSach.TabIndex = 20;
-            this.btnLamSach.Text = "Làm Mới";
-            this.btnLamSach.UseVisualStyleBackColor = false;
-            this.btnLamSach.Click += new System.EventHandler(this.btnLamSach_Click);
             // 
             // button1
             // 
@@ -396,11 +391,47 @@
             this.label7.TabIndex = 70;
             this.label7.Text = "DataTable";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(30, 377);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 71;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(125, 440);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(52, 31);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 72;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(207, 377);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(52, 31);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 73;
+            this.pictureBox5.TabStop = false;
+            // 
             // FormBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 500);
+            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -411,7 +442,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLamSach);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtChuyenKhoa);
             this.Controls.Add(this.label2);
@@ -440,6 +470,9 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -466,7 +499,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox txtChuyenKhoa;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnLamSach;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -477,5 +509,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

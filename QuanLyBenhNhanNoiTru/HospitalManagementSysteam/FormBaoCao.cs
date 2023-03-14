@@ -59,7 +59,6 @@ namespace QuanLyBenhNhanNoiTru
             {
                 MessageBox.Show(ex.Message);
             }
-            
         }
     }
 }

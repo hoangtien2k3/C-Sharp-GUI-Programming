@@ -53,7 +53,7 @@ namespace HospitalManagementSysteam
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtMaBN.Text == "" || txtMaBS.Text== "" || txtTenBS.Text == "" || txtTuoiTac.Text == "" || txtKinhNghiem.Text == "") 
+            if (txtMaBN.Text == "" || txtMaBS.Text== "" || txtTenBS.Text == "" || txtTuoiTac.Text == "" || txtKinhNghiem.Text == "" || txtChuyenKhoa.Text == "") 
             {
                 MessageBox.Show("Hãy Điền đầy đủ thông tin.");
             } else
@@ -69,9 +69,17 @@ namespace HospitalManagementSysteam
                     cmd.Parameters.AddWithValue("@TenBS", txtTenBS.Text);
                     cmd.Parameters.AddWithValue("@KinhNghiem", txtKinhNghiem.Text);
                     cmd.Parameters.AddWithValue("@TuoiTac", txtTuoiTac.Text);
-                    cmd.Parameters.AddWithValue("@ChuyenKhoa", txtChuyenKhoa.SelectedItem.ToString());
-                    cmd.ExecuteNonQuery(); // thực thi lệnh truy vấn.
 
+                    if (txtChuyenKhoa.Text != "")
+                    {
+                        cmd.Parameters.AddWithValue("@ChuyenKhoa", txtChuyenKhoa.Text);
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@ChuyenKhoa", txtChuyenKhoa.SelectedItem.ToString());
+                    }
+
+                    cmd.ExecuteNonQuery(); // thực thi lệnh truy vấn.
                     MessageBox.Show("Thêm Bác Sĩ Thanh Công.");
                     Con.Close();
                     ConnectBacSi();
@@ -79,7 +87,7 @@ namespace HospitalManagementSysteam
                 {
                     MessageBox.Show(ex.Message);
                 }
-                
+                btnLamSach_Click(sender, e);
             }
         }
 
@@ -90,7 +98,6 @@ namespace HospitalManagementSysteam
 
         private void button3_Click(object sender, EventArgs e)
         {
-
             Con.Open();
             DialogResult dialog = MessageBox.Show("Bạn Có Muốn Xóa Bác Sĩ.",
                 "Xác Nhận",
@@ -105,10 +112,10 @@ namespace HospitalManagementSysteam
                 // Truyền tham số vào câu lệnh SQL
                 command.Parameters.AddWithValue("@MaBS", txtMaBS.Text);
 
-                /*
                 // Thực thi câu lệnh SQL để xóa thông tin bệnh nhân
                 int result = command.ExecuteNonQuery();
 
+                /*
                 if (result > 0)
                 {
                     MessageBox.Show("Xóa thông tin bác sĩ thành công!");
@@ -118,14 +125,13 @@ namespace HospitalManagementSysteam
                     MessageBox.Show("Không tìm thấy bác sĩ có mã " + txtMaBN.Text);
                 }
                 */
-
-                // Đóng kết nối
-                Con.Close();
-
-                // Cập nhật lại datagridview hiển thị danh sách bác sĩ
-                ConnectBacSi();
-                btnLamSach_Click(sender, e);
             }
+            // Đóng kết nối
+            Con.Close();
+
+            // Cập nhật lại datagridview hiển thị danh sách bác sĩ
+            ConnectBacSi();
+            btnLamSach_Click(sender, e);
         }
 
         private void DoctorGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -133,14 +139,12 @@ namespace HospitalManagementSysteam
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
                 DataGridViewRow row = BacSiGV.Rows[e.RowIndex];
-
                 txtMaBS.Text = row.Cells["MaBS"].Value.ToString();
                 txtMaBN.Text = row.Cells["MaBN"].Value.ToString();
                 txtTenBS.Text = row.Cells["TenBS"].Value.ToString();
                 txtKinhNghiem.Text = row.Cells["KinhNghiem"].Value.ToString();
                 txtTuoiTac.Text = row.Cells["TuoiTac"].Value.ToString();
                 txtChuyenKhoa.SelectedItem = row.Cells["ChuyenKhoa"].Value.ToString();
-
             }
         }
 

@@ -10,7 +10,6 @@ using System.Data.SqlClient;
 
 namespace HospitalManagementSysteam
 {
-
     class BenhNhan
     {
         private string MaBN;

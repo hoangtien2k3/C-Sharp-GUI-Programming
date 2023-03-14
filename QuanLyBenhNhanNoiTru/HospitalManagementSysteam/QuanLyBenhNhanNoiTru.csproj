@@ -91,6 +91,12 @@
     <Compile Include="FormBaoCao.Designer.cs">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDangKyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangKyTaiKhoan.Designer.cs">
+      <DependentUpon>FormDangKyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormHoSo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,11 +121,17 @@
     <Compile Include="FormBenhNhan.Designer.cs">
       <DependentUpon>FormBenhNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="FormBenhAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormBenhAn.Designer.cs">
+      <DependentUpon>FormBenhAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuenMatKhau.Designer.cs">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTimKiem.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modify.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FormBatDau.cs">
@@ -141,17 +154,24 @@
     <Compile Include="FormBatDau.Designer.cs">
       <DependentUpon>FormBatDau.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyBenhNhanNoiTruDataSet.cs">
+      <DependentUpon>QuanLyBenhNhanNoiTruDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyBenhNhanNoiTruDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyBenhNhanNoiTruDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="TaiKhoan.cs" />
     <EmbeddedResource Include="BenhAn.resx">
       <DependentUpon>BenhAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormBaoCao.resx">
       <DependentUpon>FormBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangKyTaiKhoan.resx">
+      <DependentUpon>FormDangKyTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHoSo.resx">
       <DependentUpon>FormHoSo.cs</DependentUpon>
@@ -165,8 +185,11 @@
     <EmbeddedResource Include="FormBenhNhan.resx">
       <DependentUpon>FormBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormBenhAn.resx">
+      <DependentUpon>FormBenhAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuenMatKhau.resx">
+      <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>

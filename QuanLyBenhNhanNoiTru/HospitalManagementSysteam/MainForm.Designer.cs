@@ -90,14 +90,15 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1106, 0);
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(1097, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(44, 44);
+            this.button1.Size = new System.Drawing.Size(50, 44);
             this.button1.TabIndex = 32;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -130,11 +131,11 @@
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Modern No. 20", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Yellow;
-            this.label4.Location = new System.Drawing.Point(424, 9);
+            this.label4.Location = new System.Drawing.Point(402, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(353, 29);
+            this.label4.Size = new System.Drawing.Size(407, 44);
             this.label4.TabIndex = 34;
             this.label4.Text = "Quản Lý Bệnh Nhân Nội Trú";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -156,7 +157,7 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(56, 256);
+            this.label6.Location = new System.Drawing.Point(58, 330);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 24);
             this.label6.TabIndex = 37;
@@ -169,9 +170,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(49, 327);
+            this.label7.Location = new System.Drawing.Point(57, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 27);
+            this.label7.Size = new System.Drawing.Size(49, 39);
             this.label7.TabIndex = 37;
             this.label7.Text = "Bệnh Án";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

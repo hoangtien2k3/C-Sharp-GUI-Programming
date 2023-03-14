@@ -45,27 +45,50 @@ namespace HospitalManagementSysteam
             {
                 Con.Open();
 
-                string query = "INSERT INTO BenhNhan (MaBN, TenBn, DiaChi, NgaySinh, Tuoi, DienThoai, GioiTinh, NhomMau, LoaiBenh) VALUES (@MaBN, @TenBn, @DiaChi, @NgaySinh, @Tuoi, @DienThoai, @GioiTinh, @NhomMau, @LoaiBenh)";
+                string query = "SELECT COUNT(*) FROM BenhNhan WHERE MaBN = @MaBN";
                 SqlCommand command = new SqlCommand(query, Con);
-
                 command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
-                command.Parameters.AddWithValue("@TenBn", txtTen.Text);
-                command.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
+                int count = Convert.ToInt32(command.ExecuteScalar());
 
-                DateTime ngaySinh = txtNgaySinh.Value;
-                string strNgaySinh = ngaySinh.ToString("yyyy-MM-dd"); // Chuyển đổi sang chuỗi theo định dạng yyyy-MM-dd
-                command.Parameters.AddWithValue("@NgaySinh", strNgaySinh);
-                command.Parameters.AddWithValue("@Tuoi", txtTuoi.Text);
-                command.Parameters.AddWithValue("@DienThoai", txtDienThoai.Text);
-                command.Parameters.AddWithValue("@GioiTinh", (chkNam.Checked) ? "Nam" : "Nữ");
-                command.Parameters.AddWithValue("@NhomMau", txtNhomMau.SelectedItem.ToString());
-                command.Parameters.AddWithValue("@LoaiBenh", txtLoaiBenh.Text);
-                command.ExecuteNonQuery();
+                if (count > 0) // Kiểm tra xem mã bệnh nhân đã tồn tại hay chưa
+                {
+                    MessageBox.Show("Mã bệnh nhân đã tồn tại. Hãy nhập lại mã khác.", 
+                        "Xác Nhận",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                else
+                {
+                    query = "INSERT INTO BenhNhan (MaBN, TenBn, DiaChi, NgaySinh, Tuoi, DienThoai, GioiTinh, NhomMau, LoaiBenh) VALUES (@MaBN, @TenBn, @DiaChi, @NgaySinh, @Tuoi, @DienThoai, @GioiTinh, @NhomMau, @LoaiBenh)";
+                    command = new SqlCommand(query, Con);
 
-                MessageBox.Show("Thêm Bệnh Nhân Thành Công");
+                    command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
+                    command.Parameters.AddWithValue("@TenBn", txtTen.Text);
+                    command.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
+
+                    DateTime ngaySinh = txtNgaySinh.Value;
+                    string strNgaySinh = ngaySinh.ToString("yyyy-MM-dd"); // Chuyển đổi sang chuỗi theo định dạng yyyy-MM-dd
+                    command.Parameters.AddWithValue("@NgaySinh", strNgaySinh);
+                    command.Parameters.AddWithValue("@Tuoi", txtTuoi.Text);
+                    command.Parameters.AddWithValue("@DienThoai", txtDienThoai.Text);
+                    command.Parameters.AddWithValue("@GioiTinh", (chkNam.Checked) ? "Nam" : "Nữ");
+
+                    if (txtNhomMau.Text != "")
+                    {
+                        command.Parameters.AddWithValue("@NhomMau", txtNhomMau.Text);
+                    } else
+                    {
+                        command.Parameters.AddWithValue("@NhomMau", txtNhomMau.SelectedItem.ToString());
+                    }
+                    command.Parameters.AddWithValue("@LoaiBenh", txtLoaiBenh.Text);
+                    command.ExecuteNonQuery();
+
+                    MessageBox.Show("Thêm Bệnh Nhân Thành Công");
+                }
+
                 Con.Close();
                 ConnecBenhNhan(); // show dữ liệu ra datagridview
-
+                btnLamMoi_Click(sender, e);
             }
         }
 
@@ -86,21 +109,19 @@ namespace HospitalManagementSysteam
 
         private void btnSuaBenhNhan_Click(object sender, EventArgs e)
         {
+             Con.Open();
 
-            Con.Open();
-
-            string query = "UPDATE BenhNhan set MaBn = @MaBN, TenBn = @TenBn, DiaChi = @DiaChi, NgaySinh = @NgaySinh, Tuoi = @Tuoi, DienThoai = @DienThoai, GioiTinh = @GioiTinh, NhomMau = @NhomMau, LoaiBenh = @LoaiBenh WHERE MaBN = @MaBN";
+            string query = "UPDATE BenhNhan SET MaBN = @MaBN, TenBN = @TenBN, DiaChi = @DiaChi, NgaySinh = @NgaySinh, Tuoi = @Tuoi, DienThoai = @DienThoai, GioiTinh = @GioiTinh, NhomMau = @NhomMau, LoaiBenh = @LoaiBenh WHERE MaBN = @MaBN";
             SqlCommand command = new SqlCommand(query, Con);
             command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
             command.Parameters.AddWithValue("@TenBN", txtTen.Text);
             command.Parameters.AddWithValue("@DiaChi", txtDiaChi.Text);
 
             DateTime ngaySinh = txtNgaySinh.Value;
-            string strNgaySinh = ngaySinh.ToString("yyyy-MM-dd"); // Chuyển đổi sang chuỗi theo định dạng yyyy-MM-dd
+            string strNgaySinh = ngaySinh.ToString("dd-MM-yyyy"); // Chuyển đổi sang chuỗi theo định dạng dd-MM-yyyy
             command.Parameters.AddWithValue("@NgaySinh", strNgaySinh);
             command.Parameters.AddWithValue("@Tuoi", txtTuoi.Text);
             command.Parameters.AddWithValue("@DienThoai", txtDienThoai.Text);
-
             command.Parameters.AddWithValue("@GioiTinh", (chkNam.Checked) ? "Nam" : "Nữ");
             command.Parameters.AddWithValue("@NhomMau", txtNhomMau.SelectedItem.ToString());
             command.Parameters.AddWithValue("@LoaiBenh", txtLoaiBenh.Text);
@@ -114,13 +135,13 @@ namespace HospitalManagementSysteam
         
         private void BtnXoaBenhNhan_Click(object sender, EventArgs e)
         {
-
             Con.Open();
 
             DialogResult dialog = MessageBox.Show("Bạn Có Muốn Xóa Bệnh Nhân.",
                 "Xác Nhận",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Warning);
+
             if (dialog == DialogResult.Yes)
             {
                 string query = "DELETE FROM BenhNhan WHERE MaBN = @MaBN";
@@ -129,10 +150,10 @@ namespace HospitalManagementSysteam
                 // Truyền tham số vào câu lệnh SQL
                 command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
 
-                /*
                 // Thực thi câu lệnh SQL để xóa thông tin bệnh nhân
                 int result = command.ExecuteNonQuery();
 
+                /*
                 if (result > 0)
                 {
                     MessageBox.Show("Xóa thông tin bệnh nhân thành công!");
@@ -143,20 +164,19 @@ namespace HospitalManagementSysteam
                 }
                 */
 
-                // Đóng kết nối
-                Con.Close();
-
-                // Cập nhật lại datagridview hiển thị danh sách bệnh nhân
-                ConnecBenhNhan();
-                btnLamMoi_Click(sender, e);
-
             }
+            // Đóng kết nối
+            Con.Close();
+
+            // Cập nhật lại datagridview hiển thị danh sách bệnh nhân
+            ConnecBenhNhan();
+            btnLamMoi_Click(sender, e);
         }
 
         private void BenhNhanGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
+            {   
                 DataGridViewRow row = BenhNhanGV.Rows[e.RowIndex];
 
                 txtMaBN.Text = row.Cells["MaBN"].Value.ToString();
@@ -210,6 +230,31 @@ namespace HospitalManagementSysteam
         }
 
         private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaBN_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkNam_CheckedChanged(object sender, EventArgs e)
         {
 
         }
