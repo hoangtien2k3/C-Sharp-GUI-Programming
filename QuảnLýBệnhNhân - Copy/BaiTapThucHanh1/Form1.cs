@@ -57,6 +57,7 @@ namespace BaiTapThucHanh1
             txtMaBN.ReadOnly= true;
             txtTenBN.ReadOnly= true;
             txtLoaiBenh.ReadOnly= true;
+            txtPhong.ReadOnly= true;
 
             btnThem.Focus();
         }
@@ -72,6 +73,7 @@ namespace BaiTapThucHanh1
             txtMaBN.ReadOnly= false;
             txtTenBN.ReadOnly= false;
             txtLoaiBenh.ReadOnly= false;
+            txtPhong.ReadOnly= false;
 
             txtMaBN.Focus();   
 
@@ -85,6 +87,7 @@ namespace BaiTapThucHanh1
             txtMaBN.Text = "";
             txtTenBN.Text = "";
             txtLoaiBenh.Text = "";
+            txtPhong.Text = "";
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -135,6 +138,16 @@ namespace BaiTapThucHanh1
                 txtLoaiBenh.Focus();
                 return false;
             }
+
+            if (string.IsNullOrWhiteSpace(txtPhong.Text))
+            {
+                MessageBox.Show("Bạn chưa nhập Lớp",
+                    "Thông báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+                txtPhong.Focus();
+                return false;
+            }
             return true;
         }
 
@@ -145,7 +158,7 @@ namespace BaiTapThucHanh1
             {
                 if (CheckData())
                 {
-                    dtBN.Rows.Add(txtTenBN.Text, txtMaBN.Text, txtLoaiBenh.Text);
+                    dtBN.Rows.Add(txtTenBN.Text, txtMaBN.Text, txtLoaiBenh.Text, txtPhong.Text);
                     // DataSource để liên kết dữ liệu của một control điều khiển.
                     // hay có nghĩa là , có sẽ add dữ liệu vừa nhập vào DataSource ấy
                     dataGridViewBenhNhan.DataSource = dtBN;
@@ -160,6 +173,7 @@ namespace BaiTapThucHanh1
                     dtBN.Rows[index][0] = txtMaBN.Text;
                     dtBN.Rows[index][1] = txtTenBN.Text;
                     dtBN.Rows[index][2] = txtLoaiBenh.Text;
+                    dtBN.Rows[index][3] = txtPhong.Text;
 
                     dataGridViewBenhNhan.DataSource = dtBN;
                     dataGridViewBenhNhan.RefreshEdit();
@@ -195,6 +209,7 @@ namespace BaiTapThucHanh1
                 txtMaBN.Text = dataGridViewBenhNhan.Rows[index].Cells[0].Value.ToString();
                 txtTenBN.Text = dataGridViewBenhNhan.Rows[index].Cells[1].Value.ToString();
                 txtLoaiBenh.Text = dataGridViewBenhNhan.Rows[index].Cells[2].Value.ToString();
+                txtPhong.Text = dataGridViewBenhNhan.Rows[index].Cells[3].Value.ToString();
             }
         }
 
