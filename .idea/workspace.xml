@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4f19c8e3-585a-4b15-a090-cbf5cff739e8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/C-Sharp-Winform/.vs/C-Sharp-Winform/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/C-Sharp-Winform/.vs/C-Sharp-Winform/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuảnLýBệnhNhân/BaiTapThucHanh1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuảnLýBệnhNhân/BaiTapThucHanh1/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuảnLýBệnhNhân/BaiTapThucHanh1/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuảnLýBệnhNhân/BaiTapThucHanh1/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test1/.vs/Test1/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/Test1/.vs/Test1/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test10/Mau1/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Test10/Mau1/Form1.Designer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test8/.vs/Test8/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/Test8/.vs/Test8/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuanLyBenhNhanNoiTru/HospitalManagementSysteam/MainForm.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyBenhNhanNoiTru/HospitalManagementSysteam/MainForm.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuanLyBenhNhanNoiTru/HospitalManagementSysteam/MainForm.resx" beforeDir="false" afterPath="$PROJECT_DIR$/QuanLyBenhNhanNoiTru/HospitalManagementSysteam/MainForm.resx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +26,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "D:/Code C_C++/LeetCodeSolver"
+    "last_opened_file_path": "D:/Code Java/LeetCode-Solutions"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

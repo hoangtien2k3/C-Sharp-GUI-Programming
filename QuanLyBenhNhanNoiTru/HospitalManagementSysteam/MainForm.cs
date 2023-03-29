@@ -34,7 +34,7 @@ namespace HospitalManagementSysteam
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormThongTin form= new FormThongTin();
+            FormBenhAn form= new FormBenhAn();
             form.MdiParent = this;
             form.Show();
         }
@@ -54,7 +54,7 @@ namespace HospitalManagementSysteam
 
         private void pictureBoxHoSo_Click(object sender, EventArgs e)
         {
-            FormThongTin form = new FormThongTin();
+            FormBenhAn form = new FormBenhAn();
             form.MdiParent = this;
             form.Show();
         }
@@ -94,6 +94,11 @@ namespace HospitalManagementSysteam
         {
             FormBaoCao formBaoCao = new FormBaoCao();
             formBaoCao.ShowDialog();    
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

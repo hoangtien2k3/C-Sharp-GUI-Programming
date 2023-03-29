@@ -1,6 +1,15 @@
 ﻿Use QuanLyBenhNhanNoiTru
 Go
 
+-- tạo bảng tài khoản.
+Create Table TaiKhoan
+(
+	TaiKhoan nvarchar(30) not null primary key,
+	MatKhau nvarchar(30) not null,
+	Email nvarchar(50) not null
+)
+Go
+
 -- tạo bảng bệnh nhân
 Create Table BenhNhan
 (
@@ -29,12 +38,22 @@ Create Table BacSi
 )
 Go
 
--- tạo bảng tài khoản.
-Create Table TaiKhoan
+
+-- tạo bảng bệnh án
+Create Table BenhAn
 (
-	TaiKhoan nvarchar(30) not null primary key,
-	MatKhau nvarchar(30) not null,
-	Email nvarchar(50) not null
+	MaBN nvarchar(20) not null primary key,
+	DoiTuong int not null,
+	CCCD varchar(14) not null,
+	Khoa nvarchar(40) not null,
+	BHYT nvarchar(50) not null,
+	DanToc nvarchar(20) not null,
+	QuocTich nvarchar(50) not null,
+	NgheNghiep nvarchar(60) not null,
+	TienSuBenh nvarchar(40) not null,
+	LoaiBenh nvarchar(50) not null,
+	ChieuCao nvarchar(20) not null,
+	CanNang nvarchar(20) not null,
+	NgayKhamBenh datetime
 )
 Go
-

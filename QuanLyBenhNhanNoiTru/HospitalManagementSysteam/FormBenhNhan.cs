@@ -109,7 +109,7 @@ namespace HospitalManagementSysteam
 
         private void btnSuaBenhNhan_Click(object sender, EventArgs e)
         {
-             Con.Open();
+            Con.Open();
 
             string query = "UPDATE BenhNhan SET MaBN = @MaBN, TenBN = @TenBN, DiaChi = @DiaChi, NgaySinh = @NgaySinh, Tuoi = @Tuoi, DienThoai = @DienThoai, GioiTinh = @GioiTinh, NhomMau = @NhomMau, LoaiBenh = @LoaiBenh WHERE MaBN = @MaBN";
             SqlCommand command = new SqlCommand(query, Con);
@@ -125,7 +125,7 @@ namespace HospitalManagementSysteam
             command.Parameters.AddWithValue("@GioiTinh", (chkNam.Checked) ? "Nam" : "Nữ");
             command.Parameters.AddWithValue("@NhomMau", txtNhomMau.SelectedItem.ToString());
             command.Parameters.AddWithValue("@LoaiBenh", txtLoaiBenh.Text);
-            command.ExecuteNonQuery();
+            command.ExecuteNonQuery(); // thực hiện câu truy vấn
 
             MessageBox.Show("Sửa Thông Tin Bệnh Nhân Thành Công.");
             Con.Close();
@@ -170,7 +170,7 @@ namespace HospitalManagementSysteam
 
             // Cập nhật lại datagridview hiển thị danh sách bệnh nhân
             ConnecBenhNhan();
-            btnLamMoi_Click(sender, e);
+            btnLamMoi_Click(sender, e); // xóa tất cả thông tin show ra ở phần nhập thông tin
         }
 
         private void BenhNhanGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
