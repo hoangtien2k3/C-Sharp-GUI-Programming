@@ -194,5 +194,10 @@ namespace HospitalManagementSysteam
             txtKinhNghiem.Text = "";
             txtChuyenKhoa.Text = "";
         }
+
+        private void pictureBox3_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

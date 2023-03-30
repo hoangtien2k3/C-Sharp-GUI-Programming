@@ -120,103 +120,111 @@ namespace HospitalManagementSysteam
                         MessageBoxIcon.Error);
                 } else
                 {
-                    query = "INSERT INTO BenhAn (DoiTuong, MaBN, CCCD, Khoa, BHYT, DanToc, QuocTich, NgheNghiep, TienSuBenh, LoaiBenh, ChieuCao, CanNang, NgayKhamBenh) VALUES (@DoiTuong, @MaBN, @CCCD, @Khoa, @BHYT, @DanToc, @QuocTich, @NgheNghiep, @TienSuBenh, @LoaiBenh, @ChieuCao, @CanNang, @NgayKhamBenh)";
-                    sqlCommand = new SqlCommand(query, Con);
+                    try
+                    {
+                        query = "INSERT INTO BenhAn (DoiTuong, MaBN, CCCD, Khoa, BHYT, DanToc, QuocTich, NgheNghiep, TienSuBenh, LoaiBenh, ChieuCao, CanNang, NgayKhamBenh) VALUES (@DoiTuong, @MaBN, @CCCD, @Khoa, @BHYT, @DanToc, @QuocTich, @NgheNghiep, @TienSuBenh, @LoaiBenh, @ChieuCao, @CanNang, @NgayKhamBenh)";
+                        sqlCommand = new SqlCommand(query, Con);
 
-                    if (cbbDoiTuong.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@DoiTuong", cbbDoiTuong.Text);
-                    } else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@DoiTuong", cbbDoiTuong.SelectedItem.ToString());
-                    }
+                        if (cbbDoiTuong.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@DoiTuong", cbbDoiTuong.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@DoiTuong", cbbDoiTuong.SelectedItem.ToString());
+                        }
 
-                    sqlCommand.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
-                    sqlCommand.Parameters.AddWithValue("@CCCD", txtCCCD.Text);
+                        sqlCommand.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
+                        sqlCommand.Parameters.AddWithValue("@CCCD", txtCCCD.Text);
 
-                    if (cbbKhoa.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@Khoa", cbbKhoa.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@Khoa", cbbKhoa.SelectedItem.ToString());
-                    }
+                        if (cbbKhoa.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@Khoa", cbbKhoa.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@Khoa", cbbKhoa.SelectedItem.ToString());
+                        }
 
-                    sqlCommand.Parameters.AddWithValue("@BHYT", txtBHYT.Text);
+                        sqlCommand.Parameters.AddWithValue("@BHYT", txtBHYT.Text);
 
-                    if (cbbDanToc.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@DanToc", cbbDanToc.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@DanToc", cbbDanToc.SelectedItem.ToString());
-                    }
+                        if (cbbDanToc.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@DanToc", cbbDanToc.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@DanToc", cbbDanToc.SelectedItem.ToString());
+                        }
 
-                    if (cbbQuocTich.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@QuocTich", cbbQuocTich.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@QuocTich", cbbQuocTich.SelectedItem.ToString());
-                    }
+                        if (cbbQuocTich.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@QuocTich", cbbQuocTich.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@QuocTich", cbbQuocTich.SelectedItem.ToString());
+                        }
 
-                    if (cbbNgheNghiep.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@NgheNghiep", cbbNgheNghiep.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@NgheNghiep", cbbNgheNghiep.SelectedItem.ToString());
-                    }
+                        if (cbbNgheNghiep.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@NgheNghiep", cbbNgheNghiep.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@NgheNghiep", cbbNgheNghiep.SelectedItem.ToString());
+                        }
 
-                    if (cbbTienSuBenh.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@TienSuBenh", cbbTienSuBenh.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@TienSuBenh", cbbTienSuBenh.SelectedItem.ToString());
-                    }
+                        if (cbbTienSuBenh.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@TienSuBenh", cbbTienSuBenh.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@TienSuBenh", cbbTienSuBenh.SelectedItem.ToString());
+                        }
 
-                    if (cbbLoaiBenh.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@LoaiBenh", cbbLoaiBenh.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@LoaiBenh", cbbLoaiBenh.SelectedItem.ToString());
-                    }
+                        if (cbbLoaiBenh.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@LoaiBenh", cbbLoaiBenh.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@LoaiBenh", cbbLoaiBenh.SelectedItem.ToString());
+                        }
 
-                    if (cbbChieuCao.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@ChieuCao", cbbChieuCao.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@ChieuCao", cbbChieuCao.SelectedItem.ToString());
-                    }
+                        if (cbbChieuCao.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@ChieuCao", cbbChieuCao.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@ChieuCao", cbbChieuCao.SelectedItem.ToString());
+                        }
 
-                    if (cbbCanNang.Text != "")
-                    {
-                        sqlCommand.Parameters.AddWithValue("@CanNang", cbbCanNang.Text);
-                    }
-                    else
-                    {
-                        sqlCommand.Parameters.AddWithValue("@CanNang", cbbCanNang.SelectedItem.ToString());
-                    }
+                        if (cbbCanNang.Text != "")
+                        {
+                            sqlCommand.Parameters.AddWithValue("@CanNang", cbbCanNang.Text);
+                        }
+                        else
+                        {
+                            sqlCommand.Parameters.AddWithValue("@CanNang", cbbCanNang.SelectedItem.ToString());
+                        }
 
-                    sqlCommand.Parameters.AddWithValue("@NgayKhamBenh", dateTimePickerNgayKhamBenh.Value.ToString("yyyy-MM-dd"));
+                        sqlCommand.Parameters.AddWithValue("@NgayKhamBenh", dateTimePickerNgayKhamBenh.Value.ToString("yyyy-MM-dd"));
 
-                    sqlCommand.ExecuteNonQuery(); // thực hiện câu SQL (nếu không có câu này thì nó không thực hiện được câu SQL đâu)
-                    MessageBox.Show("Thêm Thông Tin Bênh Án Thành Công !");
+                        sqlCommand.ExecuteNonQuery(); // thực hiện câu SQL (nếu không có câu này thì nó không thực hiện được câu SQL đâu)
+                        MessageBox.Show("Thêm Thông Tin Bênh Án Thành Công!!!" + "\n\t + Mã Bệnh Nhân: " + txtMaBN.Text);
+                    }
+                    catch {
+                        MessageBox.Show("Thêm Thông Tin Bệnh Án Không Thành Công !!!", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
                 Con.Close();
                 ConnectBenhAn(); // show du lieu ra GV
                 btnLamMoi_Click(sender, e);
+                lblMaBN_Click(sender, e);
             }
         }
 
@@ -324,42 +332,51 @@ namespace HospitalManagementSysteam
                 sqlCommand.Parameters.AddWithValue("@NgayKhamBenh", strngaykhambenh);
 
                 sqlCommand.ExecuteNonQuery(); // thực hiện câu SQL (nếu không có câu này thì nó không thực hiện được câu SQL đâu)
+                
                 MessageBox.Show("Sửa Thông Tin Bênh Án Thành Công !");
                 Con.Close();
                 ConnectBenhAn();
+                lblMaBN_Click(sender, e);
             } catch(Exception ex)
             {
-                
+                MessageBox.Show("Sửa Thông Tin Bệnh Án không thanh công !!!");
             }
         }
 
         private void BtnXoaBenhAn_Click(object sender, EventArgs e)
         {
-            Con.Open();
-
-            DialogResult dialog = MessageBox.Show("Bạn Có Muốn Xóa Bệnh Nhân.",
-                "Xác Nhận",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (dialog == DialogResult.Yes)
+            try
             {
-                string query = "DELETE FROM BenhAn WHERE MaBN = @MaBN";
-                SqlCommand command = new SqlCommand(query, Con);
+                Con.Open();
 
-                // Truyền tham số vào câu lệnh SQL
-                command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
+                DialogResult dialog = MessageBox.Show("Bạn Có Muốn Xóa Bệnh Nhân.",
+                    "Xác Nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
 
-                // Thực thi câu lệnh SQL để xóa thông tin bệnh án
-                int result = command.ExecuteNonQuery();
+                if (dialog == DialogResult.Yes)
+                {
+                    string query = "DELETE FROM BenhAn WHERE MaBN = @MaBN";
+                    SqlCommand command = new SqlCommand(query, Con);
 
+                    // Truyền tham số vào câu lệnh SQL
+                    command.Parameters.AddWithValue("@MaBN", txtMaBN.Text);
+
+                    // Thực thi câu lệnh SQL để xóa thông tin bệnh án
+                    int result = command.ExecuteNonQuery();
+
+                }
+
+                Con.Close(); // Đóng kết nối
+
+                // Cập nhật lại datagridview hiển thị danh sách bệnh nhân
+                ConnectBenhAn();
+                btnLamMoi_Click(sender, e); // xóa tất cả thông tin show ra ở phần nhập thông tin
             }
-            
-            Con.Close(); // Đóng kết nối
-
-            // Cập nhật lại datagridview hiển thị danh sách bệnh nhân
-            ConnectBenhAn();
-            btnLamMoi_Click(sender, e); // xóa tất cả thông tin show ra ở phần nhập thông tin
+            catch(Exception ex)
+            {
+                MessageBox.Show("Xóa Thông Tin Bệnh Án Không Thành Công !!!");
+            }
         }
 
         private void txtTimKiem_TextChanged(object sender, EventArgs e)
@@ -372,9 +389,6 @@ namespace HospitalManagementSysteam
 
             if (txtTimKiemBenhAn.Text == txtMaBN.Text || txtTimKiemBenhAn.Text == txtBHYT.Text)
             {
-
-
-
                 string strTimKiem = "\t--- Thông Tin Bệnh Án ---" + "\n\n- Đối tượng: "  + cbbDoiTuong.Text.Trim() +
                     "\n  + Mã BN: " + txtMaBN.Text +
                     "\n  + CCCD: " + txtCCCD.Text +
@@ -395,6 +409,11 @@ namespace HospitalManagementSysteam
             {
                 MessageBox.Show("Không Tìm Thấy Bệnh Án !!!");
             }
+        }
+
+        private void lblMaBN_Click(object sender, EventArgs e)
+        {
+            lblMaBN.Text = txtMaBN.Text;
         }
     }
 }

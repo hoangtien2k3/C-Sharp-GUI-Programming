@@ -47,6 +47,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.pictureBoxBenhAn = new System.Windows.Forms.PictureBox();
+            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxHoSo)).BeginInit();
@@ -95,9 +96,9 @@
             // 
             this.pictureBoxHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.pictureBoxHome.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHome.Image")));
-            this.pictureBoxHome.Location = new System.Drawing.Point(3, 70);
+            this.pictureBoxHome.Location = new System.Drawing.Point(3, 59);
             this.pictureBoxHome.Name = "pictureBoxHome";
-            this.pictureBoxHome.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxHome.Size = new System.Drawing.Size(47, 39);
             this.pictureBoxHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHome.TabIndex = 33;
             this.pictureBoxHome.TabStop = false;
@@ -109,7 +110,7 @@
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(3, 344);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox4.Size = new System.Drawing.Size(47, 39);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 33;
             this.pictureBox4.TabStop = false;
@@ -132,7 +133,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(56, 81);
+            this.label5.Location = new System.Drawing.Point(53, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 17);
             this.label5.TabIndex = 37;
@@ -144,9 +145,9 @@
             this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(53, 290);
+            this.label6.Location = new System.Drawing.Point(53, 286);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 24);
+            this.label6.Size = new System.Drawing.Size(48, 39);
             this.label6.TabIndex = 37;
             this.label6.Text = "Hồ Sơ";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -157,9 +158,9 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Blue;
-            this.label7.Location = new System.Drawing.Point(52, 224);
+            this.label7.Location = new System.Drawing.Point(56, 224);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 39);
+            this.label7.Size = new System.Drawing.Size(41, 39);
             this.label7.TabIndex = 37;
             this.label7.Text = "Bệnh Án";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -181,9 +182,9 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(43, 115);
+            this.label9.Location = new System.Drawing.Point(55, 118);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 36);
+            this.label9.Size = new System.Drawing.Size(46, 36);
             this.label9.TabIndex = 37;
             this.label9.Text = "Bệnh nhân";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,7 +196,7 @@
             this.label10.ForeColor = System.Drawing.Color.Blue;
             this.label10.Location = new System.Drawing.Point(52, 172);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 19);
+            this.label10.Size = new System.Drawing.Size(49, 19);
             this.label10.TabIndex = 37;
             this.label10.Tag = "Bac";
             this.label10.Text = "Bác Sĩ";
@@ -207,7 +208,7 @@
             this.pictureBoxHoSo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxHoSo.Image")));
             this.pictureBoxHoSo.Location = new System.Drawing.Point(3, 224);
             this.pictureBoxHoSo.Name = "pictureBoxHoSo";
-            this.pictureBoxHoSo.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxHoSo.Size = new System.Drawing.Size(47, 39);
             this.pictureBoxHoSo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxHoSo.TabIndex = 38;
             this.pictureBoxHoSo.TabStop = false;
@@ -219,7 +220,7 @@
             this.pictureBoxBenhNhan.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBenhNhan.Image")));
             this.pictureBoxBenhNhan.Location = new System.Drawing.Point(3, 115);
             this.pictureBoxBenhNhan.Name = "pictureBoxBenhNhan";
-            this.pictureBoxBenhNhan.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxBenhNhan.Size = new System.Drawing.Size(47, 39);
             this.pictureBoxBenhNhan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBenhNhan.TabIndex = 39;
             this.pictureBoxBenhNhan.TabStop = false;
@@ -231,7 +232,7 @@
             this.pictureBoxBacSi.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBacSi.Image")));
             this.pictureBoxBacSi.Location = new System.Drawing.Point(3, 163);
             this.pictureBoxBacSi.Name = "pictureBoxBacSi";
-            this.pictureBoxBacSi.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxBacSi.Size = new System.Drawing.Size(47, 39);
             this.pictureBoxBacSi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBacSi.TabIndex = 40;
             this.pictureBoxBacSi.TabStop = false;
@@ -243,7 +244,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(3, 405);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(29, 28);
+            this.pictureBox1.Size = new System.Drawing.Size(47, 39);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
@@ -256,7 +257,7 @@
             this.label11.ForeColor = System.Drawing.Color.Blue;
             this.label11.Location = new System.Drawing.Point(56, 405);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(54, 35);
+            this.label11.Size = new System.Drawing.Size(57, 39);
             this.label11.TabIndex = 37;
             this.label11.Text = "Phí Nội Trú";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,11 +268,23 @@
             this.pictureBoxBenhAn.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxBenhAn.Image")));
             this.pictureBoxBenhAn.Location = new System.Drawing.Point(3, 286);
             this.pictureBoxBenhAn.Name = "pictureBoxBenhAn";
-            this.pictureBoxBenhAn.Size = new System.Drawing.Size(29, 28);
+            this.pictureBoxBenhAn.Size = new System.Drawing.Size(47, 39);
             this.pictureBoxBenhAn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxBenhAn.TabIndex = 43;
             this.pictureBoxBenhAn.TabStop = false;
             this.pictureBoxBenhAn.Click += new System.EventHandler(this.pictureBoxBenhAn_Click);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label20.Font = new System.Drawing.Font("Mistral", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(12, 9);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(288, 22);
+            this.label20.TabIndex = 80;
+            this.label20.Text = "Quản Lý Thông Tin Chi Tiết Bệnh Án: ";
             // 
             // MainForm
             // 
@@ -279,6 +292,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1147, 548);
+            this.Controls.Add(this.label20);
             this.Controls.Add(this.pictureBoxBenhAn);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBoxBacSi);
@@ -311,6 +325,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxBenhAn)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -334,5 +349,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pictureBoxBenhAn;
+        private System.Windows.Forms.Label label20;
     }
 }
