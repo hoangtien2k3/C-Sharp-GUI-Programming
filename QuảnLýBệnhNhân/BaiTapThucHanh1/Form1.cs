@@ -74,14 +74,12 @@ namespace BaiTapThucHanh1
             txtLoaiBenh.ReadOnly= false;
 
             txtMaBN.Focus();   
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             UnlockControl();
             flag = "add";
-
             txtMaBN.Text = "";
             txtTenBN.Text = "";
             txtLoaiBenh.Text = "";
@@ -199,6 +197,11 @@ namespace BaiTapThucHanh1
         }
 
         private void dataGridSinhVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtLoaiBenh_TextChanged(object sender, EventArgs e)
         {
 
         }

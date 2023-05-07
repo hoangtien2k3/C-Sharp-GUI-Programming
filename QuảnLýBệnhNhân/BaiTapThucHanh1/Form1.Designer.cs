@@ -35,15 +35,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtLoaiBenh = new System.Windows.Forms.TextBox();
             this.dataGridViewBenhNhan = new System.Windows.Forms.DataGridView();
+            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBenhNhan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             // 
             // txtMaBN
             // 
-            this.txtMaBN.Location = new System.Drawing.Point(150, 59);
+            this.txtMaBN.Location = new System.Drawing.Point(149, 56);
             this.txtMaBN.Name = "txtMaBN";
             this.txtMaBN.Size = new System.Drawing.Size(207, 20);
             this.txtMaBN.TabIndex = 1;
@@ -77,7 +77,7 @@
             // 
             // txtTenBN
             // 
-            this.txtTenBN.Location = new System.Drawing.Point(149, 22);
+            this.txtTenBN.Location = new System.Drawing.Point(150, 22);
             this.txtTenBN.Name = "txtTenBN";
             this.txtTenBN.Size = new System.Drawing.Size(208, 20);
             this.txtTenBN.TabIndex = 1;
@@ -94,10 +94,11 @@
             // 
             // txtLoaiBenh
             // 
-            this.txtLoaiBenh.Location = new System.Drawing.Point(149, 96);
+            this.txtLoaiBenh.Location = new System.Drawing.Point(148, 92);
             this.txtLoaiBenh.Name = "txtLoaiBenh";
             this.txtLoaiBenh.Size = new System.Drawing.Size(208, 20);
             this.txtLoaiBenh.TabIndex = 1;
+            this.txtLoaiBenh.TextChanged += new System.EventHandler(this.txtLoaiBenh_TextChanged);
             // 
             // dataGridViewBenhNhan
             // 
@@ -114,6 +115,27 @@
             this.dataGridViewBenhNhan.TabIndex = 2;
             this.dataGridViewBenhNhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSinhVien_CellContentClick);
             this.dataGridViewBenhNhan.SelectionChanged += new System.EventHandler(this.dataGridSinhVien_SelectionChanged);
+            // 
+            // colMaSV
+            // 
+            this.colMaSV.DataPropertyName = "MaSV";
+            this.colMaSV.HeaderText = "Họ và Tên";
+            this.colMaSV.Name = "colMaSV";
+            this.colMaSV.Width = 150;
+            // 
+            // colTen
+            // 
+            this.colTen.DataPropertyName = "TenSV";
+            this.colTen.HeaderText = "Số điện thoại";
+            this.colTen.Name = "colTen";
+            this.colTen.Width = 230;
+            // 
+            // colDiem
+            // 
+            this.colDiem.DataPropertyName = "Diem";
+            this.colDiem.HeaderText = "Mã Sinh Viên";
+            this.colDiem.Name = "colDiem";
+            this.colDiem.Width = 200;
             // 
             // btnThem
             // 
@@ -186,27 +208,6 @@
             this.label6.Size = new System.Drawing.Size(159, 20);
             this.label6.TabIndex = 12;
             this.label6.Text = "Danh sách hiển thị";
-            // 
-            // colMaSV
-            // 
-            this.colMaSV.DataPropertyName = "MaSV";
-            this.colMaSV.HeaderText = "Họ và Tên";
-            this.colMaSV.Name = "colMaSV";
-            this.colMaSV.Width = 150;
-            // 
-            // colTen
-            // 
-            this.colTen.DataPropertyName = "TenSV";
-            this.colTen.HeaderText = "Số điện thoại";
-            this.colTen.Name = "colTen";
-            this.colTen.Width = 230;
-            // 
-            // colDiem
-            // 
-            this.colDiem.DataPropertyName = "Diem";
-            this.colDiem.HeaderText = "Mã Sinh Viên";
-            this.colDiem.Name = "colDiem";
-            this.colDiem.Width = 200;
             // 
             // frmName
             // 

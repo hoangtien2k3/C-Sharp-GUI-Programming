@@ -91,6 +91,7 @@
             this.listBoxSo.Name = "listBoxSo";
             this.listBoxSo.Size = new System.Drawing.Size(311, 301);
             this.listBoxSo.TabIndex = 0;
+            this.listBoxSo.SelectedIndexChanged += new System.EventHandler(this.listBoxSo_SelectedIndexChanged);
             // 
             // groupBoxChucNang
             // 
@@ -202,6 +203,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxDanhSachSo.ResumeLayout(false);
             this.groupBoxChucNang.ResumeLayout(false);
             this.ResumeLayout(false);
