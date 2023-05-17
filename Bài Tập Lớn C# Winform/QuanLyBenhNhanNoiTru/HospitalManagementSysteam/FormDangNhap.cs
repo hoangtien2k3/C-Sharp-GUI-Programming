@@ -28,14 +28,12 @@ namespace HospitalManagementSysteam
 
         }
 
+        // Kiểm tra xem username và password có hợp lệ hay không
         private bool IsValidUser(string username, string password)
         {
-            // Kiểm tra xem username và password có hợp lệ hay không
             return (username == "admin" && password == "password"); 
         }
 
-
-        
         private void button2_Click(object sender, EventArgs e)
         {
             string taiKhoan = txtTaiKhoan.Text;

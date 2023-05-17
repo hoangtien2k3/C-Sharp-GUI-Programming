@@ -88,7 +88,6 @@ namespace HospitalManagementSysteam
 
                 string result = "\tTHÔN TIN BÁC SĨ\n" +
                     "\n+ Mã Bác Sĩ: " + row.Cells["MaBS"].Value.ToString() +
-                    "\n+ Mã Bệnh Nhân: " + row.Cells["MaBN"].Value.ToString() +
                     "\n+ Tên Bác Sĩ: " + row.Cells["TenBS"].Value.ToString() +
                     "\n+ Kinh Nghiệm: " + row.Cells["KinhNghiem"].Value.ToString() +
                     "\n+ Tuổi Tác: " + row.Cells["TuoiTac"].Value.ToString() +

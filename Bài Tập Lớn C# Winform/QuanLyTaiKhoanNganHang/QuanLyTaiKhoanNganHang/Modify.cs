@@ -1,16 +1,15 @@
-﻿using HospitalManagementSysteam;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyBenhNhanNoiTru
+namespace QuanLyTaiKhoanNganHang
 {
-    class Modify // mục đích của class Modify là lấy ra tất cả các tài khoản và add vào list<TaiKhoan>
+    class Modify
     {
-        public Modify() { } 
+        public Modify() { }
 
         SqlCommand sqlCommand;
         SqlDataReader dataReader;
@@ -19,11 +18,12 @@ namespace QuanLyBenhNhanNoiTru
         public List<TaiKhoan> TaiKhoans(string query)
         {
             List<TaiKhoan> taiKhoans = new List<TaiKhoan>();
-            using(SqlConnection Con= Connection.getConnection()) {
+            using (SqlConnection Con = Connection.getInstance().getConnection())
+            {
                 Con.Open();
                 sqlCommand = new SqlCommand(query, Con);
                 dataReader = sqlCommand.ExecuteReader(); // lấy thông tin từ DB và đẩy vào dataReader
-                while(dataReader.Read()) // đọc từng TaiKhoang được đẩy vào dataReader
+                while (dataReader.Read()) // đọc từng TaiKhoang được đẩy vào dataReader
                 {
                     taiKhoans.Add(new TaiKhoan(dataReader.GetString(0), dataReader.GetString(1))); // đọc tất cả dữ liệu và đẩy vào trong List<TaiKhoan>
                 }
@@ -36,13 +36,13 @@ namespace QuanLyBenhNhanNoiTru
         // hàm này dùng để check tài khoản.
         public void Command(string query)
         {
-            using (SqlConnection Con= Connection.getConnection()) { 
+            using (SqlConnection Con = Connection.getInstance().getConnection())
+            {
                 Con.Open();
                 sqlCommand = new SqlCommand(query, Con);
                 sqlCommand.ExecuteNonQuery();
                 Con.Close();
             }
         }
-
     }
 }

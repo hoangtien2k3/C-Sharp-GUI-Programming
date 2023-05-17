@@ -41,7 +41,6 @@ namespace HospitalManagementSysteam
 
             cbbNhomMau.DropDownStyle = ComboBoxStyle.DropDown;
             cbbNhomMau.Enabled = false;
-            
         }
 
 
@@ -93,8 +92,6 @@ namespace HospitalManagementSysteam
 
             UnLockControlInput();
         }
-
-
 
         public void ConnecBenhNhan()
         {
@@ -414,7 +411,7 @@ namespace HospitalManagementSysteam
         // load tất cả MaBN lên combobox
         private void LoadDataToComboBoxMaBN()
         {
-            string query = "SELECT MaBN FROM BenhNhan";
+            string query = "SELECT MaBN FROM LeTan";
 
             using (SqlConnection connection = Connection.getConnection())
             {
@@ -434,7 +431,7 @@ namespace HospitalManagementSysteam
         // load tất cả TenBN lên combobox
         private void LoadDataToComboBoxTenBN()
         {
-            string query = "SELECT TenBN FROM BenhNhan";
+            string query = "SELECT HoTen FROM LeTan";
 
             using (SqlConnection connection = Connection.getConnection())
             {

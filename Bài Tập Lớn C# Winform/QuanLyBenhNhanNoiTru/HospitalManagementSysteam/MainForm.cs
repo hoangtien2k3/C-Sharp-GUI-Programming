@@ -327,14 +327,7 @@ namespace HospitalManagementSysteam
 
         private void càiĐặtPhímTắtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string phimtat = "CÁC PHÍM TẮT CÀI ĐẶT NHANH MẶC ĐỊNH CHO CHƯƠNG TRÌNH\n" +
-               "\n Ctrl + S: Dùng để lưu " +
-               "\n\n Ctrl + D: Dùng để xóa" +
-               "\n\n Ctrl + F: Dùng để sửa" +
-               "\n\n Ctrl + Space: Dùng để xóa khoảng trắng" +
-               "\n\n Enter: Xác nhận thông tin";
-
-            MessageBox.Show(phimtat);
+            
         }
 
         private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
@@ -354,6 +347,48 @@ namespace HospitalManagementSysteam
 
         }
 
- 
+        private void phímTắtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string phimtat = "CÁC PHÍM TẮT CÀI ĐẶT NHANH MẶC ĐỊNH CHO CHƯƠNG TRÌNH\n" +
+               "\n Ctrl + S: Dùng để lưu " +
+               "\n\n Ctrl + D: Dùng để xóa" +
+               "\n\n Ctrl + F: Dùng để sửa" +
+               "\n\n Ctrl + Space: Dùng để xóa khoảng trắng" +
+               "\n\n Enter: Xác nhận thông tin";
+
+            MessageBox.Show(phimtat);
+        }
+
+        private void hướngDẫnSửDụngHệThốngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string huongdan = "HƯỚNG DẪN SỬ DỤNG HỆ THỐNG QUẢN LÝ BỆNH NHÂN NỘI TRÚ\n" +
+                "\n 1. Đăng nhập và quản lý tài khoản" +
+                "\n\t+ Để truy cập vào hệ thống, người dùng cần sử dụng tên đăng nhập và mật khẩu." +
+                "\n 2. Quản lý thông tin bệnh nhân:\n" +
+                "\n\t- Bảng BenhNhan chứa thông tin chi tiết về bệnh nhân." +
+                "\n 3. Quản lý thông tin bác sĩ:\n" +
+                "\n\t- Bảng BacSi chứa thông tin về các bác sĩ trong bệnh viện." +
+                "\n 4. Quản lý thông tin bệnh án:" +
+                "\n\t+ Bảng \"BenhAn\" chứa thông tin về bệnh án của bệnh nhân." +
+                "\n 5. Quản lý thông tin lễ tân:" +
+                "\n\t- Bảng \"LeTan\" chứa thông tin về các nhân viên lễ tân." +
+                "\n 6. Quản lý thông tin khám bệnh:" +
+                "\n\t- Bảng \"ThongTinKhamBenh\" chứa thông tin về quá trình khám bệnh của bệnh nhân.";
+
+            MessageBox.Show(huongdan);
+        }
+
+        private void dịchVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string dichvukhambenh = "CÁC DỊCH VỤ KHÁM CHỮA BỆNH\n" +
+                "\n\t1. Khám bệnh:" +
+                "\n\t2. Chẩn đoán và xét nghiệm:" +
+                "\n\t3. Điều trị và phẫu thuật:" +
+                "\n\t4. Theo dõi và quản lý:" +
+                "\n\t5. Báo cáo và ghi chú: " +
+                "\n\t6. Quản lý giường bệnh: ";
+
+            MessageBox.Show(dichvukhambenh);
+        }
     }
 }

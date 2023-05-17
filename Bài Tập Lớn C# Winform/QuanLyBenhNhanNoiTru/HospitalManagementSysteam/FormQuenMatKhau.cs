@@ -38,6 +38,10 @@ namespace QuanLyBenhNhanNoiTru
                 if (modify.TaiKhoans(query).Count != 0)
                 {
                     labelMatKhau.ForeColor = Color.Blue; // set màu cho tài khoản lấy ra 
+
+                    /*List<TaiKhoan> taikhoan = modify.TaiKhoans(query);
+                    labelMatKhau.Text = "Mật Khẩu: " + taikhoan[0].TenMatKhau;*/
+
                     labelMatKhau.Text = "Mật Khẩu: " + modify.TaiKhoans(query)[0].TenMatKhau;
                 } else
                 {

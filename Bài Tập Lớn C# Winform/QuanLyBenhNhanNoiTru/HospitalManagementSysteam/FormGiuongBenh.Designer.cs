@@ -308,6 +308,24 @@
             // 
             this.cbbSoGiuong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSoGiuong.FormattingEnabled = true;
+            this.cbbSoGiuong.Items.AddRange(new object[] {
+            "G01",
+            "G02",
+            "G03",
+            "G04",
+            "G05",
+            "G06",
+            "G07",
+            "G08",
+            "G09",
+            "G10",
+            "G11",
+            "G12",
+            "G13",
+            "G14",
+            "",
+            "",
+            ""});
             this.cbbSoGiuong.Location = new System.Drawing.Point(66, 142);
             this.cbbSoGiuong.Name = "cbbSoGiuong";
             this.cbbSoGiuong.Size = new System.Drawing.Size(115, 21);
@@ -324,6 +342,7 @@
             // 
             // dataGRVGiuongBenh
             // 
+            this.dataGRVGiuongBenh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGRVGiuongBenh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGRVGiuongBenh.Location = new System.Drawing.Point(200, 17);
             this.dataGRVGiuongBenh.Margin = new System.Windows.Forms.Padding(2);
@@ -354,6 +373,28 @@
             // 
             this.cbbSoPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSoPhong.FormattingEnabled = true;
+            this.cbbSoPhong.Items.AddRange(new object[] {
+            "P01",
+            "P02",
+            "P03",
+            "P04",
+            "P05",
+            "P06",
+            "P07",
+            "P08",
+            "P09",
+            "P10",
+            "P11",
+            "P12",
+            "P13",
+            "P14",
+            "P15",
+            "P16",
+            "P17",
+            "P18",
+            "P19",
+            "P20",
+            "P21"});
             this.cbbSoPhong.Location = new System.Drawing.Point(66, 102);
             this.cbbSoPhong.Name = "cbbSoPhong";
             this.cbbSoPhong.Size = new System.Drawing.Size(115, 21);
@@ -419,6 +460,7 @@
             // 
             // dataGRVBenhNhan
             // 
+            this.dataGRVBenhNhan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGRVBenhNhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGRVBenhNhan.Location = new System.Drawing.Point(0, 19);
             this.dataGRVBenhNhan.Margin = new System.Windows.Forms.Padding(2);

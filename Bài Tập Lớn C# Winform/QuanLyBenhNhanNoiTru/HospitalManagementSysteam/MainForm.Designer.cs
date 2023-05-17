@@ -64,6 +64,8 @@
             this.xuấtPDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xuấtExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.càiĐặtPhímTắtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.phímTắtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblDataTimeNow = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ptbBenhAn)).BeginInit();
@@ -127,7 +129,7 @@
             this.label4.ForeColor = System.Drawing.Color.Yellow;
             this.label4.Location = new System.Drawing.Point(504, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 30);
+            this.label4.Size = new System.Drawing.Size(300, 34);
             this.label4.TabIndex = 34;
             this.label4.Text = "Quản Lý Bệnh Nhân Nội Trú";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -251,7 +253,7 @@
             this.btnBenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBenhNhan.ForeColor = System.Drawing.Color.Blue;
-            this.btnBenhNhan.Location = new System.Drawing.Point(57, 125);
+            this.btnBenhNhan.Location = new System.Drawing.Point(57, 124);
             this.btnBenhNhan.Name = "btnBenhNhan";
             this.btnBenhNhan.Size = new System.Drawing.Size(98, 38);
             this.btnBenhNhan.TabIndex = 108;
@@ -333,20 +335,21 @@
             // chứcVụToolStripMenuItem
             // 
             this.chứcVụToolStripMenuItem.Name = "chứcVụToolStripMenuItem";
-            this.chứcVụToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
-            this.chứcVụToolStripMenuItem.Text = "Đơn Vị";
+            this.chứcVụToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.chứcVụToolStripMenuItem.Text = "Bệnh Nhân Nhập Viện";
             this.chứcVụToolStripMenuItem.Click += new System.EventHandler(this.chứcVụToolStripMenuItem_Click);
             // 
             // dịchVụToolStripMenuItem
             // 
             this.dịchVụToolStripMenuItem.Name = "dịchVụToolStripMenuItem";
-            this.dịchVụToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.dịchVụToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.dịchVụToolStripMenuItem.Text = "Dịch Vụ";
+            this.dịchVụToolStripMenuItem.Click += new System.EventHandler(this.dịchVụToolStripMenuItem_Click);
             // 
             // xếpGiườngBệnhToolStripMenuItem
             // 
             this.xếpGiườngBệnhToolStripMenuItem.Name = "xếpGiườngBệnhToolStripMenuItem";
-            this.xếpGiườngBệnhToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.xếpGiườngBệnhToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.xếpGiườngBệnhToolStripMenuItem.Text = "Xếp Giường Bệnh";
             this.xếpGiườngBệnhToolStripMenuItem.Click += new System.EventHandler(this.xếpGiườngBệnhToolStripMenuItem_Click);
             // 
@@ -425,10 +428,27 @@
             // 
             // càiĐặtPhímTắtToolStripMenuItem
             // 
+            this.càiĐặtPhímTắtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.phímTắtToolStripMenuItem,
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem});
             this.càiĐặtPhímTắtToolStripMenuItem.Name = "càiĐặtPhímTắtToolStripMenuItem";
-            this.càiĐặtPhímTắtToolStripMenuItem.Size = new System.Drawing.Size(104, 20);
-            this.càiĐặtPhímTắtToolStripMenuItem.Text = "Cài đặt phím tắt";
+            this.càiĐặtPhímTắtToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.càiĐặtPhímTắtToolStripMenuItem.Text = "Cài đặt";
             this.càiĐặtPhímTắtToolStripMenuItem.Click += new System.EventHandler(this.càiĐặtPhímTắtToolStripMenuItem_Click);
+            // 
+            // phímTắtToolStripMenuItem
+            // 
+            this.phímTắtToolStripMenuItem.Name = "phímTắtToolStripMenuItem";
+            this.phímTắtToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.phímTắtToolStripMenuItem.Text = "Phím Tắt";
+            this.phímTắtToolStripMenuItem.Click += new System.EventHandler(this.phímTắtToolStripMenuItem_Click);
+            // 
+            // hướngDẫnSửDụngHệThốngToolStripMenuItem
+            // 
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem.Name = "hướngDẫnSửDụngHệThốngToolStripMenuItem";
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem.Size = new System.Drawing.Size(238, 22);
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem.Text = "Hướng Dẫn Sử Dụng Hệ Thống";
+            this.hướngDẫnSửDụngHệThốngToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnSửDụngHệThốngToolStripMenuItem_Click);
             // 
             // lblDataTimeNow
             // 
@@ -528,5 +548,7 @@
         private System.Windows.Forms.ToolStripMenuItem xếpGiườngBệnhToolStripMenuItem;
         private System.Windows.Forms.Label lblDataTimeNow;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.ToolStripMenuItem phímTắtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hướngDẫnSửDụngHệThốngToolStripMenuItem;
     }
 }

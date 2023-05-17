@@ -30,7 +30,6 @@ namespace QuanLyBenhNhanNoiTru
         }
 
         Modify modify = new Modify();
-
         private void btnDangKyTaiKhoan_Click(object sender, EventArgs e)
         {
             string taiKhoan = txtTenTaiKhoan.Text;
@@ -88,7 +87,6 @@ namespace QuanLyBenhNhanNoiTru
             {
                 MessageBox.Show("Tài khoản này đã được đăng ký, vui lòng đăng ký tài khoản khác.");
             }
-
         }
 
         private void button1_Click(object sender, EventArgs e)

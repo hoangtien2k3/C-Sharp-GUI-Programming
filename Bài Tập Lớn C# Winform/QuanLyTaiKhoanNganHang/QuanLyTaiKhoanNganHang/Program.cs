@@ -1,11 +1,10 @@
-﻿using QuanLyBenhNhanNoiTru;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace HospitalManagementSysteam
+namespace QuanLyTaiKhoanNganHang
 {
     internal static class Program
     {
@@ -17,7 +16,7 @@ namespace HospitalManagementSysteam
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormBatDau());
+            Application.Run(new FormDangNhap());
         }
     }
 }
