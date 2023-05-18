@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCaiDat = new System.Windows.Forms.Button();
             this.btnGiaoDich = new System.Windows.Forms.Button();
             this.btnHome = new System.Windows.Forms.Button();
@@ -46,28 +52,27 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gray;
+            this.panel2.Controls.Add(this.pictureBox10);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.pictureBox9);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.pictureBox7);
@@ -93,6 +98,66 @@
             this.panel2.Size = new System.Drawing.Size(169, 557);
             this.panel2.TabIndex = 1;
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(12, 437);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 122;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(12, 386);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 121;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(12, 338);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 120;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(12, 291);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 119;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(12, 248);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 118;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(12, 206);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 117;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnCaiDat
             // 
             this.btnCaiDat.BackColor = System.Drawing.Color.Gray;
@@ -100,11 +165,11 @@
             this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaiDat.ForeColor = System.Drawing.Color.Black;
-            this.btnCaiDat.Location = new System.Drawing.Point(49, 453);
+            this.btnCaiDat.Location = new System.Drawing.Point(49, 437);
             this.btnCaiDat.Name = "btnCaiDat";
             this.btnCaiDat.Size = new System.Drawing.Size(117, 24);
             this.btnCaiDat.TabIndex = 116;
-            this.btnCaiDat.Text = "Cài Đặt";
+            this.btnCaiDat.Text = "Cài đặt";
             this.btnCaiDat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCaiDat.UseVisualStyleBackColor = false;
             // 
@@ -115,13 +180,14 @@
             this.btnGiaoDich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGiaoDich.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGiaoDich.ForeColor = System.Drawing.Color.Black;
-            this.btnGiaoDich.Location = new System.Drawing.Point(49, 402);
+            this.btnGiaoDich.Location = new System.Drawing.Point(49, 386);
             this.btnGiaoDich.Name = "btnGiaoDich";
             this.btnGiaoDich.Size = new System.Drawing.Size(117, 24);
             this.btnGiaoDich.TabIndex = 114;
             this.btnGiaoDich.Text = "Giao dịch";
             this.btnGiaoDich.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGiaoDich.UseVisualStyleBackColor = false;
+            this.btnGiaoDich.Click += new System.EventHandler(this.btnGiaoDich_Click);
             // 
             // btnHome
             // 
@@ -130,13 +196,14 @@
             this.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Location = new System.Drawing.Point(49, 138);
+            this.btnHome.Location = new System.Drawing.Point(49, 122);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(117, 24);
             this.btnHome.TabIndex = 115;
             this.btnHome.Text = "Home";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHome.UseVisualStyleBackColor = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnKiemTraSoDu
             // 
@@ -145,7 +212,7 @@
             this.btnKiemTraSoDu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKiemTraSoDu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKiemTraSoDu.ForeColor = System.Drawing.Color.Black;
-            this.btnKiemTraSoDu.Location = new System.Drawing.Point(49, 354);
+            this.btnKiemTraSoDu.Location = new System.Drawing.Point(49, 338);
             this.btnKiemTraSoDu.Name = "btnKiemTraSoDu";
             this.btnKiemTraSoDu.Size = new System.Drawing.Size(117, 24);
             this.btnKiemTraSoDu.TabIndex = 113;
@@ -156,7 +223,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 176);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 160);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(31, 24);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,18 +237,19 @@
             this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRutTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutTien.ForeColor = System.Drawing.Color.Black;
-            this.btnRutTien.Location = new System.Drawing.Point(49, 307);
+            this.btnRutTien.Location = new System.Drawing.Point(49, 291);
             this.btnRutTien.Name = "btnRutTien";
             this.btnRutTien.Size = new System.Drawing.Size(117, 24);
             this.btnRutTien.TabIndex = 112;
             this.btnRutTien.Text = "Rút tiền";
             this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRutTien.UseVisualStyleBackColor = false;
+            this.btnRutTien.Click += new System.EventHandler(this.btnRutTien_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(57, 72);
+            this.label11.Location = new System.Drawing.Point(60, 78);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 13);
             this.label11.TabIndex = 12;
@@ -194,18 +262,19 @@
             this.btnChuyenKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChuyenKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenKhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenKhoan.Location = new System.Drawing.Point(49, 264);
+            this.btnChuyenKhoan.Location = new System.Drawing.Point(49, 248);
             this.btnChuyenKhoan.Name = "btnChuyenKhoan";
             this.btnChuyenKhoan.Size = new System.Drawing.Size(117, 24);
             this.btnChuyenKhoan.TabIndex = 111;
             this.btnChuyenKhoan.Text = "Chuyển khoản";
             this.btnChuyenKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChuyenKhoan.UseVisualStyleBackColor = false;
+            this.btnChuyenKhoan.Click += new System.EventHandler(this.btnChuyenKhoan_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(57, 50);
+            this.label10.Location = new System.Drawing.Point(60, 56);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(46, 13);
             this.label10.TabIndex = 11;
@@ -218,7 +287,7 @@
             this.btnGuiTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuiTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuiTien.ForeColor = System.Drawing.Color.Black;
-            this.btnGuiTien.Location = new System.Drawing.Point(49, 222);
+            this.btnGuiTien.Location = new System.Drawing.Point(49, 206);
             this.btnGuiTien.Name = "btnGuiTien";
             this.btnGuiTien.Size = new System.Drawing.Size(117, 24);
             this.btnGuiTien.TabIndex = 110;
@@ -230,7 +299,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 35);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 60);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +313,7 @@
             this.btnTaoTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoTaiKhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(49, 176);
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(49, 160);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.Size = new System.Drawing.Size(117, 24);
             this.btnTaoTaiKhoan.TabIndex = 109;
@@ -257,7 +326,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Gray;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 138);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 122);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(31, 24);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -294,65 +363,30 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Admin";
             // 
-            // pictureBox4
+            // pictureBox10
             // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(12, 222);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 117;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(12, 486);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(31, 24);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 124;
+            this.pictureBox10.TabStop = false;
             // 
-            // pictureBox5
+            // button1
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(12, 264);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 118;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(12, 307);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 119;
-            this.pictureBox6.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(12, 354);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 120;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(12, 402);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 121;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(12, 453);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(31, 24);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 122;
-            this.pictureBox9.TabStop = false;
+            this.button1.BackColor = System.Drawing.Color.Gray;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(49, 486);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(117, 24);
+            this.button1.TabIndex = 123;
+            this.button1.Text = "Đăng xuất";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // MainForm
             // 
@@ -369,17 +403,18 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,5 +443,7 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -149,52 +149,71 @@ namespace QuanLyTaiKhoanNganHang
             {
                 Con.Open();
 
-                string query = "SELECT COUNT(*) FROM SoDuTaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
-                SqlCommand command = new SqlCommand(query, Con);
-                command.Parameters.AddWithValue("@TenTaiKhoan", txtTenTaiKhoan.Text);
-                int count = Convert.ToInt32(command.ExecuteScalar());
+                DialogResult dialogResult = MessageBox.Show("Bạn Có Chắc Muốn Gửi Tiền Vào Tài Khoản Không ?",
+                    "Xác Nhận",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information);
+                
+                if (dialogResult == DialogResult.Yes) {
 
-                if (count > 0) // Kiểm tra xem mã bệnh nhân đã tồn tại hay chưa
-                {
-                    query = "UPDATE SoDuTaiKhoan SET SoTienHienTai = @SoTienHienTai  WHERE TenTaiKhoan = @TenTaiKhoan";
-                    command = new SqlCommand(query, Con);
-
+                    string query = "SELECT COUNT(*) FROM SoDuTaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
+                    SqlCommand command = new SqlCommand(query, Con);
                     command.Parameters.AddWithValue("@TenTaiKhoan", txtTenTaiKhoan.Text);
-                    string SoTienMuonGui = string.IsNullOrEmpty(txtSoTienMuonGui.Text) ? txtSoTienMuonGui.SelectedItem.ToString() : txtSoTienMuonGui.Text;
-                    string kp = (int.Parse(txtSoTienHienTai.Text) + int.Parse(SoTienMuonGui)).ToString();
-                    command.Parameters.AddWithValue("@SoTienHienTai", kp);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
 
-                    command.ExecuteNonQuery(); // thực hiện câu truy vấn
-                    MessageBox.Show("Đã Nạp Thêm Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
+                    if (count > 0) // Kiểm tra xem mã bệnh nhân đã tồn tại hay chưa
+                    {
+                        query = "UPDATE SoDuTaiKhoan SET SoTienHienTai = @SoTienHienTai  WHERE TenTaiKhoan = @TenTaiKhoan";
+                        command = new SqlCommand(query, Con);
 
-                    txtSoTienHienTai.Text = kp;
-                    txtSoTienMuonGui.Text = "";
+                        command.Parameters.AddWithValue("@TenTaiKhoan", txtTenTaiKhoan.Text);
+                        string SoTienMuonGui = string.IsNullOrEmpty(txtSoTienMuonGui.Text) ? txtSoTienMuonGui.SelectedItem.ToString() : txtSoTienMuonGui.Text;
+                        string kp = (int.Parse(txtSoTienHienTai.Text) + int.Parse(SoTienMuonGui)).ToString();
+                        command.Parameters.AddWithValue("@SoTienHienTai", kp);
 
-                } else
-                {
-                    query = "INSERT INTO SoDuTaiKhoan (TenTaiKhoan, SoTaiKhoan, CCCD, SoTienHienTai)"
-                        + "VALUES (@TenTaiKhoan, @SoTaiKhoan, @CCCD, @SoTienHienTai)";
+                        command.ExecuteNonQuery(); // thực hiện câu truy vấn
+                        MessageBox.Show("Đã Nạp Thêm Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
 
-                    command = new SqlCommand(query, Con);
+                        txtSoTienHienTai.Text = kp;
+                        txtSoTienMuonGui.Text = "";
 
-                    command.Parameters.AddWithValue("@TenTaiKhoan", txtTenTaiKhoan.Text);
-                    command.Parameters.AddWithValue("@SoTaiKhoan", txtSoTaiKhoan.Text);
-                    command.Parameters.AddWithValue("@CCCD", txtCCCD.Text);
+                    }
+                    else
+                    {
+                        query = "INSERT INTO SoDuTaiKhoan (TenTaiKhoan, SoTaiKhoan, CCCD, SoTienHienTai)"
+                            + "VALUES (@TenTaiKhoan, @SoTaiKhoan, @CCCD, @SoTienHienTai)";
 
-                    string SoTienMuonGui = string.IsNullOrEmpty(txtSoTienMuonGui.Text) ? txtSoTienMuonGui.SelectedItem.ToString() : txtSoTienMuonGui.Text;
-                    command.Parameters.AddWithValue("@SoTienHienTai", SoTienMuonGui);
+                        command = new SqlCommand(query, Con);
 
-                    command.ExecuteNonQuery();
+                        command.Parameters.AddWithValue("@TenTaiKhoan", txtTenTaiKhoan.Text);
+                        command.Parameters.AddWithValue("@SoTaiKhoan", txtSoTaiKhoan.Text);
+                        command.Parameters.AddWithValue("@CCCD", txtCCCD.Text);
 
-                    MessageBox.Show("Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
-                    txtSoTienHienTai.Text = SoTienMuonGui;
-                    txtSoTienMuonGui.Text = "";
+                        string SoTienMuonGui = string.IsNullOrEmpty(txtSoTienMuonGui.Text) ? txtSoTienMuonGui.SelectedItem.ToString() : txtSoTienMuonGui.Text;
+                        command.Parameters.AddWithValue("@SoTienHienTai", SoTienMuonGui);
+
+                        command.ExecuteNonQuery();
+
+                        MessageBox.Show("Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
+                        txtSoTienHienTai.Text = SoTienMuonGui;
+                        txtSoTienMuonGui.Text = "";
+                    }
                 }
 
                 Con.Close();
                 ConnecSoDuTaiKhoan();
             }
 
+        }
+
+        private void txtSoTienHienTai_TextChanged(object sender, EventArgs e)
+        {
+            txtSoTienChuSo1.Text = ConvertNumber.ConvertNumberToVietnamese(txtSoTienHienTai.Text);
+        }
+
+        private void txtSoTienMuonGui_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

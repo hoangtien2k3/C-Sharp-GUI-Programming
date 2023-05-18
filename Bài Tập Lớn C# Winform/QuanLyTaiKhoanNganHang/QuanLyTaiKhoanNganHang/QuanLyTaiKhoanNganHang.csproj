@@ -47,11 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
+    <Compile Include="ConvertNumber.cs" />
     <Compile Include="FormBatDau.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormBatDau.Designer.cs">
       <DependentUpon>FormBatDau.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCaiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCaiDat.Designer.cs">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChuyenTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChuyenTien.Designer.cs">
+      <DependentUpon>FormChuyenTien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
@@ -59,11 +72,29 @@
     <Compile Include="FormDangNhap.Designer.cs">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaoDich.Designer.cs">
+      <DependentUpon>FormGiaoDich.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormGuiTien.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGuiTien.Designer.cs">
       <DependentUpon>FormGuiTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHome.Designer.cs">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRutTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRutTien.Designer.cs">
+      <DependentUpon>FormRutTien.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTaoTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -84,11 +115,26 @@
     <EmbeddedResource Include="FormBatDau.resx">
       <DependentUpon>FormBatDau.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCaiDat.resx">
+      <DependentUpon>FormCaiDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChuyenTien.resx">
+      <DependentUpon>FormChuyenTien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDangNhap.resx">
       <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaoDich.resx">
+      <DependentUpon>FormGiaoDich.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormGuiTien.resx">
       <DependentUpon>FormGuiTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHome.resx">
+      <DependentUpon>FormHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRutTien.resx">
+      <DependentUpon>FormRutTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaoTaiKhoan.resx">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>

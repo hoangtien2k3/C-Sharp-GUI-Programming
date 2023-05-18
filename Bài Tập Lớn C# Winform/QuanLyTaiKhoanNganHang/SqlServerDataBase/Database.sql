@@ -26,6 +26,7 @@ CREATE TABLE TaiKhoan
 );
 GO
 
+
 CREATE TABLE SoDuTaiKhoan
 (
 	TenTaiKhoan NVARCHAR(50) NOT NULL,
@@ -37,7 +38,36 @@ CREATE TABLE SoDuTaiKhoan
 GO
 
 
+-- Tạo bảng Giao dịch (Transaction):
+CREATE TABLE GiaoDich (
+    TenTaiKhoan NVARCHAR(50) NOT NULL,
+	SoTaiKhoan VARCHAR(14) NOT NULL,
+    NgayGiaoDich DATETIME NOT NULL,
+    GhiChu NVARCHAR(500) NOT NULL,
+	PRIMARY KEY (TenTaiKhoan)
+);
 
+
+-- thêm
+CREATE TABLE ThongTinTaiKhoan
+(
+	TenTaiKhoan NVARCHAR(50) NOT NULL,
+	SoTaiKhoan VARCHAR(14) NOT NULL,
+	MaPin INT NOT NULL
+)
+GO
+
+
+
+
+
+CREATE TABLE [User] (
+    UserID INT PRIMARY KEY,
+    UserName VARCHAR(50) NOT NULL,
+    Password VARCHAR(50) NOT NULL,
+    AccountID INT,
+    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
+);
 
 
 
