@@ -80,6 +80,8 @@ namespace QuanLyTaiKhoanNganHang
             formRutTien.MdiParent = this;
             formRutTien.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
             formRutTien.Show();
+
+            this.Hide();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -149,6 +151,14 @@ namespace QuanLyTaiKhoanNganHang
             formXoaTaiKhoan.MdiParent = this;
             formXoaTaiKhoan.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
             formXoaTaiKhoan.Show();
+        }
+
+        private void xemChiTiếtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormThongTinGiaoDich formThongTinGiaoDich = new FormThongTinGiaoDich();
+            formThongTinGiaoDich.MdiParent = this;
+            formThongTinGiaoDich.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
+            formThongTinGiaoDich.Show();
         }
     }
 }

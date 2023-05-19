@@ -21,10 +21,10 @@ CREATE TABLE TaiKhoan
     CONSTRAINT PK_TaiKhoan PRIMARY KEY (TenTaiKhoan),
     CONSTRAINT UQ_SoTaiKhoan UNIQUE (SoTaiKhoan),
     CONSTRAINT CK_MatKhau CHECK (LEN(MatKhau) >= 6 AND LEN(MatKhau) <= 12),
-    CONSTRAINT CK_GioiTinh CHECK (GioiTinh IN ('Nam', 'Nữ', 'Khác')),
     CONSTRAINT CK_NgaySinh CHECK (NgaySinh <= GETDATE())
 );
 GO
+
 
 
 CREATE TABLE SoDuTaiKhoan
@@ -46,6 +46,43 @@ CREATE TABLE GiaoDich (
     GhiChu NVARCHAR(500) NOT NULL,
 	PRIMARY KEY (TenTaiKhoan)
 );
+
+
+
+-- bảng lưu thông tin giao dịch khi gửi tiền
+CREATE TABLE GiaoDichGuiTien (
+    SoLanGui INT IDENTITY(1,1) PRIMARY KEY,
+    SoTaiKhoan NVARCHAR(50) NOT NULL,
+    SoTien DECIMAL(18, 2) NOT NULL,
+    NgayGiaoDich VARCHAR(50) NOT NULL,
+	GioGiaoDich VARCHAR(50) NOT NULL
+);
+
+
+-- bảng lưu thông tin giao dịch khi gửi tiền
+CREATE TABLE GiaoDichChuyenTien (
+    SoLanChuyen INT IDENTITY(1,1) PRIMARY KEY,
+    SoTaiKhoan NVARCHAR(50) NOT NULL,
+    SoTien DECIMAL(18, 2) NOT NULL,
+    NgayGiaoDich VARCHAR(50) NOT NULL,
+	GioGiaoDich VARCHAR(50) NOT NULL
+);
+
+
+-- bảng lưu thông tin giao dịch khi gửi tiền
+CREATE TABLE GiaoDichRutTien (
+    SoLanRut INT IDENTITY(1,1) PRIMARY KEY,
+    SoTaiKhoan NVARCHAR(50) NOT NULL,
+    SoTien DECIMAL(18, 2) NOT NULL,
+    NgayGiaoDich VARCHAR(50) NOT NULL,
+	GioGiaoDich VARCHAR(50) NOT NULL
+);
+
+
+
+
+
+
 
 
 -- thêm

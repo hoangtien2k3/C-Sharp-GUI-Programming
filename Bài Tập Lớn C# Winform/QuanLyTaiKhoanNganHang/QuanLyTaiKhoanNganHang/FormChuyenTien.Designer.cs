@@ -41,6 +41,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.SoDuTaiKhoanGV = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -66,7 +67,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoTienChuSo = new System.Windows.Forms.TextBox();
             this.cbbDenTaiKhoan = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -212,6 +212,17 @@
             this.groupBox2.TabIndex = 77;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tìm kiếm tài khoản";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(36, 177);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 15);
+            this.label12.TabIndex = 94;
+            this.label12.Text = "Profile Picture";
             // 
             // button9
             // 
@@ -477,17 +488,6 @@
             this.cbbDenTaiKhoan.Name = "cbbDenTaiKhoan";
             this.cbbDenTaiKhoan.Size = new System.Drawing.Size(217, 21);
             this.cbbDenTaiKhoan.TabIndex = 84;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(36, 177);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 15);
-            this.label12.TabIndex = 94;
-            this.label12.Text = "Profile Picture";
             // 
             // FormChuyenTien
             // 

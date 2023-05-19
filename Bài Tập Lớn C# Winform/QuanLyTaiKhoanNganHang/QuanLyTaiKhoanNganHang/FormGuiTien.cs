@@ -114,7 +114,7 @@ namespace QuanLyTaiKhoanNganHang
                     }
                     else
                     {
-                        txtSoTienHienTai.Text = "000.000";
+                        txtSoTienHienTai.Text = "000000";
                     }
                     reader.Close();
                     command.Dispose();
@@ -140,6 +140,37 @@ namespace QuanLyTaiKhoanNganHang
         }
 
 
+        private void ThongTinGiaoDichGuiTien()
+        {
+            string soTaiKhoan = txtSoTaiKhoan.Text;
+            decimal soTien = decimal.Parse(txtSoTienMuonGui.Text);
+
+            string insertQuery = "INSERT INTO GiaoDichGuiTien (SoTaiKhoan, SoTien, NgayGiaoDich, GioGiaoDich) " +
+                "VALUES (@SoTaiKhoan, @SoTien, @NgayGiaoDich, @GioGiaoDich)";
+
+            using (SqlConnection connection = Connection.getInstance().getConnection())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@SoTaiKhoan", soTaiKhoan);
+                    command.Parameters.AddWithValue("@SoTien", soTien);
+                    command.Parameters.AddWithValue("@NgayGiaoDich", DateTime.Now.ToString("dd/MM/yyyy"));
+                    command.Parameters.AddWithValue("@GioGiaoDich", DateTime.Now.ToString("HH:mm:ss"));
+
+                    command.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+
+            // MessageBox.Show("Giao dịch gửi tiền thành công!");
+
+            txtSoTienMuonGui.Text = string.Empty;
+        }
+
+
         private void btnGuiTien_Click(object sender, EventArgs e)
         {
             if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "")
@@ -155,6 +186,8 @@ namespace QuanLyTaiKhoanNganHang
                     MessageBoxIcon.Information);
                 
                 if (dialogResult == DialogResult.Yes) {
+
+                    
 
                     string query = "SELECT COUNT(*) FROM SoDuTaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
                     SqlCommand command = new SqlCommand(query, Con);
@@ -175,7 +208,6 @@ namespace QuanLyTaiKhoanNganHang
                         MessageBox.Show("Đã Nạp Thêm Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
 
                         txtSoTienHienTai.Text = kp;
-                        txtSoTienMuonGui.Text = "";
 
                     }
                     else
@@ -196,12 +228,14 @@ namespace QuanLyTaiKhoanNganHang
 
                         MessageBox.Show("Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
                         txtSoTienHienTai.Text = SoTienMuonGui;
-                        txtSoTienMuonGui.Text = "";
+
                     }
                 }
 
+
                 Con.Close();
                 ConnecSoDuTaiKhoan();
+                ThongTinGiaoDichGuiTien();
             }
 
         }

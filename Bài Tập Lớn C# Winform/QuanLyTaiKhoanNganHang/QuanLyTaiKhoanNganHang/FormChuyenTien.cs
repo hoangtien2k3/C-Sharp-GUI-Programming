@@ -207,6 +207,38 @@ namespace QuanLyTaiKhoanNganHang
             }
         }
 
+
+        private void ThongTinGiaoDichChuyenTien()
+        {
+            string soTaiKhoan = txtSoTaiKhoan.Text;
+            decimal soTien = decimal.Parse(txtSoTienMuonChuyen.Text);
+
+            string insertQuery = "INSERT INTO GiaoDichChuyenTien (SoTaiKhoan, SoTien, NgayGiaoDich, GioGiaoDich) " +
+                "VALUES (@SoTaiKhoan, @SoTien, @NgayGiaoDich, @GioGiaoDich)";
+
+            using (SqlConnection connection = Connection.getInstance().getConnection())
+            {
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@SoTaiKhoan", soTaiKhoan);
+                    command.Parameters.AddWithValue("@SoTien", soTien);
+                    command.Parameters.AddWithValue("@NgayGiaoDich", DateTime.Now.ToString("dd/MM/yyyy"));
+                    command.Parameters.AddWithValue("@GioGiaoDich", DateTime.Now.ToString("HH:mm:ss"));
+
+                    command.ExecuteNonQuery();
+                }
+
+                connection.Close();
+            }
+
+            // MessageBox.Show("Giao dịch gửi tiền thành công!");
+
+            txtSoTienMuonChuyen.Text = string.Empty;
+        }
+
+
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
             if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "")
@@ -233,6 +265,7 @@ namespace QuanLyTaiKhoanNganHang
                     {
                         updateSoTienHienTai1();
                         updateSoTienHienTai2();
+                        ThongTinGiaoDichChuyenTien();
                         MessageBox.Show("Đã Chuyển Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
                         txtSoTienMuonChuyen.Text = "";
                     }

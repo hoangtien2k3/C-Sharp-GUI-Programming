@@ -101,7 +101,6 @@ namespace QuanLyTaiKhoanNganHang
             }
         }
 
-
         public void ConnecXoaTaiKhoan()
         {
             Con.Open();

@@ -15,14 +15,6 @@ namespace QuanLyTaiKhoanNganHang
         private static string[] tens = { "", "", "hai mươi", "ba mươi", "bốn mươi", "năm mươi", "sáu mươi", "bảy mươi", "tám mươi", "chín mươi" };
         private static string[] hundreds = { "", "một trăm", "hai trăm", "ba trăm", "bốn trăm", "năm trăm", "sáu trăm", "bảy trăm", "tám trăm", "chín trăm" };
 
-        /*static void Main(string[] args)
-        {
-            Console.WriteLine("Nhập một số nguyên lớn: ");
-            string number = Console.ReadLine();
-
-            string result = ConvertNumberToVietnamese(number);
-            Console.WriteLine("Cách đọc tiếng Việt của số {0} là: {1}", number, result);
-        }*/
 
         public static string ConvertNumberToVietnamese(string number)
         {
@@ -30,6 +22,89 @@ namespace QuanLyTaiKhoanNganHang
 
             // Chia số thành các đoạn 3 chữ số
             List<string> chunks = new List<string>();
+
+            while (number.Length > 0)
+            {
+                int chunkLength = Math.Min(3, number.Length);
+                string chunk = number.Substring(number.Length - chunkLength);
+                number = number.Remove(number.Length - chunkLength);
+
+                chunks.Insert(0, chunk);
+            }
+
+            // Đọc từng đoạn 3 chữ số
+            for (int i = 0; i < chunks.Count; i++)
+            {
+                if (long.TryParse(chunks[i], out long chunkNumber))
+                {
+                    if (chunkNumber == 0)
+                    {
+                        continue; // Bỏ qua đoạn có số 0
+                    }
+
+                    string chunkText = ConvertChunkToVietnamese(chunkNumber);
+                    string unit = units[Math.Min(units.Length - 1, chunks.Count - i - 1)];
+
+                    if (!string.IsNullOrEmpty(chunkText))
+                    {
+                        if (!string.IsNullOrEmpty(result))
+                        {
+                            result += " ";
+                        }
+                        result += chunkText + " " + unit;
+                    }
+                }
+                else
+                {
+                    // Xử lý khi chuỗi không đúng định dạng số
+                    // return hoặc xử lý theo yêu cầu của bạn
+                }
+            }
+
+            return result;
+        }
+
+        private static string ConvertChunkToVietnamese(long chunkNumber)
+        {
+            string chunkText = "";
+
+            if (chunkNumber < 20)
+            {
+                chunkText = ones[(int)chunkNumber];
+            }
+            else if (chunkNumber < 100)
+            {
+                int tensDigit = (int)(chunkNumber / 10);
+                int onesDigit = (int)(chunkNumber % 10);
+
+                chunkText = tens[tensDigit] + " " + ones[onesDigit];
+            }
+            else
+            {
+                int hundredsDigit = (int)(chunkNumber / 100);
+                int tensDigit = (int)((chunkNumber % 100) / 10);
+                int onesDigit = (int)(chunkNumber % 10);
+
+                if (hundredsDigit == 0)
+                {
+                    chunkText = tens[tensDigit] + " " + ones[onesDigit];
+                }
+                else
+                {
+                    chunkText = hundreds[hundredsDigit] + " " + tens[tensDigit] + " " + ones[onesDigit];
+                }
+            }
+
+            return chunkText;
+        }
+
+
+        /*public static string ConvertNumberToVietnamese(string number)        {
+            string result = "";
+
+            // Chia số thành các đoạn 3 chữ số
+            List<string> chunks = new List<string>();
+
             while (number.Length > 0)
             {
                 int chunkLength = Math.Min(3, number.Length);
@@ -99,7 +174,7 @@ namespace QuanLyTaiKhoanNganHang
             }
 
             return chunkText;
-        }
+        }*/
 
     }
 }

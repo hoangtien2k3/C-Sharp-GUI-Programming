@@ -108,6 +108,18 @@
     <Compile Include="FormTaoTaiKhoan.Designer.cs">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinGiaoDich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinGiaoDich.Designer.cs">
+      <DependentUpon>FormThongTinGiaoDich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormXoaTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaoTaiKhoan.resx">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinGiaoDich.resx">
+      <DependentUpon>FormThongTinGiaoDich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXoaTaiKhoan.resx">
       <DependentUpon>FormXoaTaiKhoan.cs</DependentUpon>

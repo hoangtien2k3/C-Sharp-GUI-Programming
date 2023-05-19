@@ -62,7 +62,7 @@
             this.btnTaoTaiKhoan = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.BtnXoaBenhNhan = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
@@ -80,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -143,11 +142,11 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(63, 16);
+            this.label2.Location = new System.Drawing.Point(55, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 16);
+            this.label2.Size = new System.Drawing.Size(111, 16);
             this.label2.TabIndex = 124;
-            this.label2.Text = "MB Bank";
+            this.label2.Text = "Ngân Hàng QG";
             // 
             // pictureBox11
             // 
@@ -203,6 +202,7 @@
             this.xemChiTiếtThôngTinToolStripMenuItem.Name = "xemChiTiếtThôngTinToolStripMenuItem";
             this.xemChiTiếtThôngTinToolStripMenuItem.Size = new System.Drawing.Size(244, 22);
             this.xemChiTiếtThôngTinToolStripMenuItem.Text = "Xem Chi Tiết Thông Tin";
+            this.xemChiTiếtThôngTinToolStripMenuItem.Click += new System.EventHandler(this.xemChiTiếtThôngTinToolStripMenuItem_Click);
             // 
             // hướngDẫnDùngAppToolStripMenuItem
             // 
@@ -447,7 +447,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.BtnXoaBenhNhan);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -456,15 +456,21 @@
             this.panel1.Size = new System.Drawing.Size(1035, 51);
             this.panel1.TabIndex = 3;
             // 
-            // pictureBox10
+            // BtnXoaBenhNhan
             // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(986, 7);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(37, 41);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 123;
-            this.pictureBox10.TabStop = false;
+            this.BtnXoaBenhNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnXoaBenhNhan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnXoaBenhNhan.BackgroundImage")));
+            this.BtnXoaBenhNhan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnXoaBenhNhan.FlatAppearance.BorderSize = 0;
+            this.BtnXoaBenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnXoaBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnXoaBenhNhan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.BtnXoaBenhNhan.Location = new System.Drawing.Point(968, 6);
+            this.BtnXoaBenhNhan.Name = "BtnXoaBenhNhan";
+            this.BtnXoaBenhNhan.Size = new System.Drawing.Size(55, 42);
+            this.BtnXoaBenhNhan.TabIndex = 51;
+            this.BtnXoaBenhNhan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnXoaBenhNhan.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -480,7 +486,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(894, 16);
+            this.label1.Location = new System.Drawing.Point(876, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 0;
@@ -493,7 +499,7 @@
             this.ClientSize = new System.Drawing.Size(1204, 557);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -518,7 +524,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -554,11 +559,11 @@
         private System.Windows.Forms.ToolStripMenuItem hướngDẫnDùngAppToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngXuấtToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem đăngNhậpTàiKhoảnKhácToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label lblDataTimeNow;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button BtnXoaBenhNhan;
     }
 }
