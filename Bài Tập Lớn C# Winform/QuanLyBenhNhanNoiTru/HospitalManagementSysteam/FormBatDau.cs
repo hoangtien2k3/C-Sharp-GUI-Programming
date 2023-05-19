@@ -41,7 +41,42 @@ namespace HospitalManagementSysteam
         private void FormBatDau_Load(object sender, EventArgs e)
         {
             timer1.Start();
+
+            // Khởi tạo và cấu hình Timer
+            timer = new Timer();
+            timer.Interval = delay;
+            timer.Tick += Timer_Tick;
+
+            // Bắt đầu hiệu ứng chữ chạy
+            timer.Start();
         }
+
+
+        // thêm dòng chữ chạy
+        private string[] texts = new string[]
+        {
+            "Đang kết nối tới database ...",
+            "Kết nối các dữ liệu ...",
+            "Đang mở hệ thống ..."
+        };
+
+        private int currentIndex = 0;
+        private Timer timer;
+        private int delay = 3000; // Khoảng thời gian (milisecond) giữa mỗi dòng chữ
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            // Cập nhật nội dung của Label với dòng chữ hiện tại
+            lblDongChuChay.Text = texts[currentIndex];
+
+            // Tăng chỉ số currentIndex để chuyển sang dòng chữ tiếp theo
+            currentIndex++;
+
+            // Nếu currentIndex vượt quá chỉ số của mảng texts, đặt lại currentIndex về 0
+            if (currentIndex >= texts.Length)
+                currentIndex = 0;
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {

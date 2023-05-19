@@ -56,12 +56,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.XoaTaiKhoanGV = new System.Windows.Forms.DataGridView();
             this.btnXoaTaiKhoan = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.XoaTaiKhoanGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -361,19 +365,41 @@
             // 
             // btnXoaTaiKhoan
             // 
-            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(749, 312);
+            this.btnXoaTaiKhoan.Location = new System.Drawing.Point(729, 303);
             this.btnXoaTaiKhoan.Name = "btnXoaTaiKhoan";
-            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(124, 60);
+            this.btnXoaTaiKhoan.Size = new System.Drawing.Size(124, 43);
             this.btnXoaTaiKhoan.TabIndex = 78;
             this.btnXoaTaiKhoan.Text = "Xóa Tài Khoản";
             this.btnXoaTaiKhoan.UseVisualStyleBackColor = true;
             this.btnXoaTaiKhoan.Click += new System.EventHandler(this.btnXoaTaiKhoan_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(669, 303);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 43);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 79;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(655, 368);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(198, 120);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 80;
+            this.pictureBox2.TabStop = false;
             // 
             // FormXoaTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 500);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnXoaTaiKhoan);
             this.Controls.Add(this.XoaTaiKhoanGV);
             this.Controls.Add(this.groupBox2);
@@ -393,6 +419,8 @@
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.XoaTaiKhoanGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +454,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView XoaTaiKhoanGV;
         private System.Windows.Forms.Button btnXoaTaiKhoan;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

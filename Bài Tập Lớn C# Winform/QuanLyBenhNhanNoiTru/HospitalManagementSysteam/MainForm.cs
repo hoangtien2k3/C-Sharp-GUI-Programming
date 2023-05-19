@@ -14,6 +14,57 @@ namespace HospitalManagementSysteam
 {
     public partial class MainForm : Form
     {
+
+        private List<Button> buttons; // Danh sách các Button
+        private Button selectedButton; // Button đang được chọn
+
+        private void InitializeButtons()
+        {
+            // Khởi tạo danh sách các Button
+            buttons = new List<Button>
+            {
+                btnBenhNhan,
+                btnBacSi,
+                btnBenhAn,
+                btnHoSo,
+                btnVienPhi,
+                btnDangXuat
+                // Thêm các Button khác vào danh sách
+            };
+
+            // Đặt sự kiện Click cho các Button
+            foreach (Button button in buttons)
+            {
+                button.Click += Button_Click;
+            }
+        }
+
+        private void Button_Click(object sender, EventArgs e)
+        {
+            Button clickedButton = (Button)sender;
+
+            // Kiểm tra nếu Button đã được chọn trước đó
+            if (clickedButton == selectedButton)
+            {
+                // Không làm gì nếu Button đã được chọn trước đó
+                return;
+            }
+
+            // Đặt lại màu chữ của Button trước đó về màu ban đầu (nếu có)
+            if (selectedButton != null)
+            {
+                selectedButton.ForeColor = SystemColors.ControlText;
+            }
+
+            // Thay đổi màu chữ của Button được nhấn thành màu mới
+            clickedButton.ForeColor = Color.Blue;
+
+            // Lưu Button được nhấn vào selectedButton
+            selectedButton = clickedButton;
+        }
+
+
+
         private System.Windows.Forms.Timer timer;
 
         // Phương thức để cập nhật giờ
@@ -32,6 +83,7 @@ namespace HospitalManagementSysteam
         public MainForm()
         {
             InitializeComponent();
+            InitializeButtons();  // để thay đổi màu sác của chữ trong button khi button đó được ấn vào.
 
             // Khởi tạo timer
             timer = new System.Windows.Forms.Timer();

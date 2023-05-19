@@ -228,6 +228,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FormQuenMatKhau";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQuenMatKhau";

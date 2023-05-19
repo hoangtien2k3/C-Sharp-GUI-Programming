@@ -64,6 +64,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.SoDuTaiKhoanGV = new System.Windows.Forms.DataGridView();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -71,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SoDuTaiKhoanGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,14 +112,16 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox4);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.cbbTenTaiKhoan);
             this.groupBox1.Controls.Add(this.cbbSoTaiKhoan);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(45, 87);
+            this.groupBox1.Location = new System.Drawing.Point(26, 84);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 153);
+            this.groupBox1.Size = new System.Drawing.Size(411, 169);
             this.groupBox1.TabIndex = 73;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm tài khoản";
@@ -140,9 +146,11 @@
             // 
             // btnTimKiem
             // 
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnTimKiem.Location = new System.Drawing.Point(175, 115);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(98, 32);
+            this.btnTimKiem.Size = new System.Drawing.Size(114, 38);
             this.btnTimKiem.TabIndex = 26;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -464,11 +472,32 @@
             // SoDuTaiKhoanGV
             // 
             this.SoDuTaiKhoanGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SoDuTaiKhoanGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.SoDuTaiKhoanGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SoDuTaiKhoanGV.Location = new System.Drawing.Point(0, 29);
             this.SoDuTaiKhoanGV.Name = "SoDuTaiKhoanGV";
             this.SoDuTaiKhoanGV.Size = new System.Drawing.Size(450, 172);
             this.SoDuTaiKhoanGV.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(345, 44);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 76;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(345, 79);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 78;
+            this.pictureBox4.TabStop = false;
             // 
             // FormGuiTien
             // 
@@ -494,6 +523,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.SoDuTaiKhoanGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -535,5 +566,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSoTienChuSo1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

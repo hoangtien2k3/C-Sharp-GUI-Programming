@@ -105,5 +105,18 @@ namespace QuanLyTaiKhoanNganHang
                 "\n\nSau đó vào chức năng đăng ký tài khoản.";
             MessageBox.Show(ans);
         }
+
+        private void FormDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                // gọi hàm đăng nhập tại đây
+                btnDangNhap_Click(sender, e);
+            }
+        }
+
+        private void btnDangNhap_KeyDown(object sender, KeyEventArgs e)
+        {
+        }
     }
 }

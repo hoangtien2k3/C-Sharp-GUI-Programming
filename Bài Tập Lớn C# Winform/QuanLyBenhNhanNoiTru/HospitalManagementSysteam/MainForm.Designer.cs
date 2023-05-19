@@ -37,15 +37,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.ptbHome = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnHoSo = new System.Windows.Forms.Button();
+            this.btnBenhAn = new System.Windows.Forms.Button();
             this.ptbBenhNhan = new System.Windows.Forms.PictureBox();
             this.pictureBoxBacSi = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnBacSi = new System.Windows.Forms.Button();
             this.btnBenhNhan = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnTkVienPhi = new System.Windows.Forms.Button();
+            this.btnVienPhi = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -158,53 +158,53 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
-            // btnLogout
+            // btnDangXuat
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnLogout.FlatAppearance.BorderSize = 0;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.Blue;
-            this.btnLogout.Location = new System.Drawing.Point(56, 426);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(98, 40);
-            this.btnLogout.TabIndex = 98;
-            this.btnLogout.Text = "Đăng Xuất";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnDangXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnDangXuat.FlatAppearance.BorderSize = 0;
+            this.btnDangXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangXuat.ForeColor = System.Drawing.Color.Black;
+            this.btnDangXuat.Location = new System.Drawing.Point(56, 426);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(98, 40);
+            this.btnDangXuat.TabIndex = 98;
+            this.btnDangXuat.Text = "Đăng Xuất";
+            this.btnDangXuat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDangXuat.UseVisualStyleBackColor = false;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // button1
+            // btnHoSo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Blue;
-            this.button1.Location = new System.Drawing.Point(57, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 37);
-            this.button1.TabIndex = 100;
-            this.button1.Text = "Hồ Sơ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnHoSo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnHoSo.FlatAppearance.BorderSize = 0;
+            this.btnHoSo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHoSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHoSo.ForeColor = System.Drawing.Color.Black;
+            this.btnHoSo.Location = new System.Drawing.Point(57, 299);
+            this.btnHoSo.Name = "btnHoSo";
+            this.btnHoSo.Size = new System.Drawing.Size(98, 37);
+            this.btnHoSo.TabIndex = 100;
+            this.btnHoSo.Text = "Hồ Sơ";
+            this.btnHoSo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnHoSo.UseVisualStyleBackColor = false;
+            this.btnHoSo.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // button3
+            // btnBenhAn
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(57, 239);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 36);
-            this.button3.TabIndex = 101;
-            this.button3.Text = "Bệnh Án";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnBenhAn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBenhAn.FlatAppearance.BorderSize = 0;
+            this.btnBenhAn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBenhAn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBenhAn.ForeColor = System.Drawing.Color.Black;
+            this.btnBenhAn.Location = new System.Drawing.Point(57, 239);
+            this.btnBenhAn.Name = "btnBenhAn";
+            this.btnBenhAn.Size = new System.Drawing.Size(98, 36);
+            this.btnBenhAn.TabIndex = 101;
+            this.btnBenhAn.Text = "Bệnh Án";
+            this.btnBenhAn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBenhAn.UseVisualStyleBackColor = false;
+            this.btnBenhAn.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // ptbBenhNhan
             // 
@@ -230,21 +230,21 @@
             this.pictureBoxBacSi.TabStop = false;
             this.pictureBoxBacSi.Click += new System.EventHandler(this.pictureBoxBacSi_Click);
             // 
-            // button4
+            // btnBacSi
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(57, 182);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 38);
-            this.button4.TabIndex = 102;
-            this.button4.Text = "Bác Sĩ";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnBacSi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnBacSi.FlatAppearance.BorderSize = 0;
+            this.btnBacSi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBacSi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBacSi.ForeColor = System.Drawing.Color.Black;
+            this.btnBacSi.Location = new System.Drawing.Point(57, 182);
+            this.btnBacSi.Name = "btnBacSi";
+            this.btnBacSi.Size = new System.Drawing.Size(98, 38);
+            this.btnBacSi.TabIndex = 102;
+            this.btnBacSi.Text = "Bác Sĩ";
+            this.btnBacSi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBacSi.UseVisualStyleBackColor = false;
+            this.btnBacSi.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // btnBenhNhan
             // 
@@ -252,7 +252,7 @@
             this.btnBenhNhan.FlatAppearance.BorderSize = 0;
             this.btnBenhNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBenhNhan.ForeColor = System.Drawing.Color.Blue;
+            this.btnBenhNhan.ForeColor = System.Drawing.Color.Black;
             this.btnBenhNhan.Location = new System.Drawing.Point(57, 124);
             this.btnBenhNhan.Name = "btnBenhNhan";
             this.btnBenhNhan.Size = new System.Drawing.Size(98, 38);
@@ -273,21 +273,21 @@
             this.pictureBox1.TabIndex = 109;
             this.pictureBox1.TabStop = false;
             // 
-            // btnTkVienPhi
+            // btnVienPhi
             // 
-            this.btnTkVienPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnTkVienPhi.FlatAppearance.BorderSize = 0;
-            this.btnTkVienPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTkVienPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTkVienPhi.ForeColor = System.Drawing.Color.Blue;
-            this.btnTkVienPhi.Location = new System.Drawing.Point(56, 366);
-            this.btnTkVienPhi.Name = "btnTkVienPhi";
-            this.btnTkVienPhi.Size = new System.Drawing.Size(98, 40);
-            this.btnTkVienPhi.TabIndex = 110;
-            this.btnTkVienPhi.Text = "Viện Phí";
-            this.btnTkVienPhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTkVienPhi.UseVisualStyleBackColor = false;
-            this.btnTkVienPhi.Click += new System.EventHandler(this.btnTkVienPhi_Click);
+            this.btnVienPhi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnVienPhi.FlatAppearance.BorderSize = 0;
+            this.btnVienPhi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVienPhi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVienPhi.ForeColor = System.Drawing.Color.Black;
+            this.btnVienPhi.Location = new System.Drawing.Point(56, 366);
+            this.btnVienPhi.Name = "btnVienPhi";
+            this.btnVienPhi.Size = new System.Drawing.Size(98, 40);
+            this.btnVienPhi.TabIndex = 110;
+            this.btnVienPhi.Text = "Viện Phí";
+            this.btnVienPhi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVienPhi.UseVisualStyleBackColor = false;
+            this.btnVienPhi.Click += new System.EventHandler(this.btnTkVienPhi_Click);
             // 
             // panel1
             // 
@@ -471,14 +471,14 @@
             this.ClientSize = new System.Drawing.Size(1190, 560);
             this.Controls.Add(this.lblDataTimeNow);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnTkVienPhi);
+            this.Controls.Add(this.btnVienPhi);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnBenhNhan);
             this.Controls.Add(this.ptbBenhNhan);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.btnBacSi);
+            this.Controls.Add(this.btnBenhAn);
+            this.Controls.Add(this.btnHoSo);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.ptbHome);
             this.Controls.Add(this.pictureBoxBenhAn);
@@ -519,15 +519,15 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox ptbHome;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnHoSo;
+        private System.Windows.Forms.Button btnBenhAn;
         private System.Windows.Forms.PictureBox ptbBenhNhan;
         private System.Windows.Forms.PictureBox pictureBoxBacSi;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnBacSi;
         private System.Windows.Forms.Button btnBenhNhan;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnTkVienPhi;
+        private System.Windows.Forms.Button btnVienPhi;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;

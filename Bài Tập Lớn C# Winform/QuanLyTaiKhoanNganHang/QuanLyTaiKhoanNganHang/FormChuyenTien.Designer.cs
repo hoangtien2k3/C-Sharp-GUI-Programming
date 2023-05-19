@@ -67,6 +67,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoTienChuSo = new System.Windows.Forms.TextBox();
             this.cbbDenTaiKhoan = new System.Windows.Forms.ComboBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -75,6 +79,10 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -112,14 +120,18 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox12);
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.cbbTenTaiKhoan);
             this.groupBox1.Controls.Add(this.cbbSoTaiKhoan);
             this.groupBox1.Controls.Add(this.btnKiemTra);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(26, 68);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(26, 79);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(385, 153);
+            this.groupBox1.Size = new System.Drawing.Size(394, 177);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm tài khoản";
@@ -129,7 +141,7 @@
             this.cbbTenTaiKhoan.FormattingEnabled = true;
             this.cbbTenTaiKhoan.Location = new System.Drawing.Point(140, 78);
             this.cbbTenTaiKhoan.Name = "cbbTenTaiKhoan";
-            this.cbbTenTaiKhoan.Size = new System.Drawing.Size(199, 21);
+            this.cbbTenTaiKhoan.Size = new System.Drawing.Size(199, 24);
             this.cbbTenTaiKhoan.TabIndex = 28;
             // 
             // cbbSoTaiKhoan
@@ -137,14 +149,14 @@
             this.cbbSoTaiKhoan.FormattingEnabled = true;
             this.cbbSoTaiKhoan.Location = new System.Drawing.Point(140, 43);
             this.cbbSoTaiKhoan.Name = "cbbSoTaiKhoan";
-            this.cbbSoTaiKhoan.Size = new System.Drawing.Size(199, 21);
+            this.cbbSoTaiKhoan.Size = new System.Drawing.Size(199, 24);
             this.cbbSoTaiKhoan.TabIndex = 27;
             // 
             // btnKiemTra
             // 
-            this.btnKiemTra.Location = new System.Drawing.Point(168, 114);
+            this.btnKiemTra.Location = new System.Drawing.Point(210, 122);
             this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(93, 33);
+            this.btnKiemTra.Size = new System.Drawing.Size(82, 39);
             this.btnKiemTra.TabIndex = 26;
             this.btnKiemTra.Text = "Kiểm Tra";
             this.btnKiemTra.UseVisualStyleBackColor = true;
@@ -173,6 +185,8 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.SoDuTaiKhoanGV);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
             this.groupBox3.Location = new System.Drawing.Point(524, 68);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(482, 201);
@@ -183,6 +197,7 @@
             // SoDuTaiKhoanGV
             // 
             this.SoDuTaiKhoanGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.SoDuTaiKhoanGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.SoDuTaiKhoanGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SoDuTaiKhoanGV.Location = new System.Drawing.Point(0, 29);
             this.SoDuTaiKhoanGV.Name = "SoDuTaiKhoanGV";
@@ -362,14 +377,14 @@
             "10000000"});
             this.txtSoTienMuonChuyen.Location = new System.Drawing.Point(145, 157);
             this.txtSoTienMuonChuyen.Name = "txtSoTienMuonChuyen";
-            this.txtSoTienMuonChuyen.Size = new System.Drawing.Size(215, 21);
+            this.txtSoTienMuonChuyen.Size = new System.Drawing.Size(238, 24);
             this.txtSoTienMuonChuyen.TabIndex = 29;
             // 
             // btnChuyenTien
             // 
-            this.btnChuyenTien.Location = new System.Drawing.Point(424, 118);
+            this.btnChuyenTien.Location = new System.Drawing.Point(407, 118);
             this.btnChuyenTien.Name = "btnChuyenTien";
-            this.btnChuyenTien.Size = new System.Drawing.Size(96, 60);
+            this.btnChuyenTien.Size = new System.Drawing.Size(113, 60);
             this.btnChuyenTien.TabIndex = 83;
             this.btnChuyenTien.Text = "Chuyển Tiền";
             this.btnChuyenTien.UseVisualStyleBackColor = true;
@@ -421,6 +436,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.pictureBox4);
             this.groupBox4.Controls.Add(this.label11);
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Controls.Add(this.label10);
@@ -432,6 +448,7 @@
             this.groupBox4.Controls.Add(this.button5);
             this.groupBox4.Controls.Add(this.btnChuyenTien);
             this.groupBox4.Controls.Add(this.txtSoTienHienTai);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(486, 294);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(544, 205);
@@ -486,8 +503,49 @@
             this.cbbDenTaiKhoan.FormattingEnabled = true;
             this.cbbDenTaiKhoan.Location = new System.Drawing.Point(145, 118);
             this.cbbDenTaiKhoan.Name = "cbbDenTaiKhoan";
-            this.cbbDenTaiKhoan.Size = new System.Drawing.Size(217, 21);
+            this.cbbDenTaiKhoan.Size = new System.Drawing.Size(238, 24);
             this.cbbDenTaiKhoan.TabIndex = 84;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(345, 43);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 85;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(345, 79);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 23);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 86;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(170, 122);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox12.TabIndex = 85;
+            this.pictureBox12.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(398, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(134, 91);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 90;
+            this.pictureBox4.TabStop = false;
             // 
             // FormChuyenTien
             // 
@@ -516,6 +574,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -560,5 +622,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txtSoTienChuSo;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

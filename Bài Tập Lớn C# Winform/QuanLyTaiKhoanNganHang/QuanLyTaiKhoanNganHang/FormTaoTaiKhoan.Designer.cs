@@ -64,11 +64,13 @@
             this.txtImageData = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.rdbKhac = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ptbTaiAnh)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachTaiKhoanGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // ptbTaiAnh
@@ -340,6 +342,7 @@
             // 
             // DanhSachTaiKhoanGV
             // 
+            this.DanhSachTaiKhoanGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.DanhSachTaiKhoanGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DanhSachTaiKhoanGV.Location = new System.Drawing.Point(0, 19);
             this.DanhSachTaiKhoanGV.Name = "DanhSachTaiKhoanGV";
@@ -349,19 +352,24 @@
             // 
             // btnTaoTaiKhoan
             // 
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(530, 264);
+            this.btnTaoTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(570, 258);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
-            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(110, 32);
+            this.btnTaoTaiKhoan.Size = new System.Drawing.Size(128, 42);
             this.btnTaoTaiKhoan.TabIndex = 102;
             this.btnTaoTaiKhoan.Text = "Tạo tài khoản";
+            this.btnTaoTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
             this.btnTaoTaiKhoan.Click += new System.EventHandler(this.btnTaoTaiKhoan_Click);
             // 
             // btnTaoMoi
             // 
-            this.btnTaoMoi.Location = new System.Drawing.Point(401, 264);
+            this.btnTaoMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaoMoi.Location = new System.Drawing.Point(379, 258);
             this.btnTaoMoi.Name = "btnTaoMoi";
-            this.btnTaoMoi.Size = new System.Drawing.Size(91, 32);
+            this.btnTaoMoi.Size = new System.Drawing.Size(115, 42);
             this.btnTaoMoi.TabIndex = 103;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = true;
@@ -402,11 +410,23 @@
             this.rdbKhac.Text = "Khác";
             this.rdbKhac.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(530, 258);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(36, 42);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 109;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormTaoTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 500);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCCCD);
             this.Controls.Add(this.txtImageData);
             this.Controls.Add(this.cbbLoaiTaiKhoan);
@@ -450,6 +470,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DanhSachTaiKhoanGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,5 +513,6 @@
         private System.Windows.Forms.TextBox txtImageData;
         private System.Windows.Forms.TextBox txtCCCD;
         private System.Windows.Forms.RadioButton rdbKhac;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
