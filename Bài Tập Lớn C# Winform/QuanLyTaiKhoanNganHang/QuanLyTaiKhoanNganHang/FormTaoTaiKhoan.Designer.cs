@@ -59,7 +59,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DanhSachTaiKhoanGV = new System.Windows.Forms.DataGridView();
             this.btnTaoTaiKhoan = new System.Windows.Forms.Button();
-            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnTaoMoi = new System.Windows.Forms.Button();
             this.cbbLoaiTaiKhoan = new System.Windows.Forms.ComboBox();
             this.txtImageData = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
@@ -349,7 +349,7 @@
             // 
             // btnTaoTaiKhoan
             // 
-            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(556, 264);
+            this.btnTaoTaiKhoan.Location = new System.Drawing.Point(530, 264);
             this.btnTaoTaiKhoan.Name = "btnTaoTaiKhoan";
             this.btnTaoTaiKhoan.Size = new System.Drawing.Size(110, 32);
             this.btnTaoTaiKhoan.TabIndex = 102;
@@ -357,14 +357,15 @@
             this.btnTaoTaiKhoan.UseVisualStyleBackColor = true;
             this.btnTaoTaiKhoan.Click += new System.EventHandler(this.btnTaoTaiKhoan_Click);
             // 
-            // btnLamMoi
+            // btnTaoMoi
             // 
-            this.btnLamMoi.Location = new System.Drawing.Point(401, 264);
-            this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(91, 32);
-            this.btnLamMoi.TabIndex = 103;
-            this.btnLamMoi.Text = "Làm mới";
-            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnTaoMoi.Location = new System.Drawing.Point(401, 264);
+            this.btnTaoMoi.Name = "btnTaoMoi";
+            this.btnTaoMoi.Size = new System.Drawing.Size(91, 32);
+            this.btnTaoMoi.TabIndex = 103;
+            this.btnTaoMoi.Text = "Tạo mới";
+            this.btnTaoMoi.UseVisualStyleBackColor = true;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // cbbLoaiTaiKhoan
             // 
@@ -409,7 +410,7 @@
             this.Controls.Add(this.txtCCCD);
             this.Controls.Add(this.txtImageData);
             this.Controls.Add(this.cbbLoaiTaiKhoan);
-            this.Controls.Add(this.btnLamMoi);
+            this.Controls.Add(this.btnTaoMoi);
             this.Controls.Add(this.btnTaoTaiKhoan);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtMatKhau);
@@ -485,7 +486,7 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnTaoTaiKhoan;
-        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Button btnTaoMoi;
         private System.Windows.Forms.DataGridView DanhSachTaiKhoanGV;
         private System.Windows.Forms.ComboBox cbbLoaiTaiKhoan;
         private System.Windows.Forms.TextBox txtImageData;

@@ -237,5 +237,22 @@ namespace HospitalManagementSysteam
         {
 
         }
+
+        private void HienThiMatKhau_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                txtMatKhau.PasswordChar = '\0'; // Hiện mật khẩu
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*'; // Ẩn mật khẩu
+            }
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.PasswordChar = '*';
+        }
     }
 }

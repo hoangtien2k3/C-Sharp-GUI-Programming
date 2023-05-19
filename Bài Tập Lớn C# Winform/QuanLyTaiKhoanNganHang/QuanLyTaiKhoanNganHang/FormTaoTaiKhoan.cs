@@ -265,5 +265,33 @@ namespace QuanLyTaiKhoanNganHang
                 txtImageData.Text = Convert.ToBase64String(imageBytes);
             }
         }
+
+        private void btnTaoMoi_Click(object sender, EventArgs e)
+        {
+            txtTenTaiKhoan.Text = "";
+            txtSoTaiKhoan.Text = "";
+            txtMatKhau.Text = "";
+            cbbLoaiTaiKhoan.Text = "";
+            txtDiaChiEmail.Text = "";
+
+            if (rdbNam.Checked)
+            {
+                rdbNam.Checked = false;
+            } else if (rdbNu.Checked)
+            {
+                rdbNu.Checked = false;
+            } else
+            {
+                rdbNu.Checked = false;
+            }
+
+            txtCCCD.Text = "";
+            txtMVDT.Text = ""; 
+            txtSoDienThoai.Text = "";
+            txtNgaySinh.Value = DateTime.Now;
+            cbbQuocTich.Text = "";
+            cbbNgheNghiep.Text = "";
+            ptbTaiAnh.Image = null;
+        }
     }
 }

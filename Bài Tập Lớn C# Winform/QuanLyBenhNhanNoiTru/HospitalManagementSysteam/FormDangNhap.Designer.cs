@@ -32,9 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.txtTaiKhoan = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,10 +42,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
+            this.HienThiMatKhau = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMatKhau = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HienThiMatKhau)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -84,17 +86,6 @@
             this.label4.TabIndex = 19;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtMatKhau
-            // 
-            this.txtMatKhau.BackColor = System.Drawing.Color.White;
-            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhau.Location = new System.Drawing.Point(399, 199);
-            this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(179, 13);
-            this.txtMatKhau.TabIndex = 22;
-            this.txtMatKhau.UseSystemPasswordChar = true;
-            this.txtMatKhau.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.BackColor = System.Drawing.Color.White;
@@ -104,14 +95,6 @@
             this.txtTaiKhoan.Size = new System.Drawing.Size(179, 13);
             this.txtTaiKhoan.TabIndex = 23;
             this.txtTaiKhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label8.Location = new System.Drawing.Point(398, 213);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(180, 1);
-            this.label8.TabIndex = 2;
             // 
             // label9
             // 
@@ -215,12 +198,44 @@
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
             this.btnDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangNhap_KeyDown);
             // 
+            // HienThiMatKhau
+            // 
+            this.HienThiMatKhau.Image = ((System.Drawing.Image)(resources.GetObject("HienThiMatKhau.Image")));
+            this.HienThiMatKhau.Location = new System.Drawing.Point(548, 182);
+            this.HienThiMatKhau.Name = "HienThiMatKhau";
+            this.HienThiMatKhau.Size = new System.Drawing.Size(30, 28);
+            this.HienThiMatKhau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.HienThiMatKhau.TabIndex = 55;
+            this.HienThiMatKhau.TabStop = false;
+            this.HienThiMatKhau.Click += new System.EventHandler(this.HienThiMatKhau_Click);
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label2.Location = new System.Drawing.Point(398, 213);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 1);
+            this.label2.TabIndex = 56;
+            // 
+            // txtMatKhau
+            // 
+            this.txtMatKhau.BackColor = System.Drawing.Color.White;
+            this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMatKhau.Location = new System.Drawing.Point(399, 199);
+            this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.Size = new System.Drawing.Size(143, 13);
+            this.txtMatKhau.TabIndex = 57;
+            this.txtMatKhau.TextChanged += new System.EventHandler(this.txtMatKhau_TextChanged);
+            // 
             // FormDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(648, 337);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtMatKhau);
+            this.Controls.Add(this.HienThiMatKhau);
             this.Controls.Add(this.btnDangNhap);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label6);
@@ -231,10 +246,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.txtTaiKhoan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -247,6 +260,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HienThiMatKhau)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,10 +269,8 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTaiKhoan;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
@@ -268,6 +280,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button btnDangNhap;
+        private System.Windows.Forms.PictureBox HienThiMatKhau;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtMatKhau;
     }
 }
 
