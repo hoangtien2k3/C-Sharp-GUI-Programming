@@ -62,11 +62,11 @@
             this.btnTaoTaiKhoan = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnThongBao = new System.Windows.Forms.Button();
+            this.btnMayTinh = new System.Windows.Forms.Button();
             this.btnSuaThongTinTaiKhoan = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.btnMayTinh = new System.Windows.Forms.Button();
-            this.btnThongBao = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -120,9 +120,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.panel4.Controls.Add(this.lblDataTimeNow);
-            this.panel4.Location = new System.Drawing.Point(0, 524);
+            this.panel4.Location = new System.Drawing.Point(0, 528);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(169, 33);
+            this.panel4.Size = new System.Drawing.Size(169, 29);
             this.panel4.TabIndex = 125;
             // 
             // lblDataTimeNow
@@ -208,7 +208,8 @@
             // 
             this.hướngDẫnDùngAppToolStripMenuItem.Name = "hướngDẫnDùngAppToolStripMenuItem";
             this.hướngDẫnDùngAppToolStripMenuItem.Size = new System.Drawing.Size(220, 22);
-            this.hướngDẫnDùngAppToolStripMenuItem.Text = "Hướng Dẫn Dùng App";
+            this.hướngDẫnDùngAppToolStripMenuItem.Text = "Máy Tính";
+            this.hướngDẫnDùngAppToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnDùngAppToolStripMenuItem_Click);
             // 
             // đăngXuấtToolStripMenuItem
             // 
@@ -458,6 +459,40 @@
             this.panel1.Size = new System.Drawing.Size(1035, 51);
             this.panel1.TabIndex = 3;
             // 
+            // btnThongBao
+            // 
+            this.btnThongBao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnThongBao.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThongBao.BackgroundImage")));
+            this.btnThongBao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnThongBao.FlatAppearance.BorderSize = 0;
+            this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnThongBao.Location = new System.Drawing.Point(916, 2);
+            this.btnThongBao.Name = "btnThongBao";
+            this.btnThongBao.Size = new System.Drawing.Size(53, 45);
+            this.btnThongBao.TabIndex = 53;
+            this.btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongBao.UseVisualStyleBackColor = false;
+            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
+            // 
+            // btnMayTinh
+            // 
+            this.btnMayTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
+            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMayTinh.FlatAppearance.BorderSize = 0;
+            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMayTinh.Location = new System.Drawing.Point(868, 9);
+            this.btnMayTinh.Name = "btnMayTinh";
+            this.btnMayTinh.Size = new System.Drawing.Size(30, 32);
+            this.btnMayTinh.TabIndex = 52;
+            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMayTinh.UseVisualStyleBackColor = false;
+            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
+            // 
             // btnSuaThongTinTaiKhoan
             // 
             this.btnSuaThongTinTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
@@ -486,40 +521,6 @@
             this.label9.TabIndex = 1;
             this.label9.Text = "QUẢN LÝ TÀI KHOẢN NGÂN HÀNG";
             // 
-            // btnMayTinh
-            // 
-            this.btnMayTinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
-            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMayTinh.FlatAppearance.BorderSize = 0;
-            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnMayTinh.Location = new System.Drawing.Point(868, 9);
-            this.btnMayTinh.Name = "btnMayTinh";
-            this.btnMayTinh.Size = new System.Drawing.Size(30, 32);
-            this.btnMayTinh.TabIndex = 52;
-            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMayTinh.UseVisualStyleBackColor = false;
-            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
-            // 
-            // btnThongBao
-            // 
-            this.btnThongBao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnThongBao.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnThongBao.BackgroundImage")));
-            this.btnThongBao.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnThongBao.FlatAppearance.BorderSize = 0;
-            this.btnThongBao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongBao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongBao.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnThongBao.Location = new System.Drawing.Point(916, 2);
-            this.btnThongBao.Name = "btnThongBao";
-            this.btnThongBao.Size = new System.Drawing.Size(53, 45);
-            this.btnThongBao.TabIndex = 53;
-            this.btnThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongBao.UseVisualStyleBackColor = false;
-            this.btnThongBao.Click += new System.EventHandler(this.btnThongBao_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,7 +532,6 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản Lý Tài Khoản Nhân Hàng";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel2.ResumeLayout(false);

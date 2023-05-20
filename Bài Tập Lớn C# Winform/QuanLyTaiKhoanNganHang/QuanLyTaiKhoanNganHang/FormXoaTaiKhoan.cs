@@ -43,43 +43,6 @@ namespace QuanLyTaiKhoanNganHang
         }
 
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            if (cbbSoTaiKhoan.Text.Trim() == "" && cbbTenTaiKhoan.Text.Trim() == "")
-            {
-                MessageBox.Show("Hãy điền thông tin tài khoản cần tìm kiếm.");
-            }
-            else
-            {
-                Con.Open();
-                string query = "SELECT TenTaiKhoan, SoTaiKhoan, DiaChiEmail, CCCD, ImageData FROM TaiKhoan WHERE (TenTaiKhoan = @TenTaiKhoan OR @TenTaiKhoan = '') AND (SoTaiKhoan = @SoTaiKhoan OR @SoTaiKhoan = '')";
-                SqlCommand command = new SqlCommand(query, Con);
-                command.Parameters.AddWithValue("@TenTaiKhoan", cbbTenTaiKhoan.Text.Trim());
-                command.Parameters.AddWithValue("@SoTaiKhoan", cbbSoTaiKhoan.Text.Trim());
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    txtTenTaiKhoan.Text = reader["TenTaiKhoan"].ToString();
-                    txtSoTaiKhoan.Text = reader["SoTaiKhoan"].ToString();
-                    txtDiaChiEmail.Text = reader["DiaChiEmail"].ToString();
-                    txtCCCD.Text = reader["CCCD"].ToString();
-
-                    // Lấy thông tin ảnh từ cơ sở dữ liệu
-                    byte[] imageBytes = (byte[])reader["ImageData"];
-                    using (MemoryStream ms = new MemoryStream(imageBytes))
-                    {
-                        Image image = Image.FromStream(ms);
-                        ptbTaiAnh.Image = image; // Hiển thị ảnh lên PictureBox
-                    }
-                }
-
-                reader.Close();
-                Con.Close();
-
-            }
-        }
-
         public void ConnecXoaTaiKhoan()
         {
             Con.Open();
@@ -156,5 +119,41 @@ namespace QuanLyTaiKhoanNganHang
             ptbTaiAnh.Image = null;
         }
 
+        private void btnKiemTra_Click(object sender, EventArgs e)
+        {
+            if (cbbSoTaiKhoan.Text.Trim() == "" && cbbTenTaiKhoan.Text.Trim() == "")
+            {
+                MessageBox.Show("Hãy điền thông tin tài khoản cần tìm kiếm.");
+            }
+            else
+            {
+                Con.Open();
+                string query = "SELECT TenTaiKhoan, SoTaiKhoan, DiaChiEmail, CCCD, ImageData FROM TaiKhoan WHERE (TenTaiKhoan = @TenTaiKhoan OR @TenTaiKhoan = '') AND (SoTaiKhoan = @SoTaiKhoan OR @SoTaiKhoan = '')";
+                SqlCommand command = new SqlCommand(query, Con);
+                command.Parameters.AddWithValue("@TenTaiKhoan", cbbTenTaiKhoan.Text.Trim());
+                command.Parameters.AddWithValue("@SoTaiKhoan", cbbSoTaiKhoan.Text.Trim());
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtTenTaiKhoan.Text = reader["TenTaiKhoan"].ToString();
+                    txtSoTaiKhoan.Text = reader["SoTaiKhoan"].ToString();
+                    txtDiaChiEmail.Text = reader["DiaChiEmail"].ToString();
+                    txtCCCD.Text = reader["CCCD"].ToString();
+
+                    // Lấy thông tin ảnh từ cơ sở dữ liệu
+                    byte[] imageBytes = (byte[])reader["ImageData"];
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        Image image = Image.FromStream(ms);
+                        ptbTaiAnh.Image = image; // Hiển thị ảnh lên PictureBox
+                    }
+                }
+
+                reader.Close();
+                Con.Close();
+
+            }
+        }
     }
 }

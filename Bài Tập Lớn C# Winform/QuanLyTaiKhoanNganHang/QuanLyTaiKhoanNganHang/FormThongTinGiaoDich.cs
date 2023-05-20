@@ -46,10 +46,23 @@ namespace QuanLyTaiKhoanNganHang
             Con.Close();
         }
 
+        public void ConnecGhiChuGiaoDichChuyenTien()
+        {
+            Con.Open();
+            string query = "SELECT * FROM GiaoDich";
+            SqlCommand sqlCommand = new SqlCommand(query, Con);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            GhiChuGiaoDichGV.DataSource = dataTable;
+            Con.Close();
+        }
+
         private void FormThongTinGiaoDich_Load(object sender, EventArgs e)
         {
             ConnecThongTinGiaoDichGuiTien();
             ConnecThongTinGiaoDichChuyenTien();
+            ConnecGhiChuGiaoDichChuyenTien();
         }
     }
 }

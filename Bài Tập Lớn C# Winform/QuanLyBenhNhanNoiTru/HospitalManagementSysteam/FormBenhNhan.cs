@@ -718,5 +718,10 @@ namespace HospitalManagementSysteam
 
             ExportExcel(dataTable, "DANH SÁCH BỆNH NHÂN", "THỐNG KÊ DANH SÁCH CÁC BỆNH NHÂN NỘI TRÚ");
         }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

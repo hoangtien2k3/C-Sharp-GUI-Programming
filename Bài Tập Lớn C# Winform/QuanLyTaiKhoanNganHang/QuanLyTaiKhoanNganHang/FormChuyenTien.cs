@@ -104,6 +104,7 @@ namespace QuanLyTaiKhoanNganHang
                 while (reader.Read())
                 {
                     cbbSoTaiKhoan.Items.Add(reader.GetString(0));
+                    cbbDenTaiKhoan.Items.Add(reader.GetString(0));
                     cbbTenTaiKhoan.Items.Add(reader.GetString(1));
                 }
                 reader.Close();
@@ -209,10 +210,6 @@ namespace QuanLyTaiKhoanNganHang
 
                 connection.Close();
             }
-
-            // MessageBox.Show("Giao dịch gửi tiền thành công!");
-
-            txtSoTienMuonChuyen.Text = string.Empty;
         }
 
 
@@ -243,8 +240,18 @@ namespace QuanLyTaiKhoanNganHang
                         updateSoTienHienTai1();
                         updateSoTienHienTai2();
                         ThongTinGiaoDichChuyenTien();
-                        MessageBox.Show("Đã Chuyển Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
-                        txtSoTienMuonChuyen.Text = "";
+
+                        string chuyentien = "Đã Chuyển Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.\n" +
+                            "\n\n\t- Hóa Đơn: " +
+                            "\n\n\t+ Tài Khoản: " + txtSoTaiKhoan.Text +
+                            "\n\n\t+ Số Tiền Chuyển: " + txtSoTienMuonChuyen.Text +
+                            "\n\n\t+ Số Tiền Hiện Tại: " + txtSoTienHienTai.Text +
+                            "\n\n\t+ " + txtSoTienChuSo.Text +
+                            "\n\n";
+
+                        MessageBox.Show(chuyentien);
+
+                        txtSoTienMuonChuyen.Text = string.Empty;
                     }
                 }
                 ConnecSoDuTaiKhoan();

@@ -111,6 +111,10 @@ namespace QuanLyTaiKhoanNganHang
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin.");
             }
+            else if (cbbSoTienCanRut.Text == "" || txtSoTienHienTai.Text == "") 
+            {
+                MessageBox.Show("Không Thể Rút Tiền");
+            }
             else
             {
                 DialogResult dialogResult = MessageBox.Show("Bạn Có Chắc Muốn Rút Tiền ?",

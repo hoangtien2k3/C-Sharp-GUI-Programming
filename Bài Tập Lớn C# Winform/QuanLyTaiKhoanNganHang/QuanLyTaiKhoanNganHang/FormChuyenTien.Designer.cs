@@ -65,13 +65,13 @@
             this.txtSoTienHienTai = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnMayTinh = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoTienChuSo = new System.Windows.Forms.TextBox();
             this.cbbDenTaiKhoan = new System.Windows.Forms.ComboBox();
-            this.btnMayTinh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -406,7 +406,52 @@
             // 
             this.txtSoTienMuonChuyen.FormattingEnabled = true;
             this.txtSoTienMuonChuyen.Items.AddRange(new object[] {
-            "10000000"});
+            "10000",
+            "20000",
+            "30000",
+            "40000",
+            "50000",
+            "60000",
+            "70000",
+            "80000",
+            "90000",
+            "100000",
+            "200000",
+            "300000",
+            "400000",
+            "500000",
+            "600000",
+            "700000",
+            "800000",
+            "900000",
+            "1000000",
+            "2000000",
+            "3000000",
+            "4000000",
+            "5000000",
+            "6000000",
+            "7000000",
+            "8000000",
+            "9000000",
+            "10000000",
+            "20000000",
+            "30000000",
+            "40000000",
+            "50000000",
+            "60000000",
+            "70000000",
+            "80000000",
+            "90000000",
+            "100000000",
+            "200000000",
+            "300000000",
+            "400000000",
+            "500000000",
+            "600000000",
+            "700000000",
+            "800000000",
+            "900000000",
+            "1000000000"});
             this.txtSoTienMuonChuyen.Location = new System.Drawing.Point(145, 157);
             this.txtSoTienMuonChuyen.Name = "txtSoTienMuonChuyen";
             this.txtSoTienMuonChuyen.Size = new System.Drawing.Size(238, 24);
@@ -453,7 +498,6 @@
             this.txtSoTienHienTai.Name = "txtSoTienHienTai";
             this.txtSoTienHienTai.Size = new System.Drawing.Size(240, 15);
             this.txtSoTienHienTai.TabIndex = 27;
-            this.txtSoTienHienTai.Text = "0000";
             this.txtSoTienHienTai.TextChanged += new System.EventHandler(this.txtSoTienHienTai_TextChanged);
             // 
             // label6
@@ -488,6 +532,23 @@
             this.groupBox4.TabIndex = 84;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Chuyển Tiền Đến Tài Khoản";
+            // 
+            // btnMayTinh
+            // 
+            this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
+            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMayTinh.FlatAppearance.BorderSize = 0;
+            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMayTinh.Location = new System.Drawing.Point(490, 135);
+            this.btnMayTinh.Name = "btnMayTinh";
+            this.btnMayTinh.Size = new System.Drawing.Size(42, 46);
+            this.btnMayTinh.TabIndex = 85;
+            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMayTinh.UseVisualStyleBackColor = false;
+            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
             // 
             // pictureBox4
             // 
@@ -548,23 +609,6 @@
             this.cbbDenTaiKhoan.Name = "cbbDenTaiKhoan";
             this.cbbDenTaiKhoan.Size = new System.Drawing.Size(238, 24);
             this.cbbDenTaiKhoan.TabIndex = 84;
-            // 
-            // btnMayTinh
-            // 
-            this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
-            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMayTinh.FlatAppearance.BorderSize = 0;
-            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnMayTinh.Location = new System.Drawing.Point(490, 135);
-            this.btnMayTinh.Name = "btnMayTinh";
-            this.btnMayTinh.Size = new System.Drawing.Size(42, 46);
-            this.btnMayTinh.TabIndex = 85;
-            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMayTinh.UseVisualStyleBackColor = false;
-            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
             // 
             // FormChuyenTien
             // 

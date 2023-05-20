@@ -48,6 +48,7 @@
             this.lblDataTimeNow = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMayTinh = new System.Windows.Forms.Button();
             this.btnRutTien = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -63,7 +64,8 @@
             this.txtSoTienHienTai = new System.Windows.Forms.TextBox();
             this.txtSoTienChuSo = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.btnMayTinh = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -73,10 +75,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.pictureBox5);
             this.groupBox1.Controls.Add(this.pictureBox4);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.cbbTenTaiKhoan);
@@ -114,7 +119,7 @@
             // 
             // cbbTenTaiKhoan
             // 
-            this.cbbTenTaiKhoan.ForeColor = System.Drawing.Color.Red;
+            this.cbbTenTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.cbbTenTaiKhoan.FormattingEnabled = true;
             this.cbbTenTaiKhoan.Location = new System.Drawing.Point(169, 82);
             this.cbbTenTaiKhoan.Name = "cbbTenTaiKhoan";
@@ -123,7 +128,7 @@
             // 
             // cbbSoTaiKhoan
             // 
-            this.cbbSoTaiKhoan.ForeColor = System.Drawing.Color.Red;
+            this.cbbSoTaiKhoan.ForeColor = System.Drawing.Color.Black;
             this.cbbSoTaiKhoan.FormattingEnabled = true;
             this.cbbSoTaiKhoan.Location = new System.Drawing.Point(169, 48);
             this.cbbSoTaiKhoan.Name = "cbbSoTaiKhoan";
@@ -132,12 +137,15 @@
             // 
             // btnKiemTra
             // 
-            this.btnKiemTra.Location = new System.Drawing.Point(206, 136);
+            this.btnKiemTra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnKiemTra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKiemTra.Location = new System.Drawing.Point(106, 136);
             this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(126, 39);
+            this.btnKiemTra.Size = new System.Drawing.Size(125, 44);
             this.btnKiemTra.TabIndex = 26;
             this.btnKiemTra.Text = "Kiểm Tra";
-            this.btnKiemTra.UseVisualStyleBackColor = true;
+            this.btnKiemTra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnKiemTra.UseVisualStyleBackColor = false;
             this.btnKiemTra.Click += new System.EventHandler(this.btnKiemTra_Click);
             // 
             // label3
@@ -228,6 +236,53 @@
             // cbbSoTienCanRut
             // 
             this.cbbSoTienCanRut.FormattingEnabled = true;
+            this.cbbSoTienCanRut.Items.AddRange(new object[] {
+            "10000",
+            "20000",
+            "30000",
+            "40000",
+            "50000",
+            "60000",
+            "70000",
+            "80000",
+            "90000",
+            "100000",
+            "200000",
+            "300000",
+            "400000",
+            "500000",
+            "600000",
+            "700000",
+            "800000",
+            "900000",
+            "1000000",
+            "2000000",
+            "3000000",
+            "4000000",
+            "5000000",
+            "6000000",
+            "7000000",
+            "8000000",
+            "9000000",
+            "10000000",
+            "20000000",
+            "30000000",
+            "40000000",
+            "50000000",
+            "60000000",
+            "70000000",
+            "80000000",
+            "90000000",
+            "100000000",
+            "200000000",
+            "300000000",
+            "400000000",
+            "500000000",
+            "600000000",
+            "700000000",
+            "800000000",
+            "900000000",
+            "1000000000"});
             this.cbbSoTienCanRut.Location = new System.Drawing.Point(159, 48);
             this.cbbSoTienCanRut.Name = "cbbSoTienCanRut";
             this.cbbSoTienCanRut.Size = new System.Drawing.Size(199, 21);
@@ -239,7 +294,7 @@
             this.lblDataTimeNow.BackColor = System.Drawing.SystemColors.Control;
             this.lblDataTimeNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDataTimeNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDataTimeNow.Location = new System.Drawing.Point(156, 105);
+            this.lblDataTimeNow.Location = new System.Drawing.Point(156, 97);
             this.lblDataTimeNow.Name = "lblDataTimeNow";
             this.lblDataTimeNow.Size = new System.Drawing.Size(115, 16);
             this.lblDataTimeNow.TabIndex = 115;
@@ -247,6 +302,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.pictureBox1);
             this.groupBox2.Controls.Add(this.btnMayTinh);
             this.groupBox2.Controls.Add(this.btnRutTien);
             this.groupBox2.Controls.Add(this.label6);
@@ -260,21 +316,41 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rút Tiền ";
             // 
+            // btnMayTinh
+            // 
+            this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
+            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMayTinh.FlatAppearance.BorderSize = 0;
+            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btnMayTinh.Location = new System.Drawing.Point(381, 36);
+            this.btnMayTinh.Name = "btnMayTinh";
+            this.btnMayTinh.Size = new System.Drawing.Size(135, 139);
+            this.btnMayTinh.TabIndex = 118;
+            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnMayTinh.UseVisualStyleBackColor = false;
+            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
+            // 
             // btnRutTien
             // 
-            this.btnRutTien.Location = new System.Drawing.Point(119, 146);
+            this.btnRutTien.BackColor = System.Drawing.Color.Lime;
+            this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutTien.Location = new System.Drawing.Point(183, 141);
             this.btnRutTien.Name = "btnRutTien";
-            this.btnRutTien.Size = new System.Drawing.Size(115, 40);
+            this.btnRutTien.Size = new System.Drawing.Size(110, 44);
             this.btnRutTien.TabIndex = 117;
             this.btnRutTien.Text = "Rút Tiền";
-            this.btnRutTien.UseVisualStyleBackColor = true;
+            this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRutTien.UseVisualStyleBackColor = false;
             this.btnRutTien.Click += new System.EventHandler(this.btnRutTien_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 105);
+            this.label6.Location = new System.Drawing.Point(18, 97);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 15);
             this.label6.TabIndex = 116;
@@ -431,22 +507,27 @@
             this.button5.TabIndex = 120;
             this.button5.UseVisualStyleBackColor = false;
             // 
-            // btnMayTinh
+            // pictureBox1
             // 
-            this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
-            this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
-            this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnMayTinh.FlatAppearance.BorderSize = 0;
-            this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnMayTinh.Location = new System.Drawing.Point(381, 36);
-            this.btnMayTinh.Name = "btnMayTinh";
-            this.btnMayTinh.Size = new System.Drawing.Size(135, 139);
-            this.btnMayTinh.TabIndex = 118;
-            this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnMayTinh.UseVisualStyleBackColor = false;
-            this.btnMayTinh.Click += new System.EventHandler(this.btnMayTinh_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(195, 146);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 120;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(186, 141);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 121;
+            this.pictureBox5.TabStop = false;
             // 
             // FormRutTien
             // 
@@ -476,6 +557,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -516,5 +599,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnMayTinh;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

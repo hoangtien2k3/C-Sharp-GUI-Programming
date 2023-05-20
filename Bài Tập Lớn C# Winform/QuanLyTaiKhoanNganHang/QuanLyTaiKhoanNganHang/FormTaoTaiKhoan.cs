@@ -66,7 +66,8 @@ namespace QuanLyTaiKhoanNganHang
         public void ConnecTaiKhoan()
         {
             Con.Open();
-            string query = "SELECT * FROM TaiKhoan";
+            string query = "SELECT TenTaiKhoan, SoTaiKhoan, LoaiTaiKhoan, DiaChiEmail, GioiTinh, " +
+                "CCCD, SoDienThoai, NgaySinh, QuocTich, NgheNghiep, ImageData FROM TaiKhoan";
             SqlCommand sqlCommand = new SqlCommand(query, Con);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
             DataTable dataTable = new DataTable();
@@ -169,15 +170,17 @@ namespace QuanLyTaiKhoanNganHang
                         command.ExecuteNonQuery();
 
                         MessageBox.Show("Tạo Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
-                    } catch (Exception ex)
+                    } catch 
                     {
-                        // MessageBox.Show("Tạo Tài Khoản (" + txtTenTaiKhoan.Text + ") Thất Bại.");
-
-                        MessageBox.Show("Đã xảy ra lỗi: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Tạo Tài Khoản Thất Bại. Bạn Chưa Cập Nhật Ảnh." , "Error: Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        command.Dispose();
+                        Con.Close();
+                        return;
                     } 
                 }
 
                 Con.Close();
+                command.Dispose();
                 ConnecTaiKhoan(); // show dữ liệu ra datagridview
                 btnLamMoi_Click(sender, e);
             }
@@ -227,7 +230,7 @@ namespace QuanLyTaiKhoanNganHang
 
                 txtTenTaiKhoan.Text = row.Cells["TenTaiKhoan"].Value.ToString();
                 txtSoTaiKhoan.Text = row.Cells["SoTaiKhoan"].Value.ToString();
-                txtMatKhau.Text = row.Cells["MatKhau"].Value.ToString();
+                txtMatKhau.Text = "************";
                 cbbLoaiTaiKhoan.Text = row.Cells["LoaiTaiKhoan"].Value.ToString();
                 txtDiaChiEmail.Text = row.Cells["DiaChiEmail"].Value.ToString();
 
@@ -292,6 +295,178 @@ namespace QuanLyTaiKhoanNganHang
             cbbQuocTich.Text = "";
             cbbNgheNghiep.Text = "";
             ptbTaiAnh.Image = null;
+        }
+
+
+        public void ExportExcel(DataTable dataTable, string sheetName, string title)
+        {
+            //Tạo các đối tượng Excel
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+
+            //Tạo mới một Excel WorkBook 
+            oExcel.Visible = true;
+            oExcel.DisplayAlerts = false;
+            oExcel.Application.SheetsInNewWorkbook = 1;
+            oBooks = oExcel.Workbooks;
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+            oSheets = oBook.Worksheets;
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+            oSheet.Name = sheetName;
+
+            // tạo tiêu đề
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A2", "J2");
+            head.MergeCells = true;
+            head.Value2 = title; 
+            head.Font.Bold = true;
+            head.Font.Name = "Times New Roman";
+            head.Font.Size = "18";
+            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo tiêu đề cột 
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+            cl1.Value2 = "Tên Tài Khoản";
+            cl1.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+            cl2.Value2 = "Số Tài Khoản";
+            cl2.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+            cl3.Value2 = "Loại Tài Khoản";
+            cl3.ColumnWidth = 15.0;
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+            cl4.Value2 = "Địa Chỉ Email";
+            cl4.ColumnWidth = 35.0;
+            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+            cl5.Value2 = "Giới Tính";
+            cl5.ColumnWidth = 10.0;
+            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+            cl6.Value2 = "Số CCCD";
+            cl6.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl7 = oSheet.get_Range("G3", "G3");
+            cl7.Value2 = "Số Điện Thoại";
+            cl7.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl8 = oSheet.get_Range("H3", "H3");
+            cl8.Value2 = "Ngày Sinh";
+            cl8.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl9 = oSheet.get_Range("I3", "I3");
+            cl9.Value2 = "Quốc Tịch";
+            cl9.ColumnWidth = 15.0;
+            Microsoft.Office.Interop.Excel.Range cl10 = oSheet.get_Range("J3", "J3");
+            cl10.Value2 = "Nghề Nghiệp";
+            cl10.ColumnWidth = 25.0;
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "J3");
+            rowHead.Font.Bold = true;
+
+            // NGày tháng xuất file excel
+            string lastCell = $"{(char)(65 + dataTable.Columns.Count - 1)}{(dataTable.Rows.Count + 6)}"; // Lấy tên ô cuối cùng
+            Microsoft.Office.Interop.Excel.Range lastCellRange = oSheet.get_Range(lastCell); // Lấy Range của ô cuối cùng
+            string date = DateTime.Now.ToString("dd/MM/yyyy"); // Định dạng ngày tháng
+            lastCellRange.Value2 = $"Ngày in: {date}"; // Ghi ngày tháng vào ô cuối cùng
+
+            // Kẻ viền
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Thiết lập màu nền
+            rowHead.Interior.ColorIndex = 6; // vàng: 6 , màu xám: 15
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo mảng đối tượng để lưu dữ toàn bồ dữ liệu trong DataTable, vì dữ liệu được được gán vào các Cell trong Excel phải thông qua object thuần.
+            object[,] arr = new object[dataTable.Rows.Count, dataTable.Columns.Count];
+
+            //Chuyển dữ liệu từ DataTable vào mảng đối tượng
+            for (int row = 0; row < dataTable.Rows.Count; row++)
+            {
+                DataRow dataRow = dataTable.Rows[row];
+                for (int col = 0; col < dataTable.Columns.Count; col++)
+                {
+                    arr[row, col] = dataRow[col];
+                }
+            }
+
+            //Thiết lập vùng điền dữ liệu
+            int rowStart = 4;
+            int columnStart = 1;
+            int rowEnd = rowStart + dataTable.Rows.Count - 2;
+            int columnEnd = dataTable.Columns.Count;
+
+            // Ô bắt đầu điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowStart, columnStart];
+
+            // Ô kết thúc điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnEnd];
+
+            // Lấy về vùng điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range range = oSheet.get_Range(c1, c2);
+
+            //Điền dữ liệu vào vùng đã thiết lập
+            range.Value2 = arr;
+
+            // Kẻ viền
+            range.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Căn giữa cột STT
+            /*Microsoft.Office.Interop.Excel.Range c3 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnStart];
+            Microsoft.Office.Interop.Excel.Range c4 = oSheet.get_Range(c1, c3);
+            oSheet.get_Range(c3, c4).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;*/
+
+            // Căn giữa cả bảng
+            oSheet.get_Range(c1, c2).HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+        }
+
+        private void btnInThongTin_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+
+            dataTable.Columns.Add(new DataColumn("TenTaiKhoan"));
+            dataTable.Columns.Add(new DataColumn("SoTaiKhoan"));
+            dataTable.Columns.Add(new DataColumn("LoaiTaiKhoan"));
+            dataTable.Columns.Add(new DataColumn("DiaChiEmail"));
+            dataTable.Columns.Add(new DataColumn("GioiTinh"));
+            dataTable.Columns.Add(new DataColumn("CCCD"));
+            dataTable.Columns.Add(new DataColumn("SoDienThoai"));
+            dataTable.Columns.Add(new DataColumn("NgaySinh"));
+            dataTable.Columns.Add(new DataColumn("QuocTich"));
+            dataTable.Columns.Add(new DataColumn("NgheNghiep"));
+
+            foreach (DataGridViewRow dtgvRow in DanhSachTaiKhoanGV.Rows)
+            {
+                DataRow dtRow = dataTable.NewRow();
+
+                dtRow[0] = dtgvRow.Cells[0].Value;
+                dtRow[1] = dtgvRow.Cells[1].Value;
+                dtRow[2] = dtgvRow.Cells[2].Value;
+                dtRow[3] = dtgvRow.Cells[3].Value;
+                dtRow[4] = dtgvRow.Cells[4].Value;
+                dtRow[5] = dtgvRow.Cells[5].Value;
+                dtRow[6] = dtgvRow.Cells[6].Value;
+                dtRow[7] = dtgvRow.Cells[7].Value;
+                dtRow[8] = dtgvRow.Cells[8].Value;
+                dtRow[9] = dtgvRow.Cells[9].Value;
+
+                dataTable.Rows.Add(dtRow);
+            }
+
+            ExportExcel(dataTable, "DANH SÁCH TÀI KHOẢN", "DANH SÁCH CÁC TÀI KHOẢN ĐÃ ĐƯỢC TẠO");
+        }
+
+        private void HienMatKhau_Click(object sender, EventArgs e)
+        {
+            if (txtMatKhau.PasswordChar == '*')
+            {
+                txtMatKhau.PasswordChar = '\0'; // Hiện mật khẩu
+            }
+            else
+            {
+                txtMatKhau.PasswordChar = '*'; // Ẩn mật khẩu
+            }
+        }
+
+        private void txtMatKhau_TextChanged(object sender, EventArgs e)
+        {
+            txtMatKhau.PasswordChar = '*';
         }
     }
 }

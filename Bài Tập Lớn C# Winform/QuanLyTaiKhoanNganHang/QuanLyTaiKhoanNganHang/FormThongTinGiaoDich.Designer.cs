@@ -38,6 +38,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.GhiChuGiaoDichGV = new System.Windows.Forms.DataGridView();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.GiaoDichGuiTienGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GiaoDichChuyenTienGV)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -46,24 +49,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GhiChuGiaoDichGV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // GiaoDichGuiTienGV
             // 
             this.GiaoDichGuiTienGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GiaoDichGuiTienGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.GiaoDichGuiTienGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GiaoDichGuiTienGV.Location = new System.Drawing.Point(1, 19);
             this.GiaoDichGuiTienGV.Name = "GiaoDichGuiTienGV";
-            this.GiaoDichGuiTienGV.Size = new System.Drawing.Size(584, 176);
+            this.GiaoDichGuiTienGV.Size = new System.Drawing.Size(852, 112);
             this.GiaoDichGuiTienGV.TabIndex = 0;
             // 
             // GiaoDichChuyenTienGV
             // 
             this.GiaoDichChuyenTienGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GiaoDichChuyenTienGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.GiaoDichChuyenTienGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GiaoDichChuyenTienGV.Location = new System.Drawing.Point(0, 19);
             this.GiaoDichChuyenTienGV.Name = "GiaoDichChuyenTienGV";
-            this.GiaoDichChuyenTienGV.Size = new System.Drawing.Size(584, 176);
+            this.GiaoDichChuyenTienGV.Size = new System.Drawing.Size(852, 109);
             this.GiaoDichChuyenTienGV.TabIndex = 1;
             // 
             // groupBox1
@@ -71,9 +79,9 @@
             this.groupBox1.Controls.Add(this.GiaoDichGuiTienGV);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.groupBox1.Location = new System.Drawing.Point(58, 65);
+            this.groupBox1.Location = new System.Drawing.Point(38, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(585, 196);
+            this.groupBox1.Size = new System.Drawing.Size(853, 131);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông Tin Giao Dịch Gửi Tiền Vào Tài Khoản";
@@ -83,9 +91,9 @@
             this.groupBox2.Controls.Add(this.GiaoDichChuyenTienGV);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.groupBox2.Location = new System.Drawing.Point(59, 289);
+            this.groupBox2.Location = new System.Drawing.Point(38, 208);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(584, 199);
+            this.groupBox2.Size = new System.Drawing.Size(852, 128);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông Tin Giao Dịch Chuyển Tiền Đi";
@@ -126,9 +134,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(707, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(915, 227);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(243, 177);
+            this.pictureBox1.Size = new System.Drawing.Size(103, 109);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 81;
             this.pictureBox1.TabStop = false;
@@ -136,18 +144,52 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(707, 307);
+            this.pictureBox2.Location = new System.Drawing.Point(917, 73);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(243, 177);
+            this.pictureBox2.Size = new System.Drawing.Size(103, 112);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 82;
             this.pictureBox2.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.GhiChuGiaoDichGV);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.groupBox3.Location = new System.Drawing.Point(38, 358);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(852, 130);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ghi Chú Giao Dịch";
+            // 
+            // GhiChuGiaoDichGV
+            // 
+            this.GhiChuGiaoDichGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GhiChuGiaoDichGV.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.GhiChuGiaoDichGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GhiChuGiaoDichGV.Location = new System.Drawing.Point(0, 19);
+            this.GhiChuGiaoDichGV.Name = "GhiChuGiaoDichGV";
+            this.GhiChuGiaoDichGV.Size = new System.Drawing.Size(852, 111);
+            this.GhiChuGiaoDichGV.TabIndex = 1;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(917, 377);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(103, 111);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 83;
+            this.pictureBox4.TabStop = false;
             // 
             // FormThongTinGiaoDich
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1030, 500);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
@@ -167,6 +209,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.GhiChuGiaoDichGV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +227,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView GhiChuGiaoDichGV;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

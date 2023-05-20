@@ -143,8 +143,6 @@ namespace QuanLyTaiKhoanNganHang
                 connection.Close();
             }
 
-            // MessageBox.Show("Giao dịch gửi tiền thành công!");
-
             txtSoTienMuonGui.Text = string.Empty;
         }
 
@@ -181,10 +179,16 @@ namespace QuanLyTaiKhoanNganHang
                         command.Parameters.AddWithValue("@SoTienHienTai", kp);
 
                         command.ExecuteNonQuery(); // thực hiện câu truy vấn
-                        MessageBox.Show("Đã Nạp Thêm Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
+
+                        string guitien = "Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.\n" +
+                            "\n\n\t- Hóa Đơn: " +
+                            "\n\n\t+ Tài Khoản: " + txtSoTaiKhoan.Text +
+                            "\n\n\t+ Số Tiền: " + SoTienMuonGui +
+                            "\n\n";
+
+                        MessageBox.Show(guitien);
 
                         txtSoTienHienTai.Text = kp;
-
                     }
                     else
                     {
@@ -202,9 +206,16 @@ namespace QuanLyTaiKhoanNganHang
 
                         command.ExecuteNonQuery();
 
-                        MessageBox.Show("Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.");
-                        txtSoTienHienTai.Text = SoTienMuonGui;
 
+                        string guitien = "Nạp Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.\n" +
+                            "\n\n\t- Hóa Đơn: " +
+                            "\n\n\t+ Tài Khoản: " + txtSoTaiKhoan.Text +
+                            "\n\n\t+ Số Tiền: " + SoTienMuonGui +
+                            "\n\n";
+
+                        MessageBox.Show(guitien);
+
+                        txtSoTienHienTai.Text = SoTienMuonGui;
                     }
                 }
 
@@ -260,12 +271,12 @@ namespace QuanLyTaiKhoanNganHang
             oSheet.Name = sheetName;
 
             // tạo tiêu đề
-            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A2", "I2");
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A2", "D2");
             head.MergeCells = true;
             head.Value2 = title; 
             head.Font.Bold = true;
             head.Font.Name = "Times New Roman";
-            head.Font.Size = "18";
+            head.Font.Size = "14";
             head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
 
             // Tạo tiêu đề cột 
@@ -281,7 +292,7 @@ namespace QuanLyTaiKhoanNganHang
             Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
             cl4.Value2 = "Số Tiền Hiện Tại";
             cl4.ColumnWidth = 20.0;
-            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "I3");
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "D3");
             rowHead.Font.Bold = true;
 
             // NGày tháng xuất file excel
@@ -362,6 +373,62 @@ namespace QuanLyTaiKhoanNganHang
             }
 
             ExportExcel(dataTable, "Danh Sách Tài Khoản", "THỐNG KÊ DANH SÁCH CÁC TÀI KHOẢN");
+        }
+
+        private void btnKiemTra_Click(object sender, EventArgs e)
+        {
+            if (cbbSoTaiKhoan.Text.Trim() == "" && cbbTenTaiKhoan.Text.Trim() == "")
+            {
+                MessageBox.Show("Hãy điền thông tin tài khoản cần tìm kiếm.");
+            }
+            else
+            {
+                Con.Open();
+                string query = "SELECT TenTaiKhoan, SoTaiKhoan, DiaChiEmail, CCCD, ImageData FROM TaiKhoan WHERE (TenTaiKhoan = @TenTaiKhoan OR @TenTaiKhoan = '') AND (SoTaiKhoan = @SoTaiKhoan OR @SoTaiKhoan = '')";
+                SqlCommand command = new SqlCommand(query, Con);
+                command.Parameters.AddWithValue("@TenTaiKhoan", cbbTenTaiKhoan.Text.Trim());
+                command.Parameters.AddWithValue("@SoTaiKhoan", cbbSoTaiKhoan.Text.Trim());
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    txtTenTaiKhoan.Text = reader["TenTaiKhoan"].ToString();
+                    txtSoTaiKhoan.Text = reader["SoTaiKhoan"].ToString();
+                    txtDiaChiEmail.Text = reader["DiaChiEmail"].ToString();
+                    txtCCCD.Text = reader["CCCD"].ToString();
+
+                    // Lấy thông tin ảnh từ cơ sở dữ liệu
+                    byte[] imageBytes = (byte[])reader["ImageData"];
+                    using (MemoryStream ms = new MemoryStream(imageBytes))
+                    {
+                        Image image = Image.FromStream(ms);
+                        ptbTaiAnh.Image = image; // Hiển thị ảnh lên PictureBox
+                    }
+                }
+
+                query = "SELECT SoTienHienTai FROM SoDuTaiKhoan WHERE (TenTaiKhoan = '" + cbbTenTaiKhoan.Text + "' OR '" + cbbTenTaiKhoan.Text + "' = '') AND (SoTaiKhoan = '" + cbbSoTaiKhoan.Text + "' OR '" + cbbSoTaiKhoan.Text + "' = '')";
+                using (SqlConnection connection = Connection.getInstance().getConnection())
+                {
+                    command = new SqlCommand(query, connection);
+                    connection.Open();
+                    reader = command.ExecuteReader();
+                    if (reader.Read())
+                    {
+                        txtSoTienHienTai.Text = reader["SoTienHienTai"].ToString();
+                    }
+                    else
+                    {
+                        txtSoTienHienTai.Text = "000000";
+                    }
+                    reader.Close();
+                    command.Dispose();
+                    connection.Close();
+                }
+
+                reader.Close();
+                Con.Close();
+
+            }
         }
     }
 }

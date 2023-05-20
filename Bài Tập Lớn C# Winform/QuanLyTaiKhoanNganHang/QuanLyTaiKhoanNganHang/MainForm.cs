@@ -202,7 +202,7 @@ namespace QuanLyTaiKhoanNganHang
             formXoaTaiKhoan.Show();
         }
 
-        private void xemChiTiếtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        public void xemChiTiếtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormThongTinGiaoDich formThongTinGiaoDich = new FormThongTinGiaoDich();
             formThongTinGiaoDich.MdiParent = this;
@@ -238,6 +238,12 @@ namespace QuanLyTaiKhoanNganHang
             formThongTinGiaoDich.MdiParent = this;
             formThongTinGiaoDich.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
             formThongTinGiaoDich.Show();
+        }
+
+        private void hướngDẫnDùngAppToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormMayTinh formMayTinh = new FormMayTinh();
+            formMayTinh.Show();
         }
     }
 }

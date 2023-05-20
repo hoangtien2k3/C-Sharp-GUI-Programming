@@ -41,8 +41,17 @@ namespace QuanLyTaiKhoanNganHang
             }
         }
 
+        private void txtSoTienHienTai_TextChanged(object sender, EventArgs e)
+        {
+            txtSoTienChuSo.Text = ConvertNumber.ConvertNumberToVietnamese(txtSoTienHienTai.Text);
+        }
 
-        private void btnKiemTraSoDu_Click(object sender, EventArgs e)
+        private void FormKiemTraSoDu_Load(object sender, EventArgs e)
+        {
+            LoadDataToComboBoxThongTinTaiKhoan();
+        }
+
+        private void btnKiemTraSoDuTK_Click(object sender, EventArgs e)
         {
             if (cbbSoTaiKhoan.Text.Trim() == "" && cbbTenTaiKhoan.Text.Trim() == "")
             {
@@ -99,14 +108,10 @@ namespace QuanLyTaiKhoanNganHang
             }
         }
 
-        private void txtSoTienHienTai_TextChanged(object sender, EventArgs e)
+        private void MayTinh_Click(object sender, EventArgs e)
         {
-            txtSoTienChuSo.Text = ConvertNumber.ConvertNumberToVietnamese(txtSoTienHienTai.Text);
-        }
-
-        private void FormKiemTraSoDu_Load(object sender, EventArgs e)
-        {
-            LoadDataToComboBoxThongTinTaiKhoan();
+            FormMayTinh formMayTinh = new FormMayTinh();
+            formMayTinh.Show();
         }
     }
 }
