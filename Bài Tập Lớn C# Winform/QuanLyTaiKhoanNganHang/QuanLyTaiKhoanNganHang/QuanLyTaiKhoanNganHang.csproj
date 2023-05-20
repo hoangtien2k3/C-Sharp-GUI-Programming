@@ -90,6 +90,18 @@
     <Compile Include="FormHome.Designer.cs">
       <DependentUpon>FormHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormKiemTraSoDu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKiemTraSoDu.Designer.cs">
+      <DependentUpon>FormKiemTraSoDu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMayTinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMayTinh.Designer.cs">
+      <DependentUpon>FormMayTinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuenMatKhau.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,11 +126,11 @@
     <Compile Include="FormThongTinGiaoDich.Designer.cs">
       <DependentUpon>FormThongTinGiaoDich.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongTinTaiKhoan.cs">
+    <Compile Include="FormSuaThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongTinTaiKhoan.Designer.cs">
-      <DependentUpon>FormThongTinTaiKhoan.cs</DependentUpon>
+    <Compile Include="FormSuaThongTinTaiKhoan.Designer.cs">
+      <DependentUpon>FormSuaThongTinTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="FormXoaTaiKhoan.cs">
       <SubType>Form</SubType>
@@ -157,11 +169,20 @@
     <EmbeddedResource Include="FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormKiemTraSoDu.resx">
+      <DependentUpon>FormKiemTraSoDu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMayTinh.resx">
+      <DependentUpon>FormMayTinh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRutTien.resx">
       <DependentUpon>FormRutTien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThongTinTaiKhoan.resx">
+      <DependentUpon>FormSuaThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaoTaiKhoan.resx">
       <DependentUpon>FormTaoTaiKhoan.cs</DependentUpon>
@@ -196,6 +217,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

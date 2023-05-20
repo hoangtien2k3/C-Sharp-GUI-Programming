@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormXoaTaiKhoan));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lblDataTimeNow = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbTenTaiKhoan = new System.Windows.Forms.ComboBox();
@@ -70,9 +69,8 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.lblDataTimeNow);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -91,26 +89,14 @@
             this.pictureBox3.TabIndex = 15;
             this.pictureBox3.TabStop = false;
             // 
-            // lblDataTimeNow
-            // 
-            this.lblDataTimeNow.AutoSize = true;
-            this.lblDataTimeNow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblDataTimeNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataTimeNow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDataTimeNow.Location = new System.Drawing.Point(745, 16);
-            this.lblDataTimeNow.Name = "lblDataTimeNow";
-            this.lblDataTimeNow.Size = new System.Drawing.Size(153, 24);
-            this.lblDataTimeNow.TabIndex = 117;
-            this.lblDataTimeNow.Text = "day/month/year";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(340, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(359, 31);
+            this.label2.Size = new System.Drawing.Size(375, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Xóa Tài Khoản Ngân Hàng";
             // 
@@ -357,6 +343,7 @@
             // XoaTaiKhoanGV
             // 
             this.XoaTaiKhoanGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.XoaTaiKhoanGV.BackgroundColor = System.Drawing.SystemColors.Control;
             this.XoaTaiKhoanGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.XoaTaiKhoanGV.Location = new System.Drawing.Point(435, 78);
             this.XoaTaiKhoanGV.Name = "XoaTaiKhoanGV";
@@ -386,7 +373,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(655, 368);
+            this.pictureBox2.Location = new System.Drawing.Point(669, 368);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(198, 120);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -429,7 +416,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblDataTimeNow;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cbbTenTaiKhoan;

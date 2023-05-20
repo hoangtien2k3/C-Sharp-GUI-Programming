@@ -56,7 +56,7 @@ namespace QuanLyTaiKhoanNganHang
             }
 
             // Thay đổi màu chữ của Button được nhấn thành màu mới
-            clickedButton.ForeColor = Color.Blue;
+            clickedButton.ForeColor = Color.White;
 
             // Lưu Button được nhấn vào selectedButton
             selectedButton = clickedButton;
@@ -131,8 +131,6 @@ namespace QuanLyTaiKhoanNganHang
             formRutTien.MdiParent = this;
             formRutTien.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
             formRutTien.Show();
-
-            this.Hide();
         }
 
         private void btnHome_Click(object sender, EventArgs e)
@@ -205,6 +203,36 @@ namespace QuanLyTaiKhoanNganHang
         }
 
         private void xemChiTiếtThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormThongTinGiaoDich formThongTinGiaoDich = new FormThongTinGiaoDich();
+            formThongTinGiaoDich.MdiParent = this;
+            formThongTinGiaoDich.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
+            formThongTinGiaoDich.Show();
+        }
+
+        private void btnSuaThongTinTaiKhoan_Click(object sender, EventArgs e)
+        {
+            FormSuaThongTinTaiKhoan formSuaThongTinTaiKhoan = new FormSuaThongTinTaiKhoan();
+            formSuaThongTinTaiKhoan.MdiParent = this;
+            formSuaThongTinTaiKhoan.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
+            formSuaThongTinTaiKhoan.Show();
+        }
+
+        private void btnKiemTraSoDu_Click(object sender, EventArgs e)
+        {
+            FormKiemTraSoDu formKiemTraSoDu = new FormKiemTraSoDu();
+            formKiemTraSoDu.MdiParent = this;
+            formKiemTraSoDu.FormClosed += new FormClosedEventHandler(MainForm_FormClosed); // Đăng ký sự kiện FormClosed
+            formKiemTraSoDu.Show();
+        }
+
+        private void btnMayTinh_Click(object sender, EventArgs e)
+        {
+            FormMayTinh formMayTinh = new FormMayTinh();
+            formMayTinh.Show();
+        }
+
+        private void btnThongBao_Click(object sender, EventArgs e)
         {
             FormThongTinGiaoDich formThongTinGiaoDich = new FormThongTinGiaoDich();
             formThongTinGiaoDich.MdiParent = this;

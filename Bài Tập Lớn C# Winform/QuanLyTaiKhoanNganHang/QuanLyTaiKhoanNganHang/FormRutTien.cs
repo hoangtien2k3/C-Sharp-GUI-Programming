@@ -42,10 +42,9 @@ namespace QuanLyTaiKhoanNganHang
 
 
         // load dữ liệu lên combobox SoTaiKhoan
-        private void LoadDataToComboBoxSoTaiKhoan()
+        private void LoadDataToComboBoxThongTinTaiKhoan()
         {
-            string query = "SELECT SoTaiKhoan FROM TaiKhoan";
-
+            string query = "SELECT SoTaiKhoan, TenTaiKhoan FROM TaiKhoan";
             using (SqlConnection connection = Connection.getInstance().getConnection())
             {
                 SqlCommand command = new SqlCommand(query, connection);
@@ -54,27 +53,7 @@ namespace QuanLyTaiKhoanNganHang
                 while (reader.Read())
                 {
                     cbbSoTaiKhoan.Items.Add(reader.GetString(0));
-                }
-                reader.Close();
-                command.Dispose();
-                connection.Close();
-            }
-        }
-
-
-        // load dữ liệu lên combobox TenTaiKhoan
-        private void LoadDataToComboBoxTenTaiKhoan()
-        {
-            string query = "SELECT TenTaiKhoan FROM TaiKhoan";
-
-            using (SqlConnection connection = Connection.getInstance().getConnection())
-            {
-                SqlCommand command = new SqlCommand(query, connection);
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    cbbTenTaiKhoan.Items.Add(reader.GetString(0));
+                    cbbTenTaiKhoan.Items.Add(reader.GetString(1));
                 }
                 reader.Close();
                 command.Dispose();
@@ -99,8 +78,7 @@ namespace QuanLyTaiKhoanNganHang
         private void FormRutTien_Load(object sender, EventArgs e)
         {
             ConnecSoDuTaiKhoan();
-            LoadDataToComboBoxSoTaiKhoan();
-            LoadDataToComboBoxTenTaiKhoan();
+            LoadDataToComboBoxThongTinTaiKhoan();
         }
 
 
@@ -236,6 +214,12 @@ namespace QuanLyTaiKhoanNganHang
 
                 MessageBox.Show(result);
             }
+        }
+
+        private void btnMayTinh_Click(object sender, EventArgs e)
+        {
+            FormMayTinh formMayTinh = new FormMayTinh();
+            formMayTinh.Show();
         }
     }
 }

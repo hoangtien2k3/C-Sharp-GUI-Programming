@@ -247,7 +247,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.lblDataTimeNow);
             this.panel1.Controls.Add(this.label2);
@@ -283,11 +283,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MV Boli", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(340, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(281, 31);
+            this.label2.Size = new System.Drawing.Size(290, 34);
             this.label2.TabIndex = 1;
             this.label2.Text = "Thông Tin Giao Dịch";
             // 
