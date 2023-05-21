@@ -141,9 +141,9 @@
             // 
             this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(170, 122);
+            this.pictureBox12.Location = new System.Drawing.Point(171, 122);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(40, 39);
+            this.pictureBox12.Size = new System.Drawing.Size(33, 39);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox12.TabIndex = 85;
             this.pictureBox12.TabStop = false;
@@ -186,12 +186,16 @@
             // 
             // btnKiemTra
             // 
+            this.btnKiemTra.BackColor = System.Drawing.Color.Gray;
+            this.btnKiemTra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKiemTra.ForeColor = System.Drawing.Color.White;
             this.btnKiemTra.Location = new System.Drawing.Point(210, 122);
             this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(82, 39);
+            this.btnKiemTra.Size = new System.Drawing.Size(84, 39);
             this.btnKiemTra.TabIndex = 26;
             this.btnKiemTra.Text = "Kiểm Tra";
-            this.btnKiemTra.UseVisualStyleBackColor = true;
+            this.btnKiemTra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnKiemTra.UseVisualStyleBackColor = false;
             this.btnKiemTra.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label3
@@ -459,12 +463,15 @@
             // 
             // btnChuyenTien
             // 
-            this.btnChuyenTien.Location = new System.Drawing.Point(407, 132);
+            this.btnChuyenTien.BackColor = System.Drawing.Color.Cyan;
+            this.btnChuyenTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChuyenTien.Location = new System.Drawing.Point(401, 132);
             this.btnChuyenTien.Name = "btnChuyenTien";
-            this.btnChuyenTien.Size = new System.Drawing.Size(77, 49);
+            this.btnChuyenTien.Size = new System.Drawing.Size(131, 40);
             this.btnChuyenTien.TabIndex = 83;
             this.btnChuyenTien.Text = "Chuyển Tiền";
-            this.btnChuyenTien.UseVisualStyleBackColor = true;
+            this.btnChuyenTien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnChuyenTien.UseVisualStyleBackColor = false;
             this.btnChuyenTien.Click += new System.EventHandler(this.btnChuyenTien_Click);
             // 
             // label7
@@ -535,16 +542,16 @@
             // 
             // btnMayTinh
             // 
-            this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
+            this.btnMayTinh.BackColor = System.Drawing.Color.Cyan;
             this.btnMayTinh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMayTinh.BackgroundImage")));
             this.btnMayTinh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnMayTinh.FlatAppearance.BorderSize = 0;
             this.btnMayTinh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMayTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMayTinh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btnMayTinh.Location = new System.Drawing.Point(490, 135);
+            this.btnMayTinh.Location = new System.Drawing.Point(407, 135);
             this.btnMayTinh.Name = "btnMayTinh";
-            this.btnMayTinh.Size = new System.Drawing.Size(42, 46);
+            this.btnMayTinh.Size = new System.Drawing.Size(28, 35);
             this.btnMayTinh.TabIndex = 85;
             this.btnMayTinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnMayTinh.UseVisualStyleBackColor = false;
@@ -553,9 +560,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(407, 39);
+            this.pictureBox4.Location = new System.Drawing.Point(401, 28);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(125, 66);
+            this.pictureBox4.Size = new System.Drawing.Size(131, 79);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 90;
             this.pictureBox4.TabStop = false;

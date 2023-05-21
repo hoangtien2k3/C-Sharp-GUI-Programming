@@ -247,8 +247,9 @@ namespace QuanLyTaiKhoanNganHang
                             "\n\n\t+ Số Tiền Chuyển: " + txtSoTienMuonChuyen.Text +
                             "\n\n\t+ Số Tiền Hiện Tại: " + txtSoTienHienTai.Text +
                             "\n\n\t+ " + txtSoTienChuSo.Text +
+                            "\n\n\t+ Ngày Gửi: " + DateTime.Now.ToString("dd/MM/yyyy") +
+                            "\n\n\t+ Giờ Gửi: " + DateTime.Now.ToString("HH:mm:ss") +
                             "\n\n";
-
                         MessageBox.Show(chuyentien);
 
                         txtSoTienMuonChuyen.Text = string.Empty;

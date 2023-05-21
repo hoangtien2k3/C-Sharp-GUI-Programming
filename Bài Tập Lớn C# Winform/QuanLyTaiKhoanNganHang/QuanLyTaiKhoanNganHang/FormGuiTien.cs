@@ -184,8 +184,10 @@ namespace QuanLyTaiKhoanNganHang
                             "\n\n\t- Hóa Đơn: " +
                             "\n\n\t+ Tài Khoản: " + txtSoTaiKhoan.Text +
                             "\n\n\t+ Số Tiền: " + SoTienMuonGui +
+                            "\n\n\t+ Email: " + txtDiaChiEmail.Text +
+                            "\n\n\t+ Ngày Gửi: " + DateTime.Now.ToString("dd/MM/yyyy") +
+                            "\n\n\t+ Giờ Gửi: " + DateTime.Now.ToString("HH:mm:ss") +
                             "\n\n";
-
                         MessageBox.Show(guitien);
 
                         txtSoTienHienTai.Text = kp;
@@ -211,8 +213,10 @@ namespace QuanLyTaiKhoanNganHang
                             "\n\n\t- Hóa Đơn: " +
                             "\n\n\t+ Tài Khoản: " + txtSoTaiKhoan.Text +
                             "\n\n\t+ Số Tiền: " + SoTienMuonGui +
+                            "\n\n\t+ Email: " + txtDiaChiEmail.Text +
+                            "\n\n\t+ Ngày Gửi: " + DateTime.Now.ToString("dd/MM/yyyy") +
+                            "\n\n\t+ Giờ Gửi: " + DateTime.Now.ToString("HH:mm:ss") +
                             "\n\n";
-
                         MessageBox.Show(guitien);
 
                         txtSoTienHienTai.Text = SoTienMuonGui;
