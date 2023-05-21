@@ -139,9 +139,9 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pictureBox12.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(171, 122);
+            this.pictureBox12.Location = new System.Drawing.Point(153, 122);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(33, 39);
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -189,9 +189,9 @@
             this.btnKiemTra.BackColor = System.Drawing.Color.Gray;
             this.btnKiemTra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnKiemTra.ForeColor = System.Drawing.Color.White;
-            this.btnKiemTra.Location = new System.Drawing.Point(210, 122);
+            this.btnKiemTra.Location = new System.Drawing.Point(192, 122);
             this.btnKiemTra.Name = "btnKiemTra";
-            this.btnKiemTra.Size = new System.Drawing.Size(84, 39);
+            this.btnKiemTra.Size = new System.Drawing.Size(90, 39);
             this.btnKiemTra.TabIndex = 26;
             this.btnKiemTra.Text = "Kiểm Tra";
             this.btnKiemTra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

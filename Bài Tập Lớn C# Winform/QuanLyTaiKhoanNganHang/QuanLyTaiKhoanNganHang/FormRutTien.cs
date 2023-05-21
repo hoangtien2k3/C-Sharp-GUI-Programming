@@ -106,7 +106,6 @@ namespace QuanLyTaiKhoanNganHang
 
         private void btnRutTien_Click(object sender, EventArgs e)
         {
-
             if (cbbSoTaiKhoan.Text.Trim() == "" && cbbTenTaiKhoan.Text.Trim() == "")
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin.");

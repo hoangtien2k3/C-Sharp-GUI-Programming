@@ -215,7 +215,7 @@ namespace QuanLyTaiKhoanNganHang
 
         private void btnChuyenTien_Click(object sender, EventArgs e)
         {
-            if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "")
+            if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "" || txtSoTienMuonChuyen.Text == "" || cbbDenTaiKhoan.Text == "")
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin.");
             }

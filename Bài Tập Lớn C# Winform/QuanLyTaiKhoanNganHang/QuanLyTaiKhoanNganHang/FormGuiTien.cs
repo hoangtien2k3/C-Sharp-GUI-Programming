@@ -149,7 +149,7 @@ namespace QuanLyTaiKhoanNganHang
 
         private void btnGuiTien_Click(object sender, EventArgs e)
         {
-            if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "")
+            if (txtTenTaiKhoan.Text == "" || txtSoTaiKhoan.Text == "" || txtCCCD.Text == "" || txtSoTaiKhoan.Text == "" || txtSoTienMuonGui.Text == "")
             {
                 MessageBox.Show("Hãy điền đầy đủ thông tin.");
             } else

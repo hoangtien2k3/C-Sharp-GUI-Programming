@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRutTien));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.cbbTenTaiKhoan = new System.Windows.Forms.ComboBox();
@@ -48,6 +49,7 @@
             this.lblDataTimeNow = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnMayTinh = new System.Windows.Forms.Button();
             this.btnRutTien = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -64,9 +66,8 @@
             this.txtSoTienHienTai = new System.Windows.Forms.TextBox();
             this.txtSoTienChuSo = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -74,9 +75,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -96,6 +96,17 @@
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm tài khoản";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(186, 141);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 121;
+            this.pictureBox5.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -151,20 +162,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(26, 83);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 15);
+            this.label3.Size = new System.Drawing.Size(110, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "Tên tài khoản";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(26, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 15);
+            this.label1.Size = new System.Drawing.Size(103, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Số tài khoản";
             // 
@@ -226,10 +237,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(18, 49);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 15);
+            this.label5.Size = new System.Drawing.Size(132, 18);
             this.label5.TabIndex = 31;
             this.label5.Text = "Số Tiền Cần Rút";
             // 
@@ -316,6 +327,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Rút Tiền ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Lime;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(192, 146);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 120;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnMayTinh
             // 
             this.btnMayTinh.BackColor = System.Drawing.SystemColors.Control;
@@ -337,9 +359,10 @@
             // 
             this.btnRutTien.BackColor = System.Drawing.Color.Lime;
             this.btnRutTien.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRutTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRutTien.Location = new System.Drawing.Point(183, 141);
             this.btnRutTien.Name = "btnRutTien";
-            this.btnRutTien.Size = new System.Drawing.Size(110, 44);
+            this.btnRutTien.Size = new System.Drawing.Size(117, 44);
             this.btnRutTien.TabIndex = 117;
             this.btnRutTien.Text = "Rút Tiền";
             this.btnRutTien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -349,10 +372,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(18, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 15);
+            this.label6.Size = new System.Drawing.Size(94, 18);
             this.label6.TabIndex = 116;
             this.label6.Text = "Ngày - Giờ:";
             // 
@@ -382,7 +405,7 @@
             this.button4.BackColor = System.Drawing.Color.Blue;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(161, 46);
+            this.button4.Location = new System.Drawing.Point(183, 48);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(319, 2);
             this.button4.TabIndex = 31;
@@ -393,7 +416,7 @@
             this.button3.BackColor = System.Drawing.Color.Blue;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.Blue;
-            this.button3.Location = new System.Drawing.Point(161, 171);
+            this.button3.Location = new System.Drawing.Point(183, 173);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(319, 2);
             this.button3.TabIndex = 126;
@@ -405,7 +428,7 @@
             this.txtSoTienDaRut.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoTienDaRut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTienDaRut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtSoTienDaRut.Location = new System.Drawing.Point(161, 156);
+            this.txtSoTienDaRut.Location = new System.Drawing.Point(183, 158);
             this.txtSoTienDaRut.Name = "txtSoTienDaRut";
             this.txtSoTienDaRut.Size = new System.Drawing.Size(319, 15);
             this.txtSoTienDaRut.TabIndex = 125;
@@ -413,10 +436,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(33, 156);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 15);
+            this.label8.Size = new System.Drawing.Size(114, 18);
             this.label8.TabIndex = 124;
             this.label8.Text = "Số tiền đã rút:";
             // 
@@ -426,7 +449,7 @@
             this.txtTenTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.txtTenTaiKhoan.Location = new System.Drawing.Point(161, 32);
+            this.txtTenTaiKhoan.Location = new System.Drawing.Point(183, 34);
             this.txtTenTaiKhoan.Name = "txtTenTaiKhoan";
             this.txtTenTaiKhoan.Size = new System.Drawing.Size(319, 15);
             this.txtTenTaiKhoan.TabIndex = 30;
@@ -434,31 +457,31 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(33, 113);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 15);
+            this.label11.Size = new System.Drawing.Size(132, 18);
             this.label11.TabIndex = 123;
             this.label11.Text = "Số Tiền Chữ Số:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(33, 70);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(100, 15);
+            this.label7.Size = new System.Drawing.Size(116, 18);
             this.label7.TabIndex = 118;
             this.label7.Text = "Số dư hiện tại:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.Location = new System.Drawing.Point(33, 32);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 15);
+            this.label4.Size = new System.Drawing.Size(115, 18);
             this.label4.TabIndex = 29;
             this.label4.Text = "Tên tài khoản:";
             // 
@@ -467,7 +490,7 @@
             this.button2.BackColor = System.Drawing.Color.Blue;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(161, 129);
+            this.button2.Location = new System.Drawing.Point(183, 131);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(319, 2);
             this.button2.TabIndex = 122;
@@ -479,7 +502,7 @@
             this.txtSoTienHienTai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoTienHienTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTienHienTai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtSoTienHienTai.Location = new System.Drawing.Point(161, 71);
+            this.txtSoTienHienTai.Location = new System.Drawing.Point(183, 73);
             this.txtSoTienHienTai.Name = "txtSoTienHienTai";
             this.txtSoTienHienTai.Size = new System.Drawing.Size(319, 15);
             this.txtSoTienHienTai.TabIndex = 119;
@@ -491,7 +514,7 @@
             this.txtSoTienChuSo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSoTienChuSo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTienChuSo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.txtSoTienChuSo.Location = new System.Drawing.Point(161, 114);
+            this.txtSoTienChuSo.Location = new System.Drawing.Point(183, 116);
             this.txtSoTienChuSo.Name = "txtSoTienChuSo";
             this.txtSoTienChuSo.Size = new System.Drawing.Size(319, 15);
             this.txtSoTienChuSo.TabIndex = 121;
@@ -501,33 +524,11 @@
             this.button5.BackColor = System.Drawing.Color.Blue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.ForeColor = System.Drawing.Color.Blue;
-            this.button5.Location = new System.Drawing.Point(161, 87);
+            this.button5.Location = new System.Drawing.Point(183, 89);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(319, 2);
             this.button5.TabIndex = 120;
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Lime;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(195, 146);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 120;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(186, 141);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(35, 34);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 121;
-            this.pictureBox5.TabStop = false;
             // 
             // FormRutTien
             // 
@@ -546,6 +547,7 @@
             this.Load += new System.EventHandler(this.FormRutTien_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -555,10 +557,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
