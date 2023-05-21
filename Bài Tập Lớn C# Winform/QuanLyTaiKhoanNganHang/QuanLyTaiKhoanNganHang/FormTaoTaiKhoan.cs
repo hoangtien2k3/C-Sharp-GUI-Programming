@@ -452,21 +452,24 @@ namespace QuanLyTaiKhoanNganHang
             ExportExcel(dataTable, "DANH SÁCH TÀI KHOẢN", "DANH SÁCH CÁC TÀI KHOẢN ĐÃ ĐƯỢC TẠO");
         }
 
+        private bool isPasswordVisible = false; // Biến để theo dõi trạng thái hiển thị mật khẩu
         private void HienMatKhau_Click(object sender, EventArgs e)
         {
-            if (txtMatKhau.PasswordChar == '*')
+            isPasswordVisible = !isPasswordVisible;
+
+            if (isPasswordVisible)
             {
-                txtMatKhau.PasswordChar = '\0'; // Hiện mật khẩu
+                txtMatKhau.UseSystemPasswordChar = false; // Hiện mật khẩu
             }
             else
             {
-                txtMatKhau.PasswordChar = '*'; // Ẩn mật khẩu
+                txtMatKhau.UseSystemPasswordChar = true; // Ẩn mật khẩu
             }
         }
 
         private void txtMatKhau_TextChanged(object sender, EventArgs e)
         {
-            txtMatKhau.PasswordChar = '*';
+            txtMatKhau.UseSystemPasswordChar = true; // Luôn ẩn mật khẩu khi gõ vào ô nhập liệu
         }
     }
 }

@@ -15,6 +15,7 @@ namespace QuanLyTaiKhoanNganHang
 {
     public partial class FormXoaTaiKhoan : Form
     {
+        // Singleton Design Pattern
         SqlConnection Con = Connection.getInstance().getConnection();
 
         public FormXoaTaiKhoan()
@@ -43,7 +44,7 @@ namespace QuanLyTaiKhoanNganHang
         }
 
 
-        public void ConnecXoaTaiKhoan()
+        /*public void ConnecXoaTaiKhoan()
         {
             Con.Open();
             string query = "SELECT TenTaiKhoan, SoTaiKhoan, DiaChiEmail, GioiTinh, CCCD, NgaySinh FROM TaiKhoan";
@@ -53,7 +54,26 @@ namespace QuanLyTaiKhoanNganHang
             adapter.Fill(dataTable);
             XoaTaiKhoanGV.DataSource = dataTable;
             Con.Close();
+        }*/
+
+        public void ConnecXoaTaiKhoan()
+        {
+            string query = "SELECT TenTaiKhoan, SoTaiKhoan, DiaChiEmail, GioiTinh, CCCD, NgaySinh FROM TaiKhoan";
+            using (SqlConnection connection = Connection.getInstance().getConnection())
+            {
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        DataTable dataTable = new DataTable();
+                        dataTable.Load(reader);
+                        XoaTaiKhoanGV.DataSource = dataTable;
+                    }
+                }
+            }
         }
+
 
         private void FormXoaTaiKhoan_Load(object sender, EventArgs e)
         {

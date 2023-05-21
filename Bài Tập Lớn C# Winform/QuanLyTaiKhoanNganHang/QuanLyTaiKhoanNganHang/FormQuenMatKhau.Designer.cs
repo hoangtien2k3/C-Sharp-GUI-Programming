@@ -43,6 +43,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.txtCCCD = new System.Windows.Forms.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnQuayLai = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -63,18 +64,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Silver;
-            this.label2.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(349, 9);
+            this.label2.Location = new System.Drawing.Point(415, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(225, 35);
+            this.label2.Size = new System.Drawing.Size(144, 23);
             this.label2.TabIndex = 49;
             this.label2.Text = "Lấy Lại Mật Khẩu";
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(401, 286);
+            this.pictureBox3.Location = new System.Drawing.Point(421, 286);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -97,7 +98,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button2.Location = new System.Drawing.Point(427, 178);
+            this.button2.Location = new System.Drawing.Point(419, 179);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(178, 1);
             this.button2.TabIndex = 46;
@@ -123,13 +124,13 @@
             // 
             this.btnLayLaiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLayLaiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLayLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLayLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLayLaiMatKhau.ForeColor = System.Drawing.Color.Red;
-            this.btnLayLaiMatKhau.Location = new System.Drawing.Point(390, 278);
+            this.btnLayLaiMatKhau.Location = new System.Drawing.Point(410, 278);
             this.btnLayLaiMatKhau.Name = "btnLayLaiMatKhau";
-            this.btnLayLaiMatKhau.Size = new System.Drawing.Size(169, 47);
+            this.btnLayLaiMatKhau.Size = new System.Drawing.Size(129, 47);
             this.btnLayLaiMatKhau.TabIndex = 44;
-            this.btnLayLaiMatKhau.Text = "Hiển Thị Mật Khẩu";
+            this.btnLayLaiMatKhau.Text = "Khôi Phục";
             this.btnLayLaiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnLayLaiMatKhau.UseVisualStyleBackColor = false;
             this.btnLayLaiMatKhau.Click += new System.EventHandler(this.btnLayLaiMatKhau_Click);
@@ -138,7 +139,7 @@
             // 
             this.labelMatKhau.AutoSize = true;
             this.labelMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMatKhau.Location = new System.Drawing.Point(337, 242);
+            this.labelMatKhau.Location = new System.Drawing.Point(344, 242);
             this.labelMatKhau.Name = "labelMatKhau";
             this.labelMatKhau.Size = new System.Drawing.Size(74, 16);
             this.labelMatKhau.TabIndex = 43;
@@ -148,9 +149,10 @@
             // 
             this.txtEmailDangKy.BackColor = System.Drawing.Color.Silver;
             this.txtEmailDangKy.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmailDangKy.Location = new System.Drawing.Point(427, 164);
+            this.txtEmailDangKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailDangKy.Location = new System.Drawing.Point(419, 165);
             this.txtEmailDangKy.Name = "txtEmailDangKy";
-            this.txtEmailDangKy.Size = new System.Drawing.Size(178, 13);
+            this.txtEmailDangKy.Size = new System.Drawing.Size(178, 14);
             this.txtEmailDangKy.TabIndex = 42;
             // 
             // label1
@@ -181,7 +183,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.button3.Location = new System.Drawing.Point(427, 209);
+            this.button3.Location = new System.Drawing.Point(419, 210);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(178, 1);
             this.button3.TabIndex = 52;
@@ -191,21 +193,35 @@
             // 
             this.txtCCCD.BackColor = System.Drawing.Color.Silver;
             this.txtCCCD.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCCCD.Location = new System.Drawing.Point(427, 195);
+            this.txtCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCCCD.Location = new System.Drawing.Point(419, 196);
             this.txtCCCD.Name = "txtCCCD";
-            this.txtCCCD.Size = new System.Drawing.Size(178, 13);
+            this.txtCCCD.Size = new System.Drawing.Size(178, 14);
             this.txtCCCD.TabIndex = 51;
             // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Silver;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(427, 63);
+            this.pictureBox5.Location = new System.Drawing.Point(401, 12);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(85, 58);
+            this.pictureBox5.Size = new System.Drawing.Size(174, 95);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 53;
             this.pictureBox5.TabStop = false;
+            // 
+            // btnQuayLai
+            // 
+            this.btnQuayLai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnQuayLai.BackgroundImage")));
+            this.btnQuayLai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnQuayLai.FlatAppearance.BorderSize = 0;
+            this.btnQuayLai.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuayLai.Location = new System.Drawing.Point(545, 278);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(75, 47);
+            this.btnQuayLai.TabIndex = 54;
+            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // FormQuenMatKhau
             // 
@@ -213,6 +229,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(648, 337);
+            this.Controls.Add(this.btnQuayLai);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.txtCCCD);
@@ -259,5 +276,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtCCCD;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Button btnQuayLai;
     }
 }
