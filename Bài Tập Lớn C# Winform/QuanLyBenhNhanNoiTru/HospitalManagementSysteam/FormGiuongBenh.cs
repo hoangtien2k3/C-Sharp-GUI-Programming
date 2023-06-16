@@ -10,11 +10,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using e_excel = Microsoft.Office.Interop.Excel;
 
 namespace QuanLyBenhNhanNoiTru
 {
     public partial class FormGiuongBenh : Form
     {
+
         SqlConnection Con = Connection.getConnection();
 
         public FormGiuongBenh()
@@ -24,43 +26,35 @@ namespace QuanLyBenhNhanNoiTru
 
         private void FormGiuongBenh_Load(object sender, EventArgs e)
         {
-            LoadDataGRVGiuongBenh();
-            LoadDataGRVBenhNhan();
-            LoadCBBTimGiuong();
-            LoadCBBMaBNGiuong();
-            ReadOnlyThongTinBN();
+            LoadcbbBN();
+            txtChuyenKhoa.Enabled = false;
+            txtMaBS.Enabled = false;
+            LoadThongTinGiuongBenh();
         }
 
-        void LoadDataGRVGiuongBenh()
+
+        private void LoadThongTinGiuongBenh()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select * from GiuongBenh", Con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable tb = new DataTable();
-            adapter.Fill(tb);
-            dataGRVGiuongBenh.DataSource = tb;
+            string query = "SELECT * FROM GiuongBenh";
+            SqlCommand sqlCommand = new SqlCommand(query, Con);
+            SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+            dataGRVBenhNhan.DataSource = dataTable;
             Con.Close();
         }
 
-        void LoadDataGRVBenhNhan()
-        {
-            Con.Open();
-            SqlCommand cmd = new SqlCommand("select * from BenhNhan", Con);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable tb = new DataTable();
-            adapter.Fill(tb);
-            dataGRVBenhNhan.DataSource = tb;
-            Con.Close();
-        }
 
-        void LoadCBBTimGiuong()
+        void LoadcbbBN()
         {
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select MaBN from BenhNhan", Con);
+            SqlCommand cmd = new SqlCommand("select MaBN from ThongTinKhamBenh where SoNgayNhapVien > 0 ", Con);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                cbbTimGiuong.Items.Add(reader.GetString(0));
+
+                cbbMaBN.Items.Add(reader.GetString(0));
 
             }
             cmd.Dispose();
@@ -68,209 +62,76 @@ namespace QuanLyBenhNhanNoiTru
             Con.Close();
         }
 
-        void LoadCBBMaBNGiuong()
+        private void cbbMaBN_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbbMaBNGiuong.Items.Clear();
             Con.Open();
-            SqlCommand cmd = new SqlCommand("select MaBN from BenhNhan", Con);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
-            {
-                cbbMaBNGiuong.Items.Add(reader.GetString(0));
+            SqlCommand cmd1 = new SqlCommand("select ChuyenKhoa from ThongTinKhamBenh where MaBN = '" + cbbMaBN.Text + "'", Con);
+            string khoa = (string)cmd1.ExecuteScalar(); // Truy vấn dữ liệu và lấy giá trị trả về 
+            txtChuyenKhoa.Text = khoa; // Gán giá trị tên vào thuộc tính Text của textbox để hiển thị
 
-            }
-            cmd.Dispose();
-            reader.Close();
+
+            SqlCommand cmd2 = new SqlCommand("select MaBS from ThongTinKhamBenh where MaBN = '" + cbbMaBN.Text + "'", Con);
+            string MaBS = (string)cmd2.ExecuteScalar(); // Truy vấn dữ liệu và lấy giá trị trả về 
+            txtMaBS.Text = MaBS; // Gán giá trị tên vào thuộc tính Text của textbox để hiển thị
+
+            cmd1.Dispose();
+            cmd2.Dispose();
             Con.Close();
         }
 
-        void ReadOnlyThongTinBN()
+        private void txtChuyenKhoa_TextChanged(object sender, EventArgs e)
         {
-            txtMaBN.ReadOnly = true;
-            txtHoTen.ReadOnly = true;
-            txtGioiTinh.ReadOnly = true;
-            txtDiaChi.ReadOnly = true;
-            datetimeNgaySinh.Enabled = false;
-        }
-
-        private void dataGRVGiuongBenh_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                // Đẩy dữ liệu lên panel danh sách giường bệnh
-                DataGridViewRow row = dataGRVGiuongBenh.CurrentRow;
-                for (int i = 0; i < cbbMaBNGiuong.Items.Count; i++)
-                {
-                    if (row.Cells["MaBN"].Value.ToString() == cbbMaBNGiuong.Items[i].ToString())
-                    {
-                        // Lấy giá dữ liệu tại vị trí thứ i trong cbb
-                        cbbMaBNGiuong.SelectedItem = cbbMaBNGiuong.Items[i];
-                        break;
-                    }
-                }
-                for (int i = 0; i < cbbSoTang.Items.Count; i++)
-                {
-                    if (row.Cells["SoTang"].Value.ToString() == cbbSoTang.Items[i].ToString())
-                    {
-                        // Lấy giá dữ liệu tại vị trí thứ i trong cbb
-                        cbbSoTang.SelectedItem = cbbSoTang.Items[i];
-                        break;
-                    }
-                }
-                for (int i = 0; i < cbbSoPhong.Items.Count; i++)
-                {
-                    if (row.Cells["SoPhong"].Value.ToString() == cbbSoPhong.Items[i].ToString())
-                    {
-                        // Lấy giá dữ liệu tại vị trí thứ i trong cbb
-                        cbbSoPhong.SelectedItem = cbbSoPhong.Items[i];
-                        break;
-                    }
-                }
-                for (int i = 0; i < cbbSoGiuong.Items.Count; i++)
-                {
-                    if (row.Cells["SoGiuong"].Value.ToString() == cbbSoGiuong.Items[i].ToString())
-                    {
-                        // Lấy giá dữ liệu tại vị trí thứ i trong cbb
-                        cbbSoGiuong.SelectedItem = cbbSoGiuong.Items[i];
-                        break;
-                    }
-                }
-
-                /*                // Đưa giá trị vào combobox
-                                string selectedValue = row.Cells["MaBN"].Value.ToString();
-                                cbbMaBNGiuong.Items.Clear();
-                                cbbMaBNGiuong.Items.Add(selectedValue);
-                                cbbMaBNGiuong.SelectedIndex = 0;
-
-                                selectedValue = row.Cells["SoTang"].Value.ToString();
-                                cbbSoTang.Items.Clear();
-                                cbbSoTang.Items.Add(selectedValue);
-                                cbbSoTang.SelectedIndex = 0;
-
-                                selectedValue = row.Cells["SoPhong"].Value.ToString();
-                                cbbSoPhong.Items.Clear();
-                                cbbSoPhong.Items.Add(selectedValue);
-                                cbbSoPhong.SelectedIndex = 0;
-
-                                selectedValue = row.Cells["SoGiuong"].Value.ToString();
-                                cbbSoGiuong.Items.Clear();
-                                cbbSoGiuong.Items.Add(selectedValue);
-                                cbbSoGiuong.SelectedIndex = 0;*/
-
-                // Đẩy dữ liệu bệnh nhân của giường được chọn lên panel thông tin giường 
-
-                // Mở kết nối
-                Con.Open();
-
-                // Tạo đối tượng SqlCommand với truy vấn SQL để lấy thông tin của nhân viên có EmployeeID là 1
-                SqlCommand cmd = new SqlCommand("SELECT MaBN, TenBN, DiaChi, GioiTinh, NgaySinh, ImageData FROM BenhNhan WHERE MaBN = '" + row.Cells["MaBN"].Value.ToString() + "'", Con);
-
-                // Thực thi truy vấn và lấy dữ liệu
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                // Đưa thông tin vào các textbox
-                while (reader.Read())
-                {
-                    txtMaBN.Text = reader["MaBN"].ToString();
-                    txtHoTen.Text = reader["TenBN"].ToString();
-                    txtDiaChi.Text = reader["DiaChi"].ToString();
-                    txtGioiTinh.Text = reader["GioiTinh"].ToString();
-                    datetimeNgaySinh.Text = reader["NgaySinh"].ToString();
-                    byte[] imageBytes = (byte[])reader["ImageData"];
-
-                    // Chuyển đổi dữ liệu Binary về kiểu Image
-                    MemoryStream ms = new MemoryStream(imageBytes);
-                    Image image = Image.FromStream(ms);
-
-                    // Hiển thị ảnh lên PictureBox
-                    ptbTaiAnh.Image = image;
-                }
-
-                // Đóng SqlDataReader và kết nối
-                reader.Close();
-                Con.Close();
-            }
-        }
-
-        private void dataGRVBenhNhan_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
-            {
-                DataGridViewRow row = dataGRVBenhNhan.CurrentRow;
-
-                txtMaBN.Text = row.Cells["MaBN"].Value.ToString();
-                txtHoTen.Text = row.Cells["TenBN"].Value.ToString();
-                txtDiaChi.Text = row.Cells["DiaChi"].Value.ToString();
-                txtGioiTinh.Text = row.Cells["GioiTinh"].Value.ToString();
-
-                if (row.Cells["NgaySinh"].Value != null && row.Cells["NgaySinh"].Value != DBNull.Value)
-                {
-                    datetimeNgaySinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value.ToString());
-                }
-                else
-                {
-                    datetimeNgaySinh.Value = DateTime.Now;
-                }
-
-
-                if (dataGRVBenhNhan.CurrentRow.Cells["ImageData"].Value != null && dataGRVBenhNhan.CurrentRow.Cells["ImageData"].Value != DBNull.Value)
-                {
-                    byte[] imageBytes = (byte[])row.Cells["ImageData"].Value; // Lấy thông tin ảnh từ cơ sở dữ liệu
-                    MemoryStream ms = new MemoryStream(imageBytes); // Chuyển đổi dữ liệu Binary về kiểu Image
-                    Image image = Image.FromStream(ms);
-                    ptbTaiAnh.Image = image; // Hiển thị ảnh lên PictureBox
-                }
-                else
-                {
-                    ptbTaiAnh.Image = default;
-                }
-            }
-        }
-
-        private void cbbSoTang_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbSoTang.SelectedItem.ToString() == "(1) Khoa Cấp Cứu")
-            {
-                cbbSoPhong.Items.Clear();
-                cbbSoPhong.Items.Add("101");
-                cbbSoPhong.Items.Add("102");
-            }
-            if (cbbSoTang.SelectedItem.ToString() == "(2) Khoa Nhi")
+            if (txtChuyenKhoa.Text == "Khoa Nhi")
             {
                 cbbSoPhong.Items.Clear();
                 cbbSoPhong.Items.Add("201");
                 cbbSoPhong.Items.Add("202");
+                cbbSoPhong.Items.Add("203");
+                cbbSoPhong.Items.Add("204");
             }
-            if (cbbSoTang.SelectedItem.ToString() == "(3) Khoa Hồi Sức")
+            if (txtChuyenKhoa.Text == "Khoa Nội")
             {
                 cbbSoPhong.Items.Clear();
                 cbbSoPhong.Items.Add("301");
                 cbbSoPhong.Items.Add("302");
+                cbbSoPhong.Items.Add("303");
+                cbbSoPhong.Items.Add("304");
             }
-            if (cbbSoTang.SelectedItem.ToString() == "(4) Khoa Phẩu Thuật")
+            if (txtChuyenKhoa.Text == "Khoa Ngoại")
             {
                 cbbSoPhong.Items.Clear();
                 cbbSoPhong.Items.Add("401");
                 cbbSoPhong.Items.Add("402");
+                cbbSoPhong.Items.Add("403");
+                cbbSoPhong.Items.Add("404");
             }
-            if (cbbSoTang.SelectedItem.ToString() == "(5) Khoa Ngoại")
+            if (txtChuyenKhoa.Text == "Khoa Tai Mũi Họng")
             {
                 cbbSoPhong.Items.Clear();
                 cbbSoPhong.Items.Add("501");
                 cbbSoPhong.Items.Add("502");
-            }
-            if (cbbSoTang.SelectedItem.ToString() == "(6) Khoa Nội")
-            {
-                cbbSoPhong.Items.Clear();
-                cbbSoPhong.Items.Add("601");
-                cbbSoPhong.Items.Add("602");
+                cbbSoPhong.Items.Add("503");
+                cbbSoPhong.Items.Add("504");
             }
         }
 
         private void cbbSoPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbSoPhong.SelectedItem.ToString() != "")
+            if (cbbSoPhong.SelectedItem.ToString() == cbbSoPhong.Items[0].ToString())
             {
+                txtLoaiPhong.Text = "Vip";
+                cbbSoGiuong.Items.Clear();
+                cbbSoGiuong.Items.Add("1");
+            }
+            else if (cbbSoPhong.SelectedItem.ToString() == null)
+            {
+                txtLoaiPhong.Text = null;
+                cbbSoGiuong.Items.Clear();
+
+            }
+            else
+            {
+                txtLoaiPhong.Text = "Thuong";
                 cbbSoGiuong.Items.Clear();
                 cbbSoGiuong.Items.Add("1");
                 cbbSoGiuong.Items.Add("2");
@@ -279,119 +140,267 @@ namespace QuanLyBenhNhanNoiTru
             }
         }
 
-        private void buttonThem_Click(object sender, EventArgs e)
+
+        private void cbbSoGiuong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbbMaBNGiuong.Text == "" || cbbSoTang.Text == "" || cbbSoPhong.Text == "" || cbbSoGiuong.Text == "")
+            SqlCommand cmd = null;
+            Con.Open();
+            cmd = new SqlCommand("Select Count(*) From GiuongBenh Where SoPhong = '" + cbbSoPhong.Text + "' and SoGiuong = '" + cbbSoGiuong.Text + "' ", Con);
+            int Count = Convert.ToInt32(cmd.ExecuteScalar());
+            if (Count > 0)
             {
-                MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin");
+                txtTrangThai.Text = "Không Còn Trống";
             }
             else
             {
-                Con.Open();
-                string query = "select count(*) from GiuongBenh where MaBN = '" + cbbMaBNGiuong.SelectedItem.ToString() + "' ";
-                /*                    "and SoTang = '"+cbbSoTang.SelectedItem.ToString()+"'" + 
-                                    "and SoPhong = '"+cbbSoPhong.SelectedItem.ToString()+"' " +
-                                    "and SoGiuong = '"+cbbSoGiuong.SelectedItem.ToString()+"'";*/
-                SqlCommand cmd = new SqlCommand(query, Con);
-                int count = Convert.ToInt32(cmd.ExecuteScalar());
-                if (count > 0)
+                txtTrangThai.Text = "Còn Trống";
+            }
+            Con.Close();
+        }
+
+
+        private void btnSuaThongTin_Click(object sender, EventArgs e)
+        {
+            if (cbbMaBN.Text == "" || cbbSoPhong.Text == "" || cbbSoGiuong.Text == "")
+            {
+                MessageBox.Show("Hãy điền đủ thông tin !");
+
+            }
+            else
+            {
+                if (txtTrangThai.Text == "Không Còn Trống")
                 {
-                    MessageBox.Show("Mã bệnh nhân đã tồn tại. Hãy nhập lại mã khác.",
-                        "Xác Nhận",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    MessageBox.Show("Giường hiện không còn trống !");
                 }
                 else
                 {
-                    query = "insert into GiuongBenh (MaBN, SoTang, SoPhong, SoGiuong) " +
-                        "values('" + cbbMaBNGiuong.SelectedItem.ToString() + "', " +
-                        "N'" + cbbSoTang.SelectedItem.ToString() + "', " +
-                        "'" + cbbSoPhong.SelectedItem.ToString() + "', " +
-                        "'" + cbbSoGiuong.SelectedItem.ToString() + "')";
-                    cmd = new SqlCommand(query, Con);
+                    Con.Open();
+                    string query = "update GiuongBenh set ChuyenKhoa  = N'" + txtChuyenKhoa.Text + "', MaBS = '" + txtMaBS.Text + "', " +
+                        "SoPhong = '" + cbbSoPhong.Text + "', LoaiPhong = '" + txtLoaiPhong.Text + "', SoGiuong = '" + cbbSoGiuong.Text + "' where MaBN = '" + cbbMaBN.Text + "' ";
+                    SqlCommand cmd = new SqlCommand(query, Con);
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Sửa thông tin giường bệnh thành công");
                     cmd.Dispose();
                     Con.Close();
-                    MessageBox.Show("Thêm thông tin thành công.", "", MessageBoxButtons.OK);
-                    LoadDataGRVGiuongBenh();
-
+                    LoadThongTinGiuongBenh();
                 }
             }
         }
 
-        private void buttonReset_Click(object sender, EventArgs e)
-        {
-            LoadCBBMaBNGiuong();
-            cbbSoTang.Items.Clear();
-            cbbSoTang.Items.Add("(1) Khoa Cấp Cứu");
-            cbbSoTang.Items.Add("(2) Khoa Nhi");
-            cbbSoTang.Items.Add("(3) Khoa Hồi Sức");
-            cbbSoTang.Items.Add("(4) Khoa Phẩu Thuật");
-            cbbSoTang.Items.Add("(5) Khoa Ngoại");
-            cbbSoTang.Items.Add("(6) Khoa Nội");
-            cbbSoPhong.Items.Clear();
-            cbbSoGiuong.Items.Clear();
-        }
-
-        private void buttonXoa_Click(object sender, EventArgs e)
+        private void buttonXepGiuongBenh_Click(object sender, EventArgs e)
         {
             Con.Open();
-            string query = "delete from GiuongBenh where MaBN = '" + cbbMaBNGiuong.SelectedItem.ToString() + "'";
-            SqlCommand cmd = new SqlCommand(query, Con);
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            Con.Close();
-            LoadDataGRVGiuongBenh();
-        }
+            SqlCommand cmd = null;
 
-        private void buttonSua_Click(object sender, EventArgs e)
-        {
-            if (cbbMaBNGiuong.Text == "" || cbbSoTang.Text == "" || cbbSoPhong.Text == "" || cbbSoGiuong.Text == "")
+            if (cbbMaBN.Text == "" || cbbSoPhong.Text == "" || cbbSoGiuong.Text == "")
             {
-                MessageBox.Show("Hãy Nhập Đầy Đủ Thông Tin");
+                MessageBox.Show("Hãy điền đủ thông tin !");
+
+            }
+            else if (txtTrangThai.Text == "Không Còn Trống")
+            {
+                MessageBox.Show("Giường này hiện không còn trống !");
             }
             else
             {
-                Con.Open();
-                string query = "select MaBN, SoTang, SoPhong, SoGiuong from GiuongBenh";
-                using (SqlCommand cmd = new SqlCommand(query, Con))
+                cmd = new SqlCommand("Select Count(*) From GiuongBenh Where MaBN = '" + cbbMaBN.Text + "'", Con);
+                int Count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (Count > 0)
                 {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        // Đọc các thuộc tính từng dòng trong bảng
-                        while (reader.Read())
-                        {
-                            if (cbbSoTang.Text == reader["SoTang"].ToString()
-                                && cbbSoPhong.Text == reader["SoPhong"].ToString()
-                                && cbbSoGiuong.Text == reader["SoGiuong"].ToString())
-                            {
-                                if (cbbMaBNGiuong.Text == reader["MaBN"].ToString())
-                                    MessageBox.Show("Bệnh nhân đã nằm giường này.");
-                                else
-                                    MessageBox.Show("Đã có bệnh nhân khác nằm giường này.");
-                            }
-                            else
-                            {
-                                query = "update GiuongBenh set MaBN = '" + cbbMaBNGiuong.Text + "', " +
-                                    "SoTang = N'" + cbbSoTang.Text + "', " +
-                                    "SoPhong = '" + cbbSoPhong.Text + "', " +
-                                    "SoGiuong = '" + cbbSoGiuong.Text + "' " +
-                                    "where MaBN = '" + dataGRVGiuongBenh.CurrentRow.Cells["MaBN"].Value.ToString() + "'";
-                                SqlCommand command = new SqlCommand(query, Con);
-                                reader.Close();
-                                command.ExecuteNonQuery();
-                                command.Dispose();
-                                cmd.Dispose();
-                                MessageBox.Show("Sửa thông tin thành công.");
-                                break;
-                            }
-                        }
-                    }
+                    MessageBox.Show("Bệnh Nhân Đã Được Xếp Giường Bệnh", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                Con.Close();
-                LoadDataGRVGiuongBenh();
+                else
+                {
+                    string query = "insert into GiuongBenh(MaBN, ChuyenKhoa, MaBS, SoPhong, LoaiPhong, SoGiuong) " +
+                                                "values('" + cbbMaBN.Text + "', N'" + txtChuyenKhoa.Text + "', '" + txtMaBS.Text + "'" +
+                                                ", '" + cbbSoPhong.Text + "', '" + txtLoaiPhong.Text + "' , '" + cbbSoGiuong.Text + "')";
+
+                    cmd = new SqlCommand(query, Con);
+                    cmd.ExecuteNonQuery();
+                    cmd.Dispose();
+                }
+            }
+            Con.Close();
+            LoadThongTinGiuongBenh();
+            buttonResert_Click(sender, e);
+        }
+
+        private void dataGRVBenhNhan_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGRVBenhNhan.CurrentRow;
+
+                cbbMaBN.Text = row.Cells["MaBN"].Value.ToString();
+                txtChuyenKhoa.Text = row.Cells["ChuyenKhoa"].Value.ToString();
+                cbbSoPhong.Text = row.Cells["SoPhong"].Value.ToString();
+                txtLoaiPhong.Text = row.Cells["LoaiPhong"].Value.ToString();
+                cbbSoGiuong.Text = row.Cells["SoGiuong"].Value.ToString();
+                txtMaBS.Text = row.Cells["MaBS"].Value.ToString();
             }
         }
 
+        private void buttonResert_Click(object sender, EventArgs e)
+        {
+            cbbMaBN.Items.Clear();
+            LoadcbbBN();
+            txtChuyenKhoa.Text = string.Empty;
+            txtMaBS.Text = string.Empty;
+            cbbSoPhong.Items.Clear();
+            txtLoaiPhong.Text = string.Empty;
+            cbbSoGiuong.Items.Clear();
+            txtTrangThai.Text = string.Empty;
+
+            LoadThongTinGiuongBenh();
+        }
+
+        public void ExportExcel(DataTable tb, string sheetname)
+        {
+            //Tạo các đối tượng Excel
+
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+            //Tạo mới một Excel WorkBook 
+            oExcel.Visible = true;
+            oExcel.DisplayAlerts = false;
+            oExcel.Application.SheetsInNewWorkbook = 1;
+            oBooks = oExcel.Workbooks;
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+            oSheets = oBook.Worksheets;
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+            oSheet.Name = sheetname;
+            // Tạo phần đầu nếu muốn
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "F1");
+            head.MergeCells = true;
+            head.Value2 = "DANH SÁCH GIƯỜNG BỆNH";
+            head.Font.Bold = true;
+            head.Font.Name = "Tahoma";
+            head.Font.Size = "16";
+            head.HorizontalAlignment = e_excel.XlHAlign.xlHAlignCenter;
+            // Tạo tiêu đề cột 
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+            cl1.Value2 = "MÃ BỆNH NHÂN";
+            cl1.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+            cl2.Value2 = "CHUYÊN KHOA";
+            cl2.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+            cl3.Value2 = "MÃ BÁC SĨ";
+            cl3.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+            cl4.Value2 = "SO PHÒNG";
+            cl4.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl5 = oSheet.get_Range("E3", "E3");
+            cl5.Value2 = "LOẠI PHÒNG";
+            cl5.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range cl6 = oSheet.get_Range("F3", "F3");
+            cl6.Value2 = "SỐ GIƯỜNG";
+            cl6.ColumnWidth = 20.0;
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "F3");
+
+            rowHead.Font.Bold = true;
+            // Kẻ viền
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+            // Thiết lập màu nền
+            rowHead.Interior.ColorIndex = 20;
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+            // Tạo mảng đối tượng để lưu dữ toàn bồ dữ liệu trong DataTable,
+            // vì dữ liệu được được gán vào các Cell trong Excel phải thông qua object thuần.
+            object[,] arr = new object[tb.Rows.Count, tb.Columns.Count];
+            //Chuyển dữ liệu từ DataTable vào mảng đối tượng
+            for (int r = 0; r < tb.Rows.Count; r++)
+            {
+                DataRow dr = tb.Rows[r];
+                for (int c = 0; c < tb.Columns.Count; c++)
+
+                {
+                    arr[r, c] = dr[c];
+                }
+            }
+            //Thiết lập vùng điền dữ liệu
+            int rowStart = 4;
+            int columnStart = 1;
+            int rowEnd = rowStart + tb.Rows.Count - 1;
+            int columnEnd = tb.Columns.Count;
+            // Ô bắt đầu điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range c1 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowStart, columnStart];
+            // Ô kết thúc điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range c2 = (Microsoft.Office.Interop.Excel.Range)oSheet.Cells[rowEnd, columnEnd];
+            // Lấy về vùng điền dữ liệu
+            Microsoft.Office.Interop.Excel.Range range = oSheet.get_Range(c1, c2);
+            //Điền dữ liệu vào vùng đã thiết lập
+            range.Value2 = arr;
+            // Kẻ viền
+            range.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            {
+                DataColumn col1 = new DataColumn("MaBN");
+                DataColumn col2 = new DataColumn("ChuyenKhoa");
+                DataColumn col3 = new DataColumn("MaBS");
+                DataColumn col4 = new DataColumn("SoPhong");
+                DataColumn col5 = new DataColumn("LoaiPhong");
+                DataColumn col6 = new DataColumn("SoGiuong");
+
+
+                DataTable dt = new DataTable();
+                dt.Columns.Add(col1);
+                dt.Columns.Add(col2);
+                dt.Columns.Add(col3);
+                dt.Columns.Add(col4);
+                dt.Columns.Add(col5);
+                dt.Columns.Add(col6);
+
+
+                foreach (DataGridViewRow dataGRVrow in dataGRVBenhNhan.Rows)
+                {
+                    DataRow dtrow = dt.NewRow();
+                    dtrow[0] = dataGRVrow.Cells[0].Value;
+                    dtrow[1] = dataGRVrow.Cells[1].Value;
+                    dtrow[2] = dataGRVrow.Cells[2].Value;
+                    dtrow[3] = dataGRVrow.Cells[3].Value;
+                    dtrow[4] = dataGRVrow.Cells[4].Value;
+                    dtrow[5] = dataGRVrow.Cells[5].Value;
+
+
+                    dt.Rows.Add(dtrow);
+                }
+                ExportExcel(dt, "Danh sách giường bệnh");
+            }
+        }
+
+        private void btnTimKiemGiuongBenh_Click(object sender, EventArgs e)
+        {
+            Con.Open();
+            SqlCommand cmd = null;
+
+            if (txtTimGiuong.Text == "")
+            {
+                MessageBox.Show("Hãy nhập vào mã bệnh nhân !");
+            }
+            else
+            {
+                cmd = new SqlCommand("Select Count(*) From GiuongBenh Where MaBN = '" + txtTimGiuong.Text + "'", Con);
+                int Count = Convert.ToInt32(cmd.ExecuteScalar());
+
+                if (Count > 0)
+                {
+                    // MessageBox.Show("Bệnh Nhân Đã Được Xếp Giường Bệnh", "Xác Nhận", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cmd = new SqlCommand("Select * From GiuongBenh Where MaBN = '" + txtTimGiuong.Text + "'", Con);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable tb = new DataTable();
+                    da.Fill(tb);
+                    dataGRVBenhNhan.DataSource = tb;
+                    cmd.Dispose();
+                }
+            }
+            Con.Close();
+        }
     }
 }

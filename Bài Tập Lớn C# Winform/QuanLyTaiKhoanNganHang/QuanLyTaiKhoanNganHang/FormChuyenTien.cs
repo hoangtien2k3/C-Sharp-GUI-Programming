@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace QuanLyTaiKhoanNganHang
 {
@@ -237,9 +238,9 @@ namespace QuanLyTaiKhoanNganHang
                     }
                     else
                     {
-                        updateSoTienHienTai1();
-                        updateSoTienHienTai2();
-                        ThongTinGiaoDichChuyenTien();
+                        updateSoTienHienTai1(); 
+                        updateSoTienHienTai2(); 
+                        ThongTinGiaoDichChuyenTien(); 
 
                         string chuyentien = "Đã Chuyển Tiền Vào Tài Khoản (" + txtTenTaiKhoan.Text + ") Thành Công.\n" +
                             "\n\n\t- Hóa Đơn: " +
@@ -268,6 +269,27 @@ namespace QuanLyTaiKhoanNganHang
         {
             FormMayTinh formMayTinh = new FormMayTinh();
             formMayTinh.Show();
+        }
+
+        private void SoDuTaiKhoanGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = SoDuTaiKhoanGV.CurrentRow;
+                string tentaikhoan = row.Cells["TenTaiKhoan"].Value.ToString();
+                string sotaikhoan = row.Cells["SoTaiKhoan"].Value.ToString();
+                string cccd = row.Cells["CCCD"].Value.ToString();
+                string sotienhientai = row.Cells["SoTienHienTai"].Value.ToString();
+
+                string result = "THÔNG TIN CƠ BẢN VỀ TÀI KHOẢN\n" +
+                    "\n\n\t+ Tên Tài Khoản: " + tentaikhoan +
+                    "\n\n\t+ Số Tài Khoản: " + sotaikhoan +
+                    "\n\n\t+ CCCD: " + cccd +
+                    "\n\n\t+ Số Tiền Hiện Tại: " + sotienhientai +
+                    "\n\n\t";
+
+                MessageBox.Show(result);
+            }
         }
     }
 }

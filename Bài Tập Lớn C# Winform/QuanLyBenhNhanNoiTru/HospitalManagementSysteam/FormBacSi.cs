@@ -84,12 +84,11 @@ namespace HospitalManagementSysteam
             {
                 Con.Open();
 
-                string query = "UPDATE BacSi SET MaBS = @MaBS, TenBS = @TenBS, KinhNghiem = @KinhNghiem, TuoiTac = @TuoiTac, ChuyenKhoa = @ChuyenKhoa WHERE MaBS = @MaBS";
+                string query = "UPDATE BacSi SET MaBS = @MaBS, TenBS = @TenBS, KinhNghiem = @KinhNghiem, ChuyenKhoa = @ChuyenKhoa WHERE MaBS = @MaBS";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.Parameters.AddWithValue("@MaBS", txtMaBS.Text);
                 cmd.Parameters.AddWithValue("@TenBS", txtTenBS.Text);
                 cmd.Parameters.AddWithValue("@KinhNghiem", txtKinhNghiem.Text);
-                cmd.Parameters.AddWithValue("@TuoiTac", txtTuoiTac.Text);
                 cmd.Parameters.AddWithValue("@ChuyenKhoa", cbChuyenKhoa.SelectedItem.ToString());
                 cmd.ExecuteNonQuery();
 
@@ -118,7 +117,6 @@ namespace HospitalManagementSysteam
         {
             txtMaBS.Text = "";
             txtTenBS.Text = "";
-            txtTuoiTac.Text = "";
             txtKinhNghiem.Text = "";
             cbChuyenKhoa.Text = "";
         }
@@ -152,7 +150,7 @@ namespace HospitalManagementSysteam
         {
             Connect_database();
             SqlCommand cmd = null;
-            if (txtMaBS.Text == "" || txtTenBS.Text == "" || txtTuoiTac.Text == "" || txtKinhNghiem.Text == "" || cbChuyenKhoa.Text == "")
+            if (txtMaBS.Text == "" || txtTenBS.Text == "" || txtKinhNghiem.Text == "" || cbChuyenKhoa.Text == "")
             {
                 MessageBox.Show("Hãy Điền đầy đủ thông tin.");
             }
@@ -168,13 +166,12 @@ namespace HospitalManagementSysteam
                 }
                 else
                 {
-                String query = "INSERT INTO BacSi(MaBS, TenBS, KinhNghiem, TuoiTac, ChuyenKhoa) VALUES(@MaBS, @TenBS, @KinhNghiem, @TuoiTac, @ChuyenKhoa)";
+                String query = "INSERT INTO BacSi(MaBS, TenBS, KinhNghiem, ChuyenKhoa) VALUES(@MaBS, @TenBS, @KinhNghiem, @ChuyenKhoa)";
                 cmd = new SqlCommand(query, Con);
 
                 cmd.Parameters.AddWithValue("@MaBS", txtMaBS.Text);
                 cmd.Parameters.AddWithValue("@TenBS", txtTenBS.Text);
                 cmd.Parameters.AddWithValue("@KinhNghiem", txtKinhNghiem.Text);
-                cmd.Parameters.AddWithValue("@TuoiTac", txtTuoiTac.Text);
                 String ChuyenKhoa = String.IsNullOrEmpty(txtKinhNghiem.Text) ? cbChuyenKhoa.SelectedItem.ToString() : cbChuyenKhoa.Text;
                 cmd.Parameters.AddWithValue("@ChuyenKhoa", ChuyenKhoa);
 
@@ -196,7 +193,7 @@ namespace HospitalManagementSysteam
         // sửa thông tin bác sĩ vào database và load lên datagridview
         private void btnSuaThongTin_Click(object sender, EventArgs e)
         {
-            if(txtMaBS.Text == "" || txtTenBS.Text == "" || txtKinhNghiem.Text == "" || txtTuoiTac.Text == "" || cbChuyenKhoa.Text == "")
+            if(txtMaBS.Text == "" || txtTenBS.Text == "" || txtKinhNghiem.Text == "" || cbChuyenKhoa.Text == "")
             {
                 MessageBox.Show("Chưa Nhập Đủ Thông Tin");
             }
@@ -204,12 +201,11 @@ namespace HospitalManagementSysteam
             {
                 Con.Open();
 
-                string query = "UPDATE BacSi SET MaBS = @MaBS, TenBS = @TenBS, KinhNghiem = @KinhNghiem, TuoiTac = @TuoiTac, ChuyenKhoa = @ChuyenKhoa WHERE MaBS = @MaBS";
+                string query = "UPDATE BacSi SET MaBS = @MaBS, TenBS = @TenBS, KinhNghiem = @KinhNghiem, ChuyenKhoa = @ChuyenKhoa WHERE MaBS = @MaBS";
                 SqlCommand cmd = new SqlCommand(query, Con);
                 cmd.Parameters.AddWithValue("@MaBS", txtMaBS.Text);
                 cmd.Parameters.AddWithValue("@TenBS", txtTenBS.Text);
                 cmd.Parameters.AddWithValue("@KinhNghiem", txtKinhNghiem.Text);
-                cmd.Parameters.AddWithValue("@TuoiTac", txtTuoiTac.Text);
                 cmd.Parameters.AddWithValue("@ChuyenKhoa", cbChuyenKhoa.SelectedItem.ToString());
 
                 cmd.ExecuteNonQuery();
@@ -230,7 +226,7 @@ namespace HospitalManagementSysteam
             {
                 MessageBox.Show("Chưa Nhập Mã Bác Sĩ");
             }
-            else 
+            else { 
                 Con.Open();
                 DialogResult dialog = MessageBox.Show("Bạn Có Muốn Xóa Bác Sĩ.",
                 "Xác Nhận",
@@ -252,7 +248,8 @@ namespace HospitalManagementSysteam
                 Load_GrvBacSi();
                 MessageBox.Show("Xóa Thông Tin Thành Công");
                 btnLamSach_Click(sender, e);
-            {
+                    {
+                    }
 
             }
  
@@ -271,11 +268,14 @@ namespace HospitalManagementSysteam
             txtTenBS.Text = Row.Cells["TenBS"].Value.ToString();
             txtKinhNghiem.Text = Row.Cells["KinhNghiem"].Value.ToString();
             cbChuyenKhoa.Text = Row.Cells["ChuyenKhoa"].Value.ToString();
-            txtTuoiTac.Text = Row.Cells["TuoiTac"].Value.ToString();
-
         }
 
         private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
         {
 
         }

@@ -33,10 +33,6 @@ namespace HospitalManagementSysteam
             }
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void FormBatDau_Load(object sender, EventArgs e)
         {
@@ -56,7 +52,7 @@ namespace HospitalManagementSysteam
         private string[] texts = new string[]
         {
             "Đang kết nối tới database ...",
-            "Kết nối các dữ liệu ...",
+            "Load tất cả dữ liệu lên hệ thống ...",
             "Đang mở hệ thống ..."
         };
 
@@ -77,10 +73,5 @@ namespace HospitalManagementSysteam
                 currentIndex = 0;
         }
 
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

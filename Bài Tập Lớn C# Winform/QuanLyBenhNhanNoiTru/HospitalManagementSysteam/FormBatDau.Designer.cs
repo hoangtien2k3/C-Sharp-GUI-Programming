@@ -61,7 +61,6 @@
             this.label1.Size = new System.Drawing.Size(398, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÝ BỆNH NHÂN NỘI TRÚ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MyprogressBar
             // 
@@ -69,7 +68,6 @@
             this.MyprogressBar.Name = "MyprogressBar";
             this.MyprogressBar.Size = new System.Drawing.Size(514, 10);
             this.MyprogressBar.TabIndex = 2;
-            this.MyprogressBar.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // label3
             // 
@@ -101,9 +99,9 @@
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(78, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(67, 12);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 42);
+            this.pictureBox2.Size = new System.Drawing.Size(56, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
@@ -113,7 +111,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Purple;
-            this.ClientSize = new System.Drawing.Size(516, 268);
+            this.ClientSize = new System.Drawing.Size(517, 268);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.lblDongChuChay);
             this.Controls.Add(this.MyprogressBar);

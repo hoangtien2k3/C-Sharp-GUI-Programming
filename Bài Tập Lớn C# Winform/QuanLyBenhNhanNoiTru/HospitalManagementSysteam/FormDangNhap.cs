@@ -18,16 +18,6 @@ namespace HospitalManagementSysteam
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         // Kiểm tra xem username và password có hợp lệ hay không
         private bool IsValidUser(string username, string password)
         {
@@ -62,60 +52,6 @@ namespace HospitalManagementSysteam
                 }
             }
 
-
-
-            /*
-            string username = txtTaiKhoan.Text;
-            string password = txtMatKhau.Text;
-
-            if (IsValidUser(username, password))
-            {
-                // Đăng nhập thành công
-                MainForm home = new MainForm();
-                home.Show();
-                this.Hide();
-            }
-            else
-            {
-                // Hiển thị thông báo lỗi
-                if (username != "admin" && password != "password") {
-                    DialogResult result = MessageBox.Show("Error Username and Password", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                } else if (username != "admin")
-                {
-                    DialogResult result = MessageBox.Show("Error Username.", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                } else
-                {
-                    DialogResult result = MessageBox.Show("Error Password.", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                }
-            }
-            */
-
-        }
-
-        
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
@@ -148,10 +84,6 @@ namespace HospitalManagementSysteam
             formQuenMatKhau.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void FormDangNhap_KeyDown(object sender, KeyEventArgs e)
         {
@@ -161,6 +93,7 @@ namespace HospitalManagementSysteam
                 button2_Click(sender, e);
             }
         }
+
 
         Modify modify = new Modify();
         private void btnDangNhap_Click(object sender, EventArgs e)
@@ -194,34 +127,6 @@ namespace HospitalManagementSysteam
                 }
             }
 
-
-
-            /*
-            string username = txtTaiKhoan.Text;
-            string password = txtMatKhau.Text;
-
-            if (IsValidUser(username, password))
-            {
-                // Đăng nhập thành công
-                MainForm home = new MainForm();
-                home.Show();
-                this.Hide();
-            }
-            else
-            {
-                // Hiển thị thông báo lỗi
-                if (username != "admin" && password != "password") {
-                    DialogResult result = MessageBox.Show("Error Username and Password", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                } else if (username != "admin")
-                {
-                    DialogResult result = MessageBox.Show("Error Username.", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                } else
-                {
-                    DialogResult result = MessageBox.Show("Error Password.", "Login Againt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                }
-            }
-            */
-
         }
 
         private void FormDangNhap_Load(object sender, EventArgs e)
@@ -231,11 +136,6 @@ namespace HospitalManagementSysteam
             // Dùng phím Tab ở bàn phím để di chuyển chuyển giữa các phần nhật thông tin với nhau.
             txtTaiKhoan.TabIndex = 0;
             txtMatKhau.TabIndex = 1;
-        }
-
-        private void btnDangNhap_KeyDown(object sender, KeyEventArgs e)
-        {
-
         }
 
         private void HienThiMatKhau_Click(object sender, EventArgs e)

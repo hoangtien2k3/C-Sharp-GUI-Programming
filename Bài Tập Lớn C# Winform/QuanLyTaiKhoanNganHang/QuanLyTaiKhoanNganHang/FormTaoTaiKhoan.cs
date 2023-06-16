@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace QuanLyTaiKhoanNganHang
@@ -105,7 +106,7 @@ namespace QuanLyTaiKhoanNganHang
             }
             else
             {
-                Con.Open();
+                Con.Open(); // Mở kết nối với cơ sở dữ liệu
 
                 string query = "SELECT COUNT(*) FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
                 SqlCommand command = new SqlCommand(query, Con);

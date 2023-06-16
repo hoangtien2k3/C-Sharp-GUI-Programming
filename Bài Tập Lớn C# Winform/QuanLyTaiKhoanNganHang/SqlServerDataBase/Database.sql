@@ -70,20 +70,3 @@ CREATE TABLE GiaoDichRutTien (
     NgayGiaoDich VARCHAR(50) NOT NULL,
 	GioGiaoDich VARCHAR(50) NOT NULL
 );
-
--- thêm
-CREATE TABLE ThongTinTaiKhoan
-(
-	TenTaiKhoan NVARCHAR(50) NOT NULL,
-	SoTaiKhoan VARCHAR(14) NOT NULL,
-	MaPin INT NOT NULL
-)
-GO
-
-CREATE TABLE [User] (
-    UserID INT PRIMARY KEY,
-    UserName VARCHAR(50) NOT NULL,
-    Password VARCHAR(50) NOT NULL,
-    AccountID INT,
-    FOREIGN KEY (AccountID) REFERENCES Account(AccountID)
-);

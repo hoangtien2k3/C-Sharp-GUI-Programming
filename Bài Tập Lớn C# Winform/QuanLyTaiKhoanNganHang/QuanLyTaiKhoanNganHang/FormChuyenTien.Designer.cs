@@ -239,6 +239,7 @@
             this.SoDuTaiKhoanGV.Name = "SoDuTaiKhoanGV";
             this.SoDuTaiKhoanGV.Size = new System.Drawing.Size(482, 172);
             this.SoDuTaiKhoanGV.TabIndex = 0;
+            this.SoDuTaiKhoanGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SoDuTaiKhoanGV_CellContentClick);
             // 
             // groupBox2
             // 

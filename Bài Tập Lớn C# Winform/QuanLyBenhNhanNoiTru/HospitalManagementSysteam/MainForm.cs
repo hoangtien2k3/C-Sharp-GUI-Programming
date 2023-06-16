@@ -57,12 +57,11 @@ namespace HospitalManagementSysteam
             }
 
             // Thay đổi màu chữ của Button được nhấn thành màu mới
-            clickedButton.ForeColor = Color.Blue;
+            clickedButton.ForeColor = Color.White;
 
             // Lưu Button được nhấn vào selectedButton
             selectedButton = clickedButton;
         }
-
 
 
         private System.Windows.Forms.Timer timer;
@@ -113,11 +112,6 @@ namespace HospitalManagementSysteam
             form.Show();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBoxHome_Click(object sender, EventArgs e)
         {
             FormMain form = new FormMain();
@@ -139,11 +133,6 @@ namespace HospitalManagementSysteam
             form.Show();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBoxBacSi_Click(object sender, EventArgs e)
         {
             FormBacSi form = new FormBacSi();
@@ -151,10 +140,6 @@ namespace HospitalManagementSysteam
             form.Show();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBoxBenhAn_Click(object sender, EventArgs e)
         {
@@ -163,29 +148,12 @@ namespace HospitalManagementSysteam
             benhAn.Show();
         }
 
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-        
-        }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void menuStrip1_ItemClicked_1(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            FormMain form = new FormMain();
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void btnLeTan_Click(object sender, EventArgs e)
@@ -193,11 +161,6 @@ namespace HospitalManagementSysteam
             FormLeTan form = new FormLeTan();
             form.MdiParent = this;
             form.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnKhamBenh_Click(object sender, EventArgs e)
@@ -220,11 +183,6 @@ namespace HospitalManagementSysteam
                 FormDangNhap form = new FormDangNhap();
                 form.Show();
             }
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -324,18 +282,12 @@ namespace HospitalManagementSysteam
             form.Show();
         }
 
-        private void btnVienPhi_Click(object sender, EventArgs e)
-        {
-            FormBaoCao formBaoCao = new FormBaoCao();
-            formBaoCao.MdiParent = this;
-            formBaoCao.Show();
-        }
 
         private void btnTkVienPhi_Click(object sender, EventArgs e)
         {
-            FormBaoCao formBaoCao = new FormBaoCao();
-            formBaoCao.MdiParent = this;
-            formBaoCao.Show();
+            FormXuatVien form = new FormXuatVien();
+            form.MdiParent = this;
+            form.Show();
         }
 
         private void chứcVụToolStripMenuItem_Click(object sender, EventArgs e)
@@ -343,11 +295,6 @@ namespace HospitalManagementSysteam
             FormLeTan form = new FormLeTan();
             form.MdiParent = this;
             form.Show();
-        }
-
-        private void tìmKiếmTheoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
@@ -377,15 +324,6 @@ namespace HospitalManagementSysteam
             formBenhNhan.btnInThongTin_Click(sender, e);
         }
 
-        private void càiĐặtPhímTắtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void xếpGiườngBệnhToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -394,10 +332,6 @@ namespace HospitalManagementSysteam
             form.Show();
         }
 
-        private void lblDataTimeNow_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void phímTắtToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -442,5 +376,34 @@ namespace HospitalManagementSysteam
 
             MessageBox.Show(dichvukhambenh);
         }
+
+        private void khámChiTiếtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_ShowDaKham form = new Form_ShowDaKham();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tìmTheoBệnhNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TimKiemBN form = new Form_TimKiemBN();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void tìmTheoBácSĩToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TimKiemBS form = new Form_TimKiemBS();
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void điềuTrịTheoNgàyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormDieuTri form = new FormDieuTri();
+            form.MdiParent = this;
+            form.Show();
+        }
+
     }
 }

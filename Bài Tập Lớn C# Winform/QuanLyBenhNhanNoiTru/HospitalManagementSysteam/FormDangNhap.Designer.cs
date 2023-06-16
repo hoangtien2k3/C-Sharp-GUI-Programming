@@ -58,43 +58,39 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Sitka Small", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(374, 0);
+            this.label1.Location = new System.Drawing.Point(373, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 43);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(425, 55);
+            this.pictureBox1.Location = new System.Drawing.Point(419, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label4
             // 
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label4.BackColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(398, 168);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(180, 1);
+            this.label4.Size = new System.Drawing.Size(180, 2);
             this.label4.TabIndex = 19;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtTaiKhoan
             // 
             this.txtTaiKhoan.BackColor = System.Drawing.Color.White;
             this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtTaiKhoan.Location = new System.Drawing.Point(399, 154);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(399, 152);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(179, 13);
             this.txtTaiKhoan.TabIndex = 23;
-            this.txtTaiKhoan.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // label9
             // 
@@ -152,11 +148,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(360, 294);
+            this.label3.Location = new System.Drawing.Point(476, 300);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 16);
+            this.label3.Size = new System.Drawing.Size(121, 16);
             this.label3.TabIndex = 33;
             this.label3.Text = "Quên mật khẩu ?";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -164,11 +160,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(522, 294);
+            this.label6.Location = new System.Drawing.Point(369, 300);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(63, 16);
             this.label6.TabIndex = 34;
             this.label6.Text = "Đăng ký";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -187,7 +183,7 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDangNhap.FlatAppearance.BorderSize = 0;
             this.btnDangNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.Color.White;
             this.btnDangNhap.Location = new System.Drawing.Point(401, 238);
             this.btnDangNhap.Name = "btnDangNhap";
@@ -196,7 +192,6 @@
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.UseVisualStyleBackColor = false;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            this.btnDangNhap.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnDangNhap_KeyDown);
             // 
             // HienThiMatKhau
             // 
@@ -211,17 +206,17 @@
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label2.BackColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(398, 213);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 1);
+            this.label2.Size = new System.Drawing.Size(180, 2);
             this.label2.TabIndex = 56;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BackColor = System.Drawing.Color.White;
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMatKhau.Location = new System.Drawing.Point(399, 199);
+            this.txtMatKhau.Location = new System.Drawing.Point(401, 197);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(143, 13);
             this.txtMatKhau.TabIndex = 57;

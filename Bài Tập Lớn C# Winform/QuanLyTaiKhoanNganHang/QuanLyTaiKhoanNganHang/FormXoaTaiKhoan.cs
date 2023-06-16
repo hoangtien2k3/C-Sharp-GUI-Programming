@@ -175,5 +175,17 @@ namespace QuanLyTaiKhoanNganHang
 
             }
         }
+
+        private void XoaTaiKhoanGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                DataGridViewRow row = XoaTaiKhoanGV.CurrentRow;
+                txtTenTaiKhoan.Text = row.Cells["TenTaiKhoan"].Value.ToString();
+                txtSoTaiKhoan.Text = row.Cells["SoTaiKhoan"].Value.ToString();
+                txtDiaChiEmail.Text = row.Cells["DiaChiEmail"].Value.ToString();
+                txtCCCD.Text = row.Cells["CCCD"].Value.ToString();
+            }        
+        }
     }
 }

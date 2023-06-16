@@ -106,6 +106,8 @@ namespace QuanLyTaiKhoanNganHang
         {
             // Xóa Form con khỏi danh sách MdiChildren của Form cha
             ((Form)sender).MdiParent = null;
+
+            // đồng hồ dừng khi form bị đóng.
             timer.Stop();
         }
 

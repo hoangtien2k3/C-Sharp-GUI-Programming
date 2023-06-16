@@ -130,11 +130,12 @@
             // btnDangKyTaiKhoan
             // 
             this.btnDangKyTaiKhoan.BackColor = System.Drawing.Color.Cyan;
+            this.btnDangKyTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDangKyTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangKyTaiKhoan.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(413, 273);
+            this.btnDangKyTaiKhoan.Location = new System.Drawing.Point(395, 281);
             this.btnDangKyTaiKhoan.Name = "btnDangKyTaiKhoan";
-            this.btnDangKyTaiKhoan.Size = new System.Drawing.Size(170, 52);
+            this.btnDangKyTaiKhoan.Size = new System.Drawing.Size(143, 44);
             this.btnDangKyTaiKhoan.TabIndex = 25;
             this.btnDangKyTaiKhoan.Text = "Đăng ký ngay";
             this.btnDangKyTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,9 +210,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Cyan;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(427, 281);
+            this.pictureBox2.Location = new System.Drawing.Point(404, 290);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(48, 36);
+            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
@@ -229,9 +230,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(427, 63);
+            this.pictureBox1.Location = new System.Drawing.Point(419, 52);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(85, 57);
+            this.pictureBox1.Size = new System.Drawing.Size(90, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 42;
             this.pictureBox1.TabStop = false;
@@ -242,7 +243,7 @@
             this.label5.BackColor = System.Drawing.Color.White;
             this.label5.Font = new System.Drawing.Font("Sitka Small", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(341, 0);
+            this.label5.Location = new System.Drawing.Point(335, 5);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(242, 35);
             this.label5.TabIndex = 43;

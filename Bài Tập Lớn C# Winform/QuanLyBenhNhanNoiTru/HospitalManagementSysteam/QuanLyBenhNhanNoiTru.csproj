@@ -33,14 +33,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EPPlus, Version=6.2.4.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.6.2.4\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AnalysisServices.AppLocal, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.AnalysisServices.AppLocal.Tabular, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -53,17 +67,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Connection.cs" />
-    <Compile Include="FormBaoCao.cs">
+    <Compile Include="ConvertNumber.cs" />
+    <Compile Include="FormBenhAn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBaoCao.Designer.cs">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <Compile Include="FormBenhAn.Designer.cs">
+      <DependentUpon>FormBenhAn.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDangKyTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDangKyTaiKhoan.Designer.cs">
       <DependentUpon>FormDangKyTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDieuTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDieuTri.Designer.cs">
+      <DependentUpon>FormDieuTri.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGiuongBenh.cs">
       <SubType>Form</SubType>
@@ -95,18 +116,6 @@
     <Compile Include="FormBenhNhan.Designer.cs">
       <DependentUpon>FormBenhNhan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBenhAn.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormBenhAn.Designer.cs">
-      <DependentUpon>FormBenhAn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormKhamBenh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormKhamBenh.Designer.cs">
-      <DependentUpon>FormKhamBenh.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormLeTan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +140,12 @@
     <Compile Include="FormTimKiem.Designer.cs">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormXuatVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXuatVien.Designer.cs">
+      <DependentUpon>FormXuatVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_khambenh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,11 +158,17 @@
     <Compile Include="Form_ShowDaKham.Designer.cs">
       <DependentUpon>Form_ShowDaKham.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ShowNhapVien.cs">
+    <Compile Include="Form_TimKiemBN.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ShowNhapVien.Designer.cs">
-      <DependentUpon>Form_ShowNhapVien.cs</DependentUpon>
+    <Compile Include="Form_TimKiemBN.Designer.cs">
+      <DependentUpon>Form_TimKiemBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TimKiemBS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TimKiemBS.Designer.cs">
+      <DependentUpon>Form_TimKiemBS.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -166,11 +187,14 @@
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="TaiKhoan.cs" />
-    <EmbeddedResource Include="FormBaoCao.resx">
-      <DependentUpon>FormBaoCao.cs</DependentUpon>
+    <EmbeddedResource Include="FormBenhAn.resx">
+      <DependentUpon>FormBenhAn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDangKyTaiKhoan.resx">
       <DependentUpon>FormDangKyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDieuTri.resx">
+      <DependentUpon>FormDieuTri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGiuongBenh.resx">
       <DependentUpon>FormGiuongBenh.cs</DependentUpon>
@@ -187,12 +211,6 @@
     <EmbeddedResource Include="FormBenhNhan.resx">
       <DependentUpon>FormBenhNhan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBenhAn.resx">
-      <DependentUpon>FormBenhAn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormKhamBenh.resx">
-      <DependentUpon>FormKhamBenh.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormLeTan.resx">
       <DependentUpon>FormLeTan.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,14 +223,20 @@
     <EmbeddedResource Include="FormTimKiem.resx">
       <DependentUpon>FormTimKiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormXuatVien.resx">
+      <DependentUpon>FormXuatVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_khambenh.resx">
       <DependentUpon>Form_khambenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ShowDaKham.resx">
       <DependentUpon>Form_ShowDaKham.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ShowNhapVien.resx">
-      <DependentUpon>Form_ShowNhapVien.cs</DependentUpon>
+    <EmbeddedResource Include="Form_TimKiemBN.resx">
+      <DependentUpon>Form_TimKiemBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TimKiemBS.resx">
+      <DependentUpon>Form_TimKiemBS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

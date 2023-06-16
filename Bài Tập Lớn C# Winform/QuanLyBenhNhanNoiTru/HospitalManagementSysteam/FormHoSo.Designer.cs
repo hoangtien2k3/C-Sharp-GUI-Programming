@@ -30,13 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHoSo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BacSiGV = new System.Windows.Forms.DataGridView();
             this.groupBoxDanhSachBenhNhan = new System.Windows.Forms.GroupBox();
             this.BenhNhanGV = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BacSiGV)).BeginInit();
@@ -56,14 +58,25 @@
             this.panel1.Size = new System.Drawing.Size(1030, 50);
             this.panel1.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(284, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(488, 29);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Hồ Sơ Chi Tiết Danh Sách Thông Tin ";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BacSiGV);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.groupBox1.Location = new System.Drawing.Point(150, 284);
+            this.groupBox1.Location = new System.Drawing.Point(150, 299);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(868, 205);
+            this.groupBox1.Size = new System.Drawing.Size(868, 190);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh Sách Bác Sĩ Quản Lý Bệnh Nhân";
@@ -78,7 +91,7 @@
             this.BacSiGV.Name = "BacSiGV";
             this.BacSiGV.ReadOnly = true;
             this.BacSiGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BacSiGV.Size = new System.Drawing.Size(867, 184);
+            this.BacSiGV.Size = new System.Drawing.Size(867, 169);
             this.BacSiGV.TabIndex = 13;
             this.BacSiGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BacSiGV_CellContentClick);
             // 
@@ -87,9 +100,9 @@
             this.groupBoxDanhSachBenhNhan.Controls.Add(this.BenhNhanGV);
             this.groupBoxDanhSachBenhNhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBoxDanhSachBenhNhan.ForeColor = System.Drawing.Color.Blue;
-            this.groupBoxDanhSachBenhNhan.Location = new System.Drawing.Point(150, 113);
+            this.groupBoxDanhSachBenhNhan.Location = new System.Drawing.Point(150, 80);
             this.groupBoxDanhSachBenhNhan.Name = "groupBoxDanhSachBenhNhan";
-            this.groupBoxDanhSachBenhNhan.Size = new System.Drawing.Size(868, 154);
+            this.groupBoxDanhSachBenhNhan.Size = new System.Drawing.Size(868, 188);
             this.groupBoxDanhSachBenhNhan.TabIndex = 52;
             this.groupBoxDanhSachBenhNhan.TabStop = false;
             this.groupBoxDanhSachBenhNhan.Text = "Danh Sách Bệnh Nhân";
@@ -102,14 +115,14 @@
             this.BenhNhanGV.Location = new System.Drawing.Point(0, 19);
             this.BenhNhanGV.Name = "BenhNhanGV";
             this.BenhNhanGV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.BenhNhanGV.Size = new System.Drawing.Size(867, 135);
+            this.BenhNhanGV.Size = new System.Drawing.Size(867, 169);
             this.BenhNhanGV.TabIndex = 23;
             this.BenhNhanGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BenhNhanGV_CellContentClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 149);
+            this.pictureBox1.Location = new System.Drawing.Point(26, 126);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(101, 102);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,29 +132,41 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(26, 351);
+            this.pictureBox2.Location = new System.Drawing.Point(26, 340);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(101, 102);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 54;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
+            // label1
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mistral", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(320, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(420, 33);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Hồ Sơ Chi Tiết Về Danh Sách Thông Tin ";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Bệnh Nhân";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(44, 313);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 24);
+            this.label3.TabIndex = 56;
+            this.label3.Text = "Bác Sĩ";
             // 
             // FormHoSo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1030, 500);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBoxDanhSachBenhNhan);
@@ -161,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,5 +200,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

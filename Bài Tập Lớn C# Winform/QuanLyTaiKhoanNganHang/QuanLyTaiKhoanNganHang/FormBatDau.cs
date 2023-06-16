@@ -26,7 +26,6 @@ namespace QuanLyTaiKhoanNganHang
         {
             timer1.Start();
 
-
             // Khởi tạo và cấu hình Timer
             timer = new Timer();
             timer.Interval = delay;

@@ -40,7 +40,6 @@ namespace QuanLyTaiKhoanNganHang
 
                 if (dialogResult == DialogResult.Yes)
                 {
-
                     string query = "SELECT COUNT(*) FROM TaiKhoan WHERE TenTaiKhoan = @TenTaiKhoan";
                     SqlCommand command = new SqlCommand(query, Con);
 

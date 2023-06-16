@@ -40,10 +40,6 @@ namespace HospitalManagementSysteam
             Con.Close();
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void BenhNhanGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -52,16 +48,15 @@ namespace HospitalManagementSysteam
                 // DataGridViewRow row = BenhNhanGV.Rows[e.RowIndex];
                 DataGridViewRow row = BenhNhanGV.CurrentRow;
 
-                string result = "\tTHÔN TIN BỆNH NHÂN\n" + 
-                    "\n+ Mã Bệnh Nhân: " + row.Cells["MaBN"].Value.ToString() + 
-                    "\n+ Tên Bệnh Nhân: " + row.Cells["TenBn"].Value.ToString() + 
-                    "\n+ Địa Chỉ: " + row.Cells["DiaChi"].Value.ToString() + 
+                string result = "\tTHÔN TIN BỆNH NHÂN\n" +
+                    "\n+ Mã Bệnh Nhân: " + row.Cells["MaBN"].Value.ToString() +
+                    "\n+ Tên Bệnh Nhân: " + row.Cells["TenBN"].Value.ToString() +
                     "\n+ Ngày Sinh: " + row.Cells["NgaySinh"].Value.ToString() +
-                    "\n+ Tuổi: " + row.Cells["Tuoi"].Value.ToString() + 
-                    "\n+ Điện Thoại: " + row.Cells["DienThoai"].Value.ToString() +
-                    "\n+ Giới Tính: " + row.Cells["GioiTinh"].Value.ToString() + 
-                    "\n+ Nhóm Máu: " + row.Cells["NhomMau"].Value.ToString() + 
-                    "\n+ Loại Bệnh: " + row.Cells["LoaiBenh"].Value.ToString();
+                    "\n+ Giới Tính: " + row.Cells["GioiTinh"].Value.ToString() +
+                    "\n+ CCCD: " + row.Cells["CCCD"].Value.ToString() +
+                    "\n+ Địa Chỉ: " + row.Cells["DiaChi"].Value.ToString() +
+                    "\n+ BHYT: " + row.Cells["BHYT"].Value.ToString() +
+                    "\n+ Điện Thoại: " + row.Cells["DienThoai"].Value.ToString();
 
                 MessageBox.Show(result);                
             }
@@ -90,7 +85,6 @@ namespace HospitalManagementSysteam
                     "\n+ Mã Bác Sĩ: " + row.Cells["MaBS"].Value.ToString() +
                     "\n+ Tên Bác Sĩ: " + row.Cells["TenBS"].Value.ToString() +
                     "\n+ Kinh Nghiệm: " + row.Cells["KinhNghiem"].Value.ToString() +
-                    "\n+ Tuổi Tác: " + row.Cells["TuoiTac"].Value.ToString() +
                     "\n+ Chuyên Khoa: " + row.Cells["ChuyenKhoa"].Value.ToString();
 
                 MessageBox.Show(result);

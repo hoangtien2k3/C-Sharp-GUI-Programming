@@ -79,11 +79,11 @@
             // 
             this.btnLayLaiMatKhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnLayLaiMatKhau.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLayLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLayLaiMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLayLaiMatKhau.ForeColor = System.Drawing.Color.Red;
             this.btnLayLaiMatKhau.Location = new System.Drawing.Point(390, 261);
             this.btnLayLaiMatKhau.Name = "btnLayLaiMatKhau";
-            this.btnLayLaiMatKhau.Size = new System.Drawing.Size(169, 47);
+            this.btnLayLaiMatKhau.Size = new System.Drawing.Size(182, 47);
             this.btnLayLaiMatKhau.TabIndex = 24;
             this.btnLayLaiMatKhau.Text = "Hiển Thị Mật Khẩu";
             this.btnLayLaiMatKhau.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,7 +114,7 @@
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button2.Location = new System.Drawing.Point(429, 186);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 1);
+            this.button2.Size = new System.Drawing.Size(178, 2);
             this.button2.TabIndex = 35;
             this.button2.UseVisualStyleBackColor = false;
             // 
@@ -130,6 +130,7 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(401, 269);
             this.pictureBox3.Name = "pictureBox3";
@@ -151,9 +152,9 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(415, 61);
+            this.pictureBox1.Location = new System.Drawing.Point(415, 54);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(89, 61);
+            this.pictureBox1.Size = new System.Drawing.Size(97, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;

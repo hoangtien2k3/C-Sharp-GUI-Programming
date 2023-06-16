@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QuanLyTaiKhoanNganHang
+namespace QuanLyBenhNhanNoiTru
 {
     class ConvertNumber
     {
-
         // dùng để đọc số tiền trong tài khoản
         private static string[] units = { "", "nghìn", "triệu", "tỷ", "nghìn tỷ", "triệu tỷ", "tỷ tỷ" };
         private static string[] ones = { "", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín" };
@@ -95,7 +94,8 @@ namespace QuanLyTaiKhoanNganHang
                         chunkText = hundreds[hundredsDigit] + " " + tens[tensDigit] + " " + ones[onesDigit];
                     }
                 }
-            } catch
+            }
+            catch
             {
 
             }
