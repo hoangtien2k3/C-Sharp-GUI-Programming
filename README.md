@@ -1,12 +1,40 @@
-# C-Sharp-GUI-Programming
-Code C# Winform
+# Bài Tập Lớn C# Winform
 
-![image](https://user-images.githubusercontent.com/122768076/220406370-44398b85-f682-46a7-93d8-f7d85d61b585.png)
+## Technologies Used -
 
+![image](https://github.com/hoangtien2k3qx1/Bai-Tap-Lon-C-Sharp-Winform/assets/122768076/781389c4-6a9e-4f1a-bbf0-755f8b3fa54c)
 
-![image](https://user-images.githubusercontent.com/122768076/220404640-8133f816-af8f-43c0-86d1-b1bcfd27f970.png)
+### 1. Technologies:
+  - C#
+  - Winform
+  
+### 2. Back end Technologies:
+  .Net
+  
+### 3. Database:
+  - Sql Server
+  
+  
+## System Diagrams
 
+1. Usecase Diagram
 
-![image](https://user-images.githubusercontent.com/122768076/220405167-521e6367-33e2-4505-b9f5-8b735872cd0d.png)
+![Usecase Diagram](https://github.com/rid17pawar/HospitalManagement/assets/47048717/53f12eb6-0789-42ed-8ec9-569b9895ac82)
 
-![image](https://user-images.githubusercontent.com/122768076/220406712-1f68579c-bad5-49da-860d-048a44ca299f.png)
+2. Activity Diagram
+
+![Activity Diagram](https://github.com/rid17pawar/HospitalManagement/assets/47048717/1d506cd6-4add-413f-a4cc-159a16c98760)
+
+3. Class Diagram
+
+![Class Diagram](https://github.com/rid17pawar/HospitalManagement/assets/47048717/1e52efac-4641-4ee0-a079-2da921c996dd)
+
+4. Sequence Diagram
+
+![Sequence Diagram](https://github.com/rid17pawar/HospitalManagement/assets/47048717/b0ecdef9-e21c-44d0-a9d9-6273d91e8aaf)
+
+5. State Diagram
+
+![State Diagram](https://github.com/rid17pawar/HospitalManagement/assets/47048717/c60747f3-ba73-4611-bc46-ce6413799cf4)
+
+### Thank You !  
