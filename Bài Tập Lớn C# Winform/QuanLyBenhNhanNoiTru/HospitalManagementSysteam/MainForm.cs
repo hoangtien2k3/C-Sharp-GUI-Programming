@@ -100,9 +100,6 @@ namespace HospitalManagementSysteam
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            FormTimKiem form = new FormTimKiem();
-            form.MdiParent= this;
-            form.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -202,9 +199,6 @@ namespace HospitalManagementSysteam
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            FormTimKiem form = new FormTimKiem();
-            form.MdiParent = this;
-            form.Show();
         }
 
         private void button3_Click_1(object sender, EventArgs e)
@@ -313,9 +307,6 @@ namespace HospitalManagementSysteam
 
         private void tìmKiếmBNBSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormTimKiem form = new FormTimKiem();
-            form.MdiParent = this;
-            form.Show();
         }
 
         private void xuấtExcelToolStripMenuItem_Click(object sender, EventArgs e)

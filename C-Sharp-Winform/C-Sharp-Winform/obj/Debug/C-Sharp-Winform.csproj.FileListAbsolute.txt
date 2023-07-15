@@ -1,8 +1,0 @@
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\bin\Debug\C-Sharp-Winform.exe.config
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\bin\Debug\C-Sharp-Winform.exe
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\bin\Debug\C-Sharp-Winform.pdb
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\obj\Debug\C-Sharp-Winform.csproj.AssemblyReference.cache
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\obj\Debug\C-Sharp-Winform.csproj.SuggestedBindingRedirects.cache
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\obj\Debug\C-Sharp-Winform.csproj.CoreCompileInputs.cache
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\obj\Debug\C-Sharp-Winform.exe
-C:\Users\hoang\source\repos\C-Sharp-Winform\C-Sharp-Winform\obj\Debug\C-Sharp-Winform.pdb

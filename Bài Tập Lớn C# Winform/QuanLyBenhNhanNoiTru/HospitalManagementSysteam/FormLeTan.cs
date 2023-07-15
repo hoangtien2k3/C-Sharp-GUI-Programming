@@ -102,7 +102,7 @@ namespace QuanLyBenhNhanNoiTru
                         connection.Close();
                     }
                 }
-                catch (Exception ex)
+                catch 
                 {
                     MessageBox.Show("Lỗi: Hãy Thử Nhập Lại");
                 }

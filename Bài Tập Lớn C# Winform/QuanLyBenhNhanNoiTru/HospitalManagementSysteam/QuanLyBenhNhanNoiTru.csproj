@@ -134,12 +134,6 @@
     <Compile Include="FormQuenMatKhau.Designer.cs">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTimKiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormTimKiem.Designer.cs">
-      <DependentUpon>FormTimKiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormXuatVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuenMatKhau.resx">
       <DependentUpon>FormQuenMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormTimKiem.resx">
-      <DependentUpon>FormTimKiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormXuatVien.resx">
       <DependentUpon>FormXuatVien.cs</DependentUpon>
